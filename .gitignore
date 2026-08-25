@@ -216,3 +216,23 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+
+# data & surveys — bulk pulls are reproducible; MICS microdata is licensed
+data/
+*.csv
+*.parquet
+*.feather
+*.sav
+# shared contract tables are versioned — unignore
+!derived/**
+# duckdb builds are derived from the CSVs — never commit
+*.duckdb
+
+# R
+.Rhistory
+.RData
+.Rproj.user/
+
+# misc
+.DS_Store
