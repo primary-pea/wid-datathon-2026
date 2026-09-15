@@ -1,0 +1,226 @@
+iso3,country_name,vehicle,mandatory_fortification,fortification_year,fortification_standard,standard_year
+AGO,Angola,Maize flour,UNKNOWN,,UNKNOWN,
+AGO,Angola,Oil,UNKNOWN,,UNKNOWN,
+AGO,Angola,Rice,UNKNOWN,,UNKNOWN,
+AGO,Angola,Salt,YES,2008,YES,2006
+AGO,Angola,Wheat flour,UNKNOWN,,UNKNOWN,
+BDI,Burundi,Maize flour,YES,2015,YES,2015
+BDI,Burundi,Oil,YES,2015,YES,2018
+BDI,Burundi,Rice,UNKNOWN,,UNKNOWN,
+BDI,Burundi,Salt,YES,1992,YES,2013
+BDI,Burundi,Wheat flour,YES,2015,YES,2015
+BEN,Benin,Maize flour,UNKNOWN,,UNKNOWN,
+BEN,Benin,Oil,YES,2012,YES,2012
+BEN,Benin,Rice,UNKNOWN,,UNKNOWN,
+BEN,Benin,Salt,YES,2009,YES,2013
+BEN,Benin,Wheat flour,YES,2010,YES,2010
+BFA,Burkina Faso,Maize flour,UNKNOWN,,UNKNOWN,
+BFA,Burkina Faso,Oil,YES,2012,YES,2010
+BFA,Burkina Faso,Rice,UNKNOWN,,UNKNOWN,
+BFA,Burkina Faso,Salt,YES,2003,YES,2013
+BFA,Burkina Faso,Wheat flour,YES,2012,YES,2010
+BWA,Botswana,Maize flour,UNKNOWN,,UNKNOWN,
+BWA,Botswana,Oil,UNKNOWN,,UNKNOWN,
+BWA,Botswana,Rice,UNKNOWN,,UNKNOWN,
+BWA,Botswana,Salt,YES,,YES,2010
+BWA,Botswana,Wheat flour,UNKNOWN,,UNKNOWN,
+CAF,Central African Republic,Maize flour,UNKNOWN,,UNKNOWN,
+CAF,Central African Republic,Oil,UNKNOWN,,UNKNOWN,
+CAF,Central African Republic,Rice,UNKNOWN,,UNKNOWN,
+CAF,Central African Republic,Salt,YES,1995,YES,1995
+CAF,Central African Republic,Wheat flour,UNKNOWN,,UNKNOWN,
+CMR,Cameroon,Maize flour,UNKNOWN,,UNKNOWN,
+CMR,Cameroon,Oil,YES,2011,YES,2011
+CMR,Cameroon,Rice,UNKNOWN,,UNKNOWN,
+CMR,Cameroon,Salt,YES,1991,YES,1995
+CMR,Cameroon,Wheat flour,YES,2011,YES,2011
+COD,Democratic Republic of the Congo,Maize flour,UNKNOWN,,UNKNOWN,
+COD,Democratic Republic of the Congo,Oil,UNKNOWN,,UNKNOWN,
+COD,Democratic Republic of the Congo,Rice,UNKNOWN,,UNKNOWN,
+COD,Democratic Republic of the Congo,Salt,YES,1993,YES,2003
+COD,Democratic Republic of the Congo,Wheat flour,UNKNOWN,,UNKNOWN,
+COG,Congo,Maize flour,UNKNOWN,,UNKNOWN,
+COG,Congo,Oil,UNKNOWN,,UNKNOWN,
+COG,Congo,Rice,UNKNOWN,,UNKNOWN,
+COG,Congo,Salt,YES,2004,YES,2004
+COG,Congo,Wheat flour,YES,2013,YES,2013
+COM,Comoros,Maize flour,UNKNOWN,,UNKNOWN,
+COM,Comoros,Oil,UNKNOWN,,UNKNOWN,
+COM,Comoros,Rice,UNKNOWN,,UNKNOWN,
+COM,Comoros,Salt,UNKNOWN,,UNKNOWN,
+COM,Comoros,Wheat flour,UNKNOWN,,UNKNOWN,
+CPV,Cabo Verde,Maize flour,UNKNOWN,,UNKNOWN,
+CPV,Cabo Verde,Oil,UNKNOWN,,UNKNOWN,
+CPV,Cabo Verde,Rice,UNKNOWN,,UNKNOWN,
+CPV,Cabo Verde,Salt,YES,2002,YES,2004
+CPV,Cabo Verde,Wheat flour,YES,2014,YES,2014
+DJI,Djibouti,Maize flour,UNKNOWN,,UNKNOWN,
+DJI,Djibouti,Oil,YES,2013,YES,2013
+DJI,Djibouti,Rice,UNKNOWN,,UNKNOWN,
+DJI,Djibouti,Salt,YES,1997,YES,1997
+DJI,Djibouti,Wheat flour,YES,2013,YES,2013
+ERI,Eritrea,Maize flour,UNKNOWN,,UNKNOWN,
+ERI,Eritrea,Oil,UNKNOWN,,UNKNOWN,
+ERI,Eritrea,Rice,UNKNOWN,,UNKNOWN,
+ERI,Eritrea,Salt,UNKNOWN,2004,UNKNOWN,
+ERI,Eritrea,Wheat flour,UNKNOWN,,UNKNOWN,
+ETH,Ethiopia,Maize flour,NO,,NO,
+ETH,Ethiopia,Oil,YES,2022,YES,2022
+ETH,Ethiopia,Rice,NO,,NO,
+ETH,Ethiopia,Salt,YES,2009,YES,2017
+ETH,Ethiopia,Wheat flour,YES,2022,YES,2022
+GAB,Gabon,Maize flour,UNKNOWN,,UNKNOWN,
+GAB,Gabon,Oil,UNKNOWN,,UNKNOWN,
+GAB,Gabon,Rice,UNKNOWN,,UNKNOWN,
+GAB,Gabon,Salt,YES,2004,YES,2004
+GAB,Gabon,Wheat flour,UNKNOWN,,UNKNOWN,
+GHA,Ghana,Maize flour,UNKNOWN,,UNKNOWN,
+GHA,Ghana,Oil,YES,2009,YES,2015
+GHA,Ghana,Rice,UNKNOWN,,UNKNOWN,
+GHA,Ghana,Salt,YES,1992,YES,2023
+GHA,Ghana,Wheat flour,YES,2010,YES,2006
+GIN,Guinea,Maize flour,UNKNOWN,,UNKNOWN,
+GIN,Guinea,Oil,UNKNOWN,,UNKNOWN,
+GIN,Guinea,Rice,UNKNOWN,,UNKNOWN,
+GIN,Guinea,Salt,YES,1995,YES,2013
+GIN,Guinea,Wheat flour,YES,2006,YES,2006
+GNB,Guinea-Bissau,Maize flour,UNKNOWN,,UNKNOWN,
+GNB,Guinea-Bissau,Oil,UNKNOWN,,UNKNOWN,
+GNB,Guinea-Bissau,Rice,UNKNOWN,,UNKNOWN,
+GNB,Guinea-Bissau,Salt,YES,2004,YES,2014
+GNB,Guinea-Bissau,Wheat flour,UNKNOWN,,UNKNOWN,
+GNQ,Equatorial Guinea,Maize flour,UNKNOWN,,UNKNOWN,
+GNQ,Equatorial Guinea,Oil,UNKNOWN,,UNKNOWN,
+GNQ,Equatorial Guinea,Rice,UNKNOWN,,UNKNOWN,
+GNQ,Equatorial Guinea,Salt,NO,,NO,
+GNQ,Equatorial Guinea,Wheat flour,UNKNOWN,,UNKNOWN,
+KEN,Kenya,Maize flour,YES,2012,YES,2012
+KEN,Kenya,Oil,YES,2012,YES,2018
+KEN,Kenya,Rice,NO,,NO,
+KEN,Kenya,Salt,YES,1988,YES,2013
+KEN,Kenya,Wheat flour,YES,2012,YES,2012
+LBR,Liberia,Maize flour,UNKNOWN,,UNKNOWN,
+LBR,Liberia,Oil,YES,2013,YES,2014
+LBR,Liberia,Rice,UNKNOWN,,UNKNOWN,
+LBR,Liberia,Salt,YES,2010,YES,2014
+LBR,Liberia,Wheat flour,YES,2017,YES,2017
+LSO,Lesotho,Maize flour,YES,2020,YES,2024
+LSO,Lesotho,Oil,YES,2024,YES,2024
+LSO,Lesotho,Rice,NO,,NO,
+LSO,Lesotho,Salt,YES,1999,YES,1999
+LSO,Lesotho,Wheat flour,YES,2020,YES,2024
+MDG,Madagascar,Maize flour,UNKNOWN,,UNKNOWN,
+MDG,Madagascar,Oil,UNKNOWN,,UNKNOWN,
+MDG,Madagascar,Rice,UNKNOWN,,UNKNOWN,
+MDG,Madagascar,Salt,YES,1995,YES,2014
+MDG,Madagascar,Wheat flour,UNKNOWN,,UNKNOWN,
+MLI,Mali,Maize flour,UNKNOWN,,UNKNOWN,
+MLI,Mali,Oil,YES,2017,YES,2017
+MLI,Mali,Rice,UNKNOWN,,UNKNOWN,
+MLI,Mali,Salt,YES,1999,YES,2019
+MLI,Mali,Wheat flour,YES,2010,YES,2010
+MOZ,Mozambique,Maize flour,YES,2016,YES,2012
+MOZ,Mozambique,Oil,YES,2016,YES,2012
+MOZ,Mozambique,Rice,NO,,NO,
+MOZ,Mozambique,Salt,YES,2000,YES,2016
+MOZ,Mozambique,Wheat flour,YES,2016,YES,2012
+MRT,Mauritania,Maize flour,UNKNOWN,,UNKNOWN,
+MRT,Mauritania,Oil,YES,2010,YES,2010
+MRT,Mauritania,Rice,UNKNOWN,,UNKNOWN,
+MRT,Mauritania,Salt,YES,2004,YES,2004
+MRT,Mauritania,Wheat flour,YES,2010,UNKNOWN,
+MUS,Mauritius,Maize flour,UNKNOWN,,UNKNOWN,
+MUS,Mauritius,Oil,UNKNOWN,,UNKNOWN,
+MUS,Mauritius,Rice,UNKNOWN,,UNKNOWN,
+MUS,Mauritius,Salt,NO,,YES,2022
+MUS,Mauritius,Wheat flour,YES,2024,YES,2023
+MWI,Malawi,Maize flour,YES,2015,YES,2011
+MWI,Malawi,Oil,YES,2012,YES,2011
+MWI,Malawi,Rice,NO,,UNKNOWN,
+MWI,Malawi,Salt,YES,1998,YES,1998
+MWI,Malawi,Wheat flour,YES,2015,YES,2011
+NAM,Namibia,Maize flour,NO,,NO,
+NAM,Namibia,Oil,UNKNOWN,,UNKNOWN,
+NAM,Namibia,Rice,NO,,NO,
+NAM,Namibia,Salt,YES,1994,YES,1994
+NAM,Namibia,Wheat flour,NO,,NO,
+NER,Niger,Maize flour,NO,,UNKNOWN,
+NER,Niger,Oil,YES,2012,YES,2012
+NER,Niger,Rice,NO,,UNKNOWN,
+NER,Niger,Salt,YES,2014,YES,2014
+NER,Niger,Wheat flour,YES,2010,YES,2010
+NGA,Nigeria,Maize flour,YES,2005,YES,2015
+NGA,Nigeria,Oil,YES,2000,YES,2000
+NGA,Nigeria,Rice,UNKNOWN,,UNKNOWN,
+NGA,Nigeria,Salt,YES,1992,YES,2004
+NGA,Nigeria,Wheat flour,YES,2005,YES,2015
+RWA,Rwanda,Maize flour,YES,2019,YES,2012
+RWA,Rwanda,Oil,YES,2020,YES,2020
+RWA,Rwanda,Rice,NO,,NO,
+RWA,Rwanda,Salt,YES,2019,YES,2013
+RWA,Rwanda,Wheat flour,YES,2019,YES,2019
+SDN,Sudan,Maize flour,UNKNOWN,,UNKNOWN,
+SDN,Sudan,Oil,UNKNOWN,,UNKNOWN,
+SDN,Sudan,Rice,UNKNOWN,,UNKNOWN,
+SDN,Sudan,Salt,YES,2018,YES,2018
+SDN,Sudan,Wheat flour,NO,,YES,2011
+SEN,Senegal,Maize flour,NO,,NO,
+SEN,Senegal,Oil,YES,2009,YES,2013
+SEN,Senegal,Rice,NO,,NO,
+SEN,Senegal,Salt,YES,2000,YES,2015
+SEN,Senegal,Wheat flour,YES,2009,YES,2013
+SLE,Sierra Leone,Maize flour,UNKNOWN,,UNKNOWN,
+SLE,Sierra Leone,Oil,YES,2010,YES,2010
+SLE,Sierra Leone,Rice,UNKNOWN,,UNKNOWN,
+SLE,Sierra Leone,Salt,NO,,YES,2010
+SLE,Sierra Leone,Wheat flour,NO,,YES,2010
+SOM,Somalia,Maize flour,UNKNOWN,,UNKNOWN,
+SOM,Somalia,Oil,UNKNOWN,,UNKNOWN,
+SOM,Somalia,Rice,UNKNOWN,,UNKNOWN,
+SOM,Somalia,Salt,YES,2004,UNKNOWN,
+SOM,Somalia,Wheat flour,UNKNOWN,,UNKNOWN,
+SSD,South Sudan,Maize flour,UNKNOWN,,UNKNOWN,
+SSD,South Sudan,Oil,NO,,YES,2018
+SSD,South Sudan,Rice,UNKNOWN,,UNKNOWN,
+SSD,South Sudan,Salt,NO,,NO,
+SSD,South Sudan,Wheat flour,UNKNOWN,,UNKNOWN,
+STP,Sao Tome and Principe,Maize flour,UNKNOWN,,UNKNOWN,
+STP,Sao Tome and Principe,Oil,UNKNOWN,,UNKNOWN,
+STP,Sao Tome and Principe,Rice,UNKNOWN,,UNKNOWN,
+STP,Sao Tome and Principe,Salt,YES,1996,YES,1996
+STP,Sao Tome and Principe,Wheat flour,UNKNOWN,,UNKNOWN,
+SYC,Seychelles,Maize flour,UNKNOWN,,UNKNOWN,
+SYC,Seychelles,Oil,UNKNOWN,,UNKNOWN,
+SYC,Seychelles,Rice,UNKNOWN,,UNKNOWN,
+SYC,Seychelles,Salt,UNKNOWN,,UNKNOWN,
+SYC,Seychelles,Wheat flour,UNKNOWN,,UNKNOWN,
+TCD,Chad,Maize flour,YES,2021,YES,2021
+TCD,Chad,Oil,YES,2021,YES,2021
+TCD,Chad,Rice,UNKNOWN,,UNKNOWN,
+TCD,Chad,Salt,YES,1994,YES,1994
+TCD,Chad,Wheat flour,YES,2021,YES,2021
+TGO,Togo,Maize flour,UNKNOWN,,UNKNOWN,
+TGO,Togo,Oil,YES,2012,YES,2013
+TGO,Togo,Rice,UNKNOWN,,UNKNOWN,
+TGO,Togo,Salt,YES,1996,YES,2017
+TGO,Togo,Wheat flour,YES,2012,YES,2013
+UGA,Uganda,Maize flour,YES,2011,YES,2006
+UGA,Uganda,Oil,YES,2011,YES,2018
+UGA,Uganda,Rice,NO,,NO,
+UGA,Uganda,Salt,YES,1997,YES,2013
+UGA,Uganda,Wheat flour,YES,2005,YES,2016
+ZAF,South Africa,Maize flour,YES,2003,YES,2016
+ZAF,South Africa,Oil,UNKNOWN,,UNKNOWN,
+ZAF,South Africa,Rice,UNKNOWN,,UNKNOWN,
+ZAF,South Africa,Salt,YES,1995,YES,2007
+ZAF,South Africa,Wheat flour,YES,2003,YES,2016
+ZMB,Zambia,Maize flour,NO,,YES,2001
+ZMB,Zambia,Oil,NO,,UNKNOWN,
+ZMB,Zambia,Rice,NO,,NO,
+ZMB,Zambia,Salt,YES,1992,YES,1994
+ZMB,Zambia,Wheat flour,NO,,YES,2001
+ZWE,Zimbabwe,Maize flour,YES,2016,YES,2016
+ZWE,Zimbabwe,Oil,YES,2016,YES,2016
+ZWE,Zimbabwe,Rice,NO,,NO,
+ZWE,Zimbabwe,Salt,YES,1973,YES,2000
+ZWE,Zimbabwe,Wheat flour,YES,2016,YES,2016

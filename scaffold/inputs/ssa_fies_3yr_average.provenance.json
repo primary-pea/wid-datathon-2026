@@ -1,0 +1,7 @@
+{
+  "file": "ssa_fies_3yr_average.csv",
+  "source": "FAOSTAT FS July-2026 release (cached parquet), FIES 3-year averages assigned to the window's middle year",
+  "built": "2026-09-08 (scaffold v0 rebuild after the annual pull returned no SSA rows)",
+  "rows": 321,
+  "countries": 40
+}

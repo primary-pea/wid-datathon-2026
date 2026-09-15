@@ -1,0 +1,101 @@
+{
+  "run_at": "2026-09-15T18:12:11+00:00",
+  "config_version": "2026-09-13a",
+  "panel_sha256": "afe63e46c26b0403f170c655d164485dd03a1473cb4dd4783fc6cba7043550c2",
+  "data_version": "afe63e46c26b",
+  "n_specs": 336,
+  "share_ci_excludes_zero": 0.06547619047619048,
+  "share_negative_and_excludes_zero": 0.044642857142857144,
+  "share_positive_and_excludes_zero": 0.020833333333333332,
+  "median_pp_per_within_sd": -0.02424940878315427,
+  "iqr_pp_per_within_sd": [
+    -0.05812223785561563,
+    0.0022836832719391924
+  ],
+  "min_max": [
+    -0.6244053129043067,
+    0.4268056574348545
+  ],
+  "by_estimator": {
+    "fe": {
+      "n": 84,
+      "median": -0.10094305777102493,
+      "share_excludes_zero": 0.0
+    },
+    "fe_trend": {
+      "n": 84,
+      "median": -0.009814699137314378,
+      "share_excludes_zero": 0.20238095238095238
+    },
+    "fd": {
+      "n": 84,
+      "median": -0.007157335668505403,
+      "share_excludes_zero": 0.03571428571428571
+    },
+    "ldv": {
+      "n": 84,
+      "median": -0.030372553459751414,
+      "share_excludes_zero": 0.023809523809523808
+    }
+  },
+  "by_exposure": {
+    "feat_gd_stock_anaemia_policies": {
+      "median": -0.037835747629947486,
+      "share_excludes_zero": 0.0
+    },
+    "feat_gd_logstock_anaemia_policies": {
+      "median": -0.03864629291740758,
+      "share_excludes_zero": 0.0625
+    },
+    "feat_gifna_anemia_programming_intensity": {
+      "median": -0.020912625306541616,
+      "share_excludes_zero": 0.08333333333333333
+    },
+    "feat_gd_stock_anaemia": {
+      "median": -0.009460609922634526,
+      "share_excludes_zero": 0.0
+    },
+    "feat_gd_logstock_anaemia": {
+      "median": -0.02748759339043399,
+      "share_excludes_zero": 0.0
+    },
+    "feat_gd_any_anaemia_policies": {
+      "median": 0.0015290232764024487,
+      "share_excludes_zero": 0.20833333333333334
+    },
+    "feat_gd_any_fortification": {
+      "median": -0.009733110853599802,
+      "share_excludes_zero": 0.10416666666666667
+    }
+  },
+  "grid": {
+    "exposures": [
+      "feat_gd_stock_anaemia_policies",
+      "feat_gd_logstock_anaemia_policies",
+      "feat_gifna_anemia_programming_intensity",
+      "feat_gd_stock_anaemia",
+      "feat_gd_logstock_anaemia",
+      "feat_gd_any_anaemia_policies",
+      "feat_gd_any_fortification"
+    ],
+    "estimators": [
+      "fe",
+      "fe_trend",
+      "fd",
+      "ldv"
+    ],
+    "incomes": [
+      "constant",
+      "current"
+    ],
+    "lags": [
+      2,
+      3,
+      5
+    ],
+    "controls": [
+      "none",
+      "context"
+    ]
+  }
+}

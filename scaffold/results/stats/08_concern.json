@@ -1,0 +1,81 @@
+{
+  "run_at": "2026-09-15T18:12:35+00:00",
+  "config_version": "2026-09-13a",
+  "panel_sha256": "afe63e46c26b0403f170c655d164485dd03a1473cb4dd4783fc6cba7043550c2",
+  "data_version": "afe63e46c26b",
+  "method": "flag 0 improved / 1 started in top quartile / 2 worsened, plus the percentile of the latest level; equal weights over four women's indicators; 500 Dirichlet weight draws for stability",
+  "indicators": [
+    "out_anaemia_wra_fs_pct",
+    "out_anaemia_pregnant_pct",
+    "out_women_underweight_pct",
+    "out_women_overweight_pct"
+  ],
+  "window": [
+    2000,
+    2023
+  ],
+  "top10": [
+    {
+      "iso3": "BDI",
+      "country": "Burundi",
+      "score": 2.48,
+      "share_top10_under_random_weights": 0.96
+    },
+    {
+      "iso3": "SOM",
+      "country": "Somalia",
+      "score": 2.288,
+      "share_top10_under_random_weights": 0.92
+    },
+    {
+      "iso3": "SEN",
+      "country": "Senegal",
+      "score": 2.173,
+      "share_top10_under_random_weights": 0.85
+    },
+    {
+      "iso3": "GMB",
+      "country": "Gambia",
+      "score": 2.0,
+      "share_top10_under_random_weights": 0.98
+    },
+    {
+      "iso3": "NER",
+      "country": "Niger",
+      "score": 1.964,
+      "share_top10_under_random_weights": 0.61
+    },
+    {
+      "iso3": "LSO",
+      "country": "Lesotho",
+      "score": 1.888,
+      "share_top10_under_random_weights": 0.67
+    },
+    {
+      "iso3": "TCD",
+      "country": "Chad",
+      "score": 1.883,
+      "share_top10_under_random_weights": 0.64
+    },
+    {
+      "iso3": "BFA",
+      "country": "Burkina Faso",
+      "score": 1.832,
+      "share_top10_under_random_weights": 0.52
+    },
+    {
+      "iso3": "GAB",
+      "country": "Gabon",
+      "score": 1.77,
+      "share_top10_under_random_weights": 0.52
+    },
+    {
+      "iso3": "MRT",
+      "country": "Mauritania",
+      "score": 1.745,
+      "share_top10_under_random_weights": 0.42
+    }
+  ],
+  "spearman_equal_vs_median_random_weights": 0.9974984202077032,
+  "note": "reproduction pending the analytics member's exact weights; the global 194-country version in the skeleton doc uses the same logic on all countries"
+}

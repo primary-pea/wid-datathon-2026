@@ -1,0 +1,14 @@
+line-length = 120
+target-version = "py312"
+extend-exclude = ["*.ipynb"]   # the notebook is a built presentation artefact (07_make_notebook.py owns it)
+
+[lint]
+select = ["E", "F", "W", "B", "I", "UP", "SIM", "PLW", "N"]
+ignore = ["N806", "N803"]   # statsmodels/linearmodels conventions use capitalised design-matrix names (X)
+
+[lint.pycodestyle]
+max-line-length = 150   # code wraps at 120 (formatter); only prose strings may run to 150
+
+[lint.per-file-ignores]
+"06_report.py" = ["E501"]        # report prose lives in long f-strings by design
+"07_make_notebook.py" = ["E501"] # notebook cell source strings

@@ -1,0 +1,185 @@
+{
+  "run_at": "2026-09-15T18:12:04+00:00",
+  "config_version": "2026-09-13a",
+  "panel_sha256": "afe63e46c26b0403f170c655d164485dd03a1473cb4dd4783fc6cba7043550c2",
+  "data_version": "afe63e46c26b",
+  "events": {
+    "anaemia_policy": {
+      "info": {
+        "dropped_already_treated": [
+          "BFA",
+          "BWA",
+          "CIV",
+          "CMR",
+          "COD",
+          "COG",
+          "GHA",
+          "GIN",
+          "GMB",
+          "KEN",
+          "MRT",
+          "SDN",
+          "SEN",
+          "TCD",
+          "ZMB"
+        ],
+        "treated_countries": 31,
+        "never_treated_countries": 3,
+        "cohorts": {
+          "2002": 1,
+          "2003": 3,
+          "2004": 2,
+          "2005": 2,
+          "2006": 3,
+          "2008": 3,
+          "2009": 4,
+          "2010": 1,
+          "2011": 2,
+          "2012": 4,
+          "2013": 1,
+          "2014": 3,
+          "2017": 1,
+          "2022": 1
+        }
+      },
+      "n_obs": 775,
+      "n_countries": 34,
+      "twfe_static": {
+        "att": -0.9389166577104092,
+        "se": 0.5271736355167264,
+        "p": 0.08411354287820783,
+        "share_negative_weight": 0.2748050075240239,
+        "n_negative": 135,
+        "n_treated_cells": 451
+      },
+      "did2s_static": {
+        "att": 0.09762866508760916,
+        "se": 1.0863065242415764,
+        "p": 0.9283888403074321,
+        "ci": [
+          -2.0420955199997155,
+          2.08604447984952
+        ],
+        "bootstrap_draws": 299
+      },
+      "lpdid_terms": [
+        "time_to_treatment::-4",
+        "time_to_treatment::-3",
+        "time_to_treatment::-2",
+        "time_to_treatment::0",
+        "time_to_treatment::1",
+        "time_to_treatment::2",
+        "time_to_treatment::3",
+        "time_to_treatment::4",
+        "time_to_treatment::5"
+      ],
+      "lpdid_att": {
+        "att": -0.08012695135089634,
+        "se": 0.19151101804315157,
+        "p": 0.6784542099223336
+      },
+      "did2s_event_pretrend": {
+        "slope": -0.040058312850205245,
+        "post_mean": -0.49217955371174404,
+        "post_mean_adjusted": -0.37200461516112837
+      },
+      "did2s_event_pre_max_abs_t": 0.9670800234439354,
+      "lpdid_event_pretrend": {
+        "slope": -0.03702479680555622,
+        "post_mean": -0.07465244147728436,
+        "post_mean_adjusted": 0.03642194893938429
+      },
+      "lpdid_event_pre_max_abs_t": 1.2440966511817861,
+      "twfe_event_pretrend": {
+        "slope": -0.11195114134055476,
+        "post_mean": -0.6664253505374426,
+        "post_mean_adjusted": -0.33057192651577827
+      },
+      "twfe_event_pre_max_abs_t": 2.0084754744894644
+    },
+    "wheat_mandate": {
+      "info": {
+        "dropped_already_treated": [],
+        "treated_countries": 26,
+        "never_treated_countries": 23,
+        "cohorts": {
+          "2003": 1,
+          "2005": 2,
+          "2006": 1,
+          "2009": 1,
+          "2010": 5,
+          "2011": 1,
+          "2012": 3,
+          "2013": 2,
+          "2014": 1,
+          "2015": 2,
+          "2016": 2,
+          "2017": 1,
+          "2019": 1,
+          "2020": 1,
+          "2021": 1,
+          "2022": 1
+        }
+      },
+      "n_obs": 1135,
+      "n_countries": 49,
+      "twfe_static": {
+        "att": -0.5640092597801553,
+        "se": 0.7652013606204168,
+        "p": 0.4646656726192524,
+        "share_negative_weight": 0.02122086511732774,
+        "n_negative": 29,
+        "n_treated_cells": 298
+      },
+      "did2s_static": {
+        "att": -1.0522195851853322,
+        "se": 0.7915208622012841,
+        "p": 0.18372780648328235,
+        "ci": [
+          -2.595239368622803,
+          0.3925693967846649
+        ],
+        "bootstrap_draws": 299
+      },
+      "lpdid_terms": [
+        "time_to_treatment::-4",
+        "time_to_treatment::-3",
+        "time_to_treatment::-2",
+        "time_to_treatment::0",
+        "time_to_treatment::1",
+        "time_to_treatment::2",
+        "time_to_treatment::3",
+        "time_to_treatment::4",
+        "time_to_treatment::5"
+      ],
+      "lpdid_att": {
+        "att": -0.17285444537363195,
+        "se": 0.342648959449385,
+        "p": 0.6162915529627702
+      },
+      "did2s_event_pretrend": {
+        "slope": 0.023138354158172496,
+        "post_mean": -0.24442527559593982,
+        "post_mean_adjusted": -0.3138403380704573
+      },
+      "did2s_event_pre_max_abs_t": 0.608658869971607,
+      "lpdid_event_pretrend": {
+        "slope": 0.053584930002182764,
+        "post_mean": -0.05783706547647447,
+        "post_mean_adjusted": -0.21859185548302276
+      },
+      "lpdid_event_pre_max_abs_t": 0.6535143285461206,
+      "twfe_event_pretrend": {
+        "slope": 0.0284386148877474,
+        "post_mean": -0.15372624579803013,
+        "post_mean_adjusted": -0.23904209046127237
+      },
+      "twfe_event_pre_max_abs_t": 0.13637526486371154
+    }
+  },
+  "window": {
+    "pre": 4,
+    "post": 5,
+    "ref": -1
+  }
+}

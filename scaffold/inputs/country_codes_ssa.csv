@@ -1,0 +1,50 @@
+iso3,iso2,m49,faostat_area_code,faostat_area_name,wb_name,display_name
+AGO,AO,24,7,Angola,Angola,Angola
+BDI,BI,108,29,Burundi,Burundi,Burundi
+BEN,BJ,204,53,Benin,Benin,Benin
+BFA,BF,854,233,Burkina Faso,Burkina Faso,Burkina Faso
+BWA,BW,72,20,Botswana,Botswana,Botswana
+CAF,CF,140,37,Central African Republic,Central African Republic,Central African Republic
+CIV,CI,384,107,Côte d'Ivoire,Cote d'Ivoire,Côte d'Ivoire
+CMR,CM,120,32,Cameroon,Cameroon,Cameroon
+COD,CD,180,250,Democratic Republic of the Congo,Democratic Republic of the Congo,Democratic Republic of the Congo
+COG,CG,178,46,Congo,Congo,Congo
+COM,KM,174,45,Comoros,Comoros,Comoros
+CPV,CV,132,35,Cabo Verde,Cabo Verde,Cabo Verde
+DJI,DJ,262,72,Djibouti,Djibouti,Djibouti
+ERI,ER,232,178,Eritrea,Eritrea,Eritrea
+ETH,ET,231,238,Ethiopia,Ethiopia,Ethiopia
+GAB,GA,266,74,Gabon,Gabon,Gabon
+GHA,GH,288,81,Ghana,Ghana,Ghana
+GIN,GN,324,90,Guinea,Guinea,Guinea
+GMB,GM,270,75,Gambia,Gambia,Gambia
+GNB,GW,624,175,Guinea-Bissau,Guinea-Bissau,Guinea-Bissau
+GNQ,GQ,226,61,Equatorial Guinea,Equatorial Guinea,Equatorial Guinea
+KEN,KE,404,114,Kenya,Kenya,Kenya
+LBR,LR,430,123,Liberia,Liberia,Liberia
+LSO,LS,426,122,Lesotho,Lesotho,Lesotho
+MDG,MG,450,129,Madagascar,Madagascar,Madagascar
+MLI,ML,466,133,Mali,Mali,Mali
+MOZ,MZ,508,144,Mozambique,Mozambique,Mozambique
+MRT,MR,478,136,Mauritania,Mauritania,Mauritania
+MUS,MU,480,137,Mauritius,Mauritius,Mauritius
+MWI,MW,454,130,Malawi,Malawi,Malawi
+NAM,NA,516,147,Namibia,Namibia,Namibia
+NER,NE,562,158,Niger,Niger,Niger
+NGA,NG,566,159,Nigeria,Nigeria,Nigeria
+RWA,RW,646,184,Rwanda,Rwanda,Rwanda
+SDN,SD,729,276,Sudan,Sudan,Sudan
+SEN,SN,686,195,Senegal,Senegal,Senegal
+SLE,SL,694,197,Sierra Leone,Sierra Leone,Sierra Leone
+SOM,SO,706,201,Somalia,Somalia,Somalia
+SSD,SS,728,277,South Sudan,South Sudan,South Sudan
+STP,ST,678,193,Sao Tome and Principe,Sao Tome and Principe,Sao Tome and Principe
+SWZ,SZ,748,209,Eswatini,Eswatini,Eswatini
+SYC,SC,690,196,Seychelles,Seychelles,Seychelles
+TCD,TD,148,39,Chad,Chad,Chad
+TGO,TG,768,217,Togo,Togo,Togo
+TZA,TZ,834,215,United Republic of Tanzania,United Republic of Tanzania,United Republic of Tanzania
+UGA,UG,800,226,Uganda,Uganda,Uganda
+ZAF,ZA,710,202,South Africa,South Africa,South Africa
+ZMB,ZM,894,251,Zambia,Zambia,Zambia
+ZWE,ZW,716,181,Zimbabwe,Zimbabwe,Zimbabwe

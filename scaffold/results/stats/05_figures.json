@@ -1,0 +1,17 @@
+{
+  "run_at": "2026-09-15T18:12:34+00:00",
+  "config_version": "2026-09-13a",
+  "panel_sha256": "afe63e46c26b0403f170c655d164485dd03a1473cb4dd4783fc6cba7043550c2",
+  "data_version": "afe63e46c26b",
+  "figures": {
+    "fig_sensitivity": "the dose ladder: main, lags, lead test, trends, bracket, context, team and survey-anchored rows",
+    "fig_event_study": "event studies around the first anaemia policy and the wheat-flour mandate (three estimators)",
+    "fig_spec_curve": "specification curve over exposure \u00d7 estimator \u00d7 income \u00d7 lag \u00d7 controls",
+    "fig_loco": "leave-one-country-out RMSE by nested model",
+    "fig_calibration": "LOCO calibration scatter for the income + policy model",
+    "fig_residuals": "context ranking (residual from the context model), recent window",
+    "fig_rankings_compare": "income-only vs context residuals, one point per country",
+    "fig_map": "choropleth of the context ranking (plotly/kaleido)",
+    "fig_trends_anaemia": "anaemia small multiples, 49 countries"
+  }
+}

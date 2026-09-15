@@ -1,0 +1,38 @@
+{
+  "note": "byte-identical copies of the atlas cache (scripts/21_faostat_pull_coverage.py, July-2026 FAOSTAT release; UNICEF workbook from the shared Drive, Aug 2025), pinned here so the scaffold rebuilds from any clone",
+  "copied_at_utc": "2026-09-09T17:41:38+00:00",
+  "files": {
+    "data_CAHD_full_release_7S2026.parquet": {
+      "sha256": "c156fdcf2344170dbde86da38524f5321814cfed686d7e1a04fabe06ba3bc001",
+      "bytes": 37345
+    },
+    "data_FS_item21025_stunting_u5_pct.parquet": {
+      "sha256": "2bff8fc32dd87074a599d574559f06be6ebdcedaef018337b369c568bbf9058c",
+      "bytes": 20060
+    },
+    "data_FS_item21026_wasting_u5_pct.parquet": {
+      "sha256": "0e71fb20b71445c5c5efe460fe6867ada7d18b3d55b7732551d01ae13b3f99c6",
+      "bytes": 15484
+    },
+    "data_FS_item21041_overweight_u5_pct.parquet": {
+      "sha256": "05708484e78d6ae7e7d5319b5b090eebb1c552ae280816c25991edc4c33f43cd",
+      "bytes": 17015
+    },
+    "data_FS_item21043_anaemia_women_15_49_pct.parquet": {
+      "sha256": "441439a35358590b26bcff84e31862ab91af1a0c6e854f4faa8ad84235777462",
+      "bytes": 20358
+    },
+    "data_FS_item21044_exclusive_breastfeeding_pct.parquet": {
+      "sha256": "108dce3f5b663bbaf51882dfeaadc27d8d5ca54f41f77ad222eb42799c403dcc",
+      "bytes": 14702
+    },
+    "data_FS_item21049_low_birthweight_pct.parquet": {
+      "sha256": "e0856ce71c0e1527f3e99ce7ffd3e3fa6d69e7c91e185e0383adf924aecc99b6",
+      "bytes": 15414
+    },
+    "UNICEF_Global-database_Womens-Nutrition_August-2025_2.xlsx": {
+      "sha256": "0c57793f2dcc5417c35f635dbde3192817430fef4e9b1373062963f41cee9515",
+      "bytes": 1543002
+    }
+  }
+}

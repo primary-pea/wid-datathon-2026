@@ -1,0 +1,13 @@
+{
+  "file": "gfdx_legislation_years_ssa.csv",
+  "source": "GFDx (Global Fortification Data Exchange) dataset snapshot datadumps/GFDx/GFDxDataSet.CSV, tidied by scripts/11_gfdx_tidy.py into derived/gfdx_legislation.parquet; country names mapped to ISO3 via derived/fortification_gaps.parquet",
+  "fields": {
+    "mandatory_fortification": "YES/NO/UNKNOWN per food vehicle",
+    "fortification_year": "GFDx 'mandatory fortification year' = year the vehicle was first mandated",
+    "standard_year": "year of the current standard or parent regulation"
+  },
+  "rows": 225,
+  "countries": 45,
+  "extracted_at_utc": "2026-09-13T01:48:06+00:00",
+  "sha256": "31d9b77b1acffc51e3275406a82826d1c10c9152cbb5aea5b5f90261168311ac"
+}

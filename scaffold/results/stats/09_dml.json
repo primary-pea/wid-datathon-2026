@@ -1,0 +1,24 @@
+{
+  "run_at": "2026-09-15T18:12:53+00:00",
+  "config_version": "2026-09-13a",
+  "panel_sha256": "afe63e46c26b0403f170c655d164485dd03a1473cb4dd4783fc6cba7043550c2",
+  "data_version": "afe63e46c26b",
+  "theta": 0.07685991115353845,
+  "se": 0.14342977996948586,
+  "ci": [
+    -0.20426245758665384,
+    0.35798227989373077
+  ],
+  "p": 0.5920474599060581,
+  "theta_per_within_sd": 0.1304697004806436,
+  "n_obs": 931,
+  "n_countries": 46,
+  "controls": [
+    "log_gdp_pc_constant",
+    "feat_malaria_incidence_per1000",
+    "feat_fertility_rate",
+    "feat_urban_pct"
+  ],
+  "nuisance": "random forests (300 trees, min leaf 20), 5 country-grouped folds, cross-fitted",
+  "note": "same sign as the ladder is the only claim this sidebar supports"
+}

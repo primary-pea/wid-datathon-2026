@@ -1,0 +1,9 @@
+{
+  "file": "igme_2025_ssa_national.csv",
+  "source": "UN IGME 2025 round, national estimates, both sexes (atlas tidy: scripts/10_igme_tidy.py \u2192 derived/igme_2025_estimates.parquet)",
+  "source_sha256": "f7e8e3d37055d2d863310959bf262f9450ce85727aed170b81349e41ab447765",
+  "filter": "sex == Total; wealth_quintile total/missing; three indicators; the 49 SSA countries; 2000\u20132025",
+  "rows": 3675,
+  "extracted_at_utc": "2026-09-09T17:41:38+00:00",
+  "sha256": "91c86688e15524a2453179fad695dba3cc1d44203e5213b137d4019cbcf41786"
+}

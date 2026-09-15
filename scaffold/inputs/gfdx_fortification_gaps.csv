@@ -1,0 +1,201 @@
+iso3,name,sdg_region,anaemia,anaemia_year,maize_flour_code,rice_code,wheat_flour_code,mandate_class,wheat_mandate,folic_in_wheat_standard,iron_in_wheat_standard,wheat_standard_documented,anaemia_tier
+GAB,Gabon,Sub-Saharan Africa,59.9,2023.0,3,3,3,status unknown,False,False,False,False,severe (≥40%)
+MLI,Mali,Sub-Saharan Africa,56.5,2023.0,3,3,1,grain mandate,True,True,True,True,severe (≥40%)
+MRT,Mauritania,Sub-Saharan Africa,54.5,2023.0,3,3,1,grain mandate,True,False,False,False,severe (≥40%)
+IND,India,Central and Southern Asia,53.7,2023.0,3,2,2,no grain mandate,False,True,True,True,severe (≥40%)
+CIV,Côte d'Ivoire,Sub-Saharan Africa,51.4,2023.0,3,3,1,grain mandate,True,True,True,True,severe (≥40%)
+BEN,Benin,Sub-Saharan Africa,50.0,2023.0,3,3,1,grain mandate,True,True,True,True,severe (≥40%)
+NER,Niger,Sub-Saharan Africa,47.1,2023.0,2,2,1,grain mandate,True,True,True,True,severe (≥40%)
+MOZ,Mozambique,Sub-Saharan Africa,47.0,2023.0,1,2,1,grain mandate,True,True,True,True,severe (≥40%)
+COG,Congo,Sub-Saharan Africa,46.7,2023.0,3,3,1,grain mandate,True,False,True,True,severe (≥40%)
+PAK,Pakistan,Central and Southern Asia,46.5,2023.0,2,2,3,no grain mandate,False,True,True,True,severe (≥40%)
+TCD,Chad,Sub-Saharan Africa,46.5,2023.0,1,3,1,grain mandate,True,True,True,True,severe (≥40%)
+SOM,Somalia,Sub-Saharan Africa,46.2,2023.0,3,3,3,status unknown,False,False,False,False,severe (≥40%)
+GMB,Gambia,Sub-Saharan Africa,46.1,2023.0,2,2,1,grain mandate,True,True,True,True,severe (≥40%)
+HTI,Haiti,Latin America and the Caribbean,45.9,2023.0,3,3,1,grain mandate,True,False,False,False,severe (≥40%)
+GNB,Guinea-Bissau,Sub-Saharan Africa,45.7,2023.0,3,3,3,status unknown,False,False,False,False,severe (≥40%)
+GIN,Guinea,Sub-Saharan Africa,45.7,2023.0,3,3,1,grain mandate,True,True,True,True,severe (≥40%)
+AFG,Afghanistan,Central and Southern Asia,45.4,2023.0,3,3,1,grain mandate,True,True,True,True,severe (≥40%)
+SLE,Sierra Leone,Sub-Saharan Africa,44.6,2023.0,3,3,2,no grain mandate,False,True,True,True,severe (≥40%)
+BFA,Burkina Faso,Sub-Saharan Africa,44.3,2023.0,3,3,1,grain mandate,True,True,True,True,severe (≥40%)
+AGO,Angola,Sub-Saharan Africa,43.8,2023.0,3,3,3,status unknown,False,False,False,False,severe (≥40%)
+CAF,Central African Republic,Sub-Saharan Africa,43.4,2023.0,3,3,3,status unknown,False,False,False,False,severe (≥40%)
+MDV,Maldives,Central and Southern Asia,43.4,2023.0,3,3,3,status unknown,False,False,False,False,severe (≥40%)
+SEN,Senegal,Sub-Saharan Africa,43.1,2023.0,2,2,1,grain mandate,True,True,True,True,severe (≥40%)
+LBR,Liberia,Sub-Saharan Africa,42.5,2023.0,3,3,1,grain mandate,True,True,True,True,severe (≥40%)
+TGO,Togo,Sub-Saharan Africa,41.5,2023.0,3,3,1,grain mandate,True,True,True,True,severe (≥40%)
+GNQ,Equatorial Guinea,Sub-Saharan Africa,41.3,2023.0,3,3,3,status unknown,False,False,False,False,severe (≥40%)
+CPV,Cabo Verde,Sub-Saharan Africa,40.6,2023.0,3,3,1,grain mandate,True,True,True,True,severe (≥40%)
+COD,Democratic Republic of the Congo,Sub-Saharan Africa,40.0,2023.0,3,3,3,status unknown,False,False,False,False,severe (≥40%)
+MMR,Myanmar,Eastern and South-Eastern Asia,39.7,2023.0,3,2,3,no grain mandate,False,False,False,False,moderate (30–39.9%)
+STP,Sao Tome and Principe,Sub-Saharan Africa,39.7,2023.0,3,3,3,status unknown,False,False,False,False,moderate (30–39.9%)
+BDI,Burundi,Sub-Saharan Africa,39.0,2023.0,1,3,1,grain mandate,True,True,True,True,moderate (30–39.9%)
+CMR,Cameroon,Sub-Saharan Africa,38.9,2023.0,3,3,1,grain mandate,True,True,True,True,moderate (30–39.9%)
+TZA,United Republic of Tanzania,Sub-Saharan Africa,38.8,2023.0,1,2,1,grain mandate,True,True,True,True,moderate (30–39.9%)
+BHR,Bahrain,Northern Africa and Western Asia,38.4,2023.0,3,2,1,grain mandate,True,True,True,True,moderate (30–39.9%)
+KHM,Cambodia,Eastern and South-Eastern Asia,38.0,2023.0,3,3,3,status unknown,False,False,False,False,moderate (30–39.9%)
+NGA,Nigeria,Sub-Saharan Africa,37.9,2023.0,1,3,1,grain mandate,True,True,True,True,moderate (30–39.9%)
+BGD,Bangladesh,Central and Southern Asia,37.6,2023.0,3,2,2,no grain mandate,False,True,True,True,moderate (30–39.9%)
+GUY,Guyana,Latin America and the Caribbean,37.5,2023.0,3,3,1,grain mandate,True,False,True,True,moderate (30–39.9%)
+TJK,Tajikistan,Central and Southern Asia,37.3,2023.0,3,3,1,grain mandate,True,True,True,True,moderate (30–39.9%)
+MDG,Madagascar,Sub-Saharan Africa,37.2,2023.0,3,3,3,status unknown,False,False,False,False,moderate (30–39.9%)
+YEM,Yemen,Northern Africa and Western Asia,36.4,2023.0,3,3,1,grain mandate,True,True,True,True,moderate (30–39.9%)
+GHA,Ghana,Sub-Saharan Africa,36.0,2023.0,3,3,1,grain mandate,True,True,True,True,moderate (30–39.9%)
+ERI,Eritrea,Sub-Saharan Africa,35.6,2023.0,3,3,3,status unknown,False,False,False,False,moderate (30–39.9%)
+AZE,Azerbaijan,Northern Africa and Western Asia,35.6,2023.0,3,3,3,status unknown,False,False,False,False,moderate (30–39.9%)
+SSD,South Sudan,Sub-Saharan Africa,35.0,2023.0,3,3,3,status unknown,False,False,False,False,moderate (30–39.9%)
+TKM,Turkmenistan,Central and Southern Asia,34.8,2023.0,3,3,1,grain mandate,True,True,True,True,moderate (30–39.9%)
+OMN,Oman,Northern Africa and Western Asia,34.4,2023.0,3,3,1,grain mandate,True,True,True,True,moderate (30–39.9%)
+LSO,Lesotho,Sub-Saharan Africa,34.2,2023.0,1,2,1,grain mandate,True,True,True,True,moderate (30–39.9%)
+SDN,Sudan,Northern Africa and Western Asia,34.0,2023.0,3,3,2,no grain mandate,False,True,True,True,moderate (30–39.9%)
+LBN,Lebanon,Northern Africa and Western Asia,34.0,2023.0,3,3,3,status unknown,False,False,False,False,moderate (30–39.9%)
+BTN,Bhutan,Central and Southern Asia,33.8,2023.0,3,3,3,status unknown,False,False,False,False,moderate (30–39.9%)
+NPL,Nepal,Central and Southern Asia,33.2,2023.0,3,3,1,grain mandate,True,True,True,True,moderate (30–39.9%)
+JOR,Jordan,Northern Africa and Western Asia,33.0,2023.0,3,3,1,grain mandate,True,True,True,True,moderate (30–39.9%)
+KGZ,Kyrgyzstan,Central and Southern Asia,32.9,2023.0,3,3,1,grain mandate,True,True,True,True,moderate (30–39.9%)
+MUS,Mauritius,Sub-Saharan Africa,32.8,2023.0,3,3,1,grain mandate,True,True,True,True,moderate (30–39.9%)
+EGY,Egypt,Northern Africa and Western Asia,32.7,2023.0,3,3,3,status unknown,False,False,False,False,moderate (30–39.9%)
+SLB,Solomon Islands,Oceania,32.6,2023.0,3,1,1,grain mandate,True,True,True,True,moderate (30–39.9%)
+MWI,Malawi,Sub-Saharan Africa,32.4,2023.0,1,2,1,grain mandate,True,True,True,True,moderate (30–39.9%)
+KEN,Kenya,Sub-Saharan Africa,32.2,2023.0,1,2,1,grain mandate,True,True,True,True,moderate (30–39.9%)
+DJI,Djibouti,Sub-Saharan Africa,31.8,2023.0,3,3,1,grain mandate,True,True,True,True,moderate (30–39.9%)
+DZA,Algeria,Northern Africa and Western Asia,31.6,2023.0,3,3,3,status unknown,False,False,False,False,moderate (30–39.9%)
+MYS,Malaysia,Eastern and South-Eastern Asia,31.3,2023.0,3,3,2,no grain mandate,False,False,False,True,moderate (30–39.9%)
+ZAF,South Africa,Sub-Saharan Africa,31.2,2023.0,1,3,1,grain mandate,True,True,True,True,moderate (30–39.9%)
+SYR,Syrian Arab Republic,Northern Africa and Western Asia,31.0,2023.0,3,3,3,status unknown,False,False,False,False,moderate (30–39.9%)
+BWA,Botswana,Sub-Saharan Africa,30.9,2023.0,3,3,3,status unknown,False,False,False,False,moderate (30–39.9%)
+KAZ,Kazakhstan,Central and Southern Asia,30.5,2023.0,3,3,1,grain mandate,True,True,True,True,moderate (30–39.9%)
+UZB,Uzbekistan,Central and Southern Asia,30.4,2023.0,2,2,1,grain mandate,True,True,True,True,moderate (30–39.9%)
+VUT,Vanuatu,Oceania,30.4,2023.0,3,3,3,status unknown,False,False,False,False,moderate (30–39.9%)
+GEO,Georgia,Northern Africa and Western Asia,30.2,2023.0,3,3,3,status unknown,False,False,False,False,moderate (30–39.9%)
+FJI,Fiji,Oceania,29.9,2023.0,3,3,1,grain mandate,True,True,True,True,below 30%
+COM,Comoros,Sub-Saharan Africa,29.9,2023.0,3,3,3,status unknown,False,False,False,False,below 30%
+TLS,Timor-Leste,Eastern and South-Eastern Asia,29.7,2023.0,3,3,3,status unknown,False,False,False,False,below 30%
+MAR,Morocco,Northern Africa and Western Asia,29.5,2023.0,3,3,1,grain mandate,True,True,True,True,below 30%
+LBY,Libya,Northern Africa and Western Asia,29.3,2023.0,3,3,3,status unknown,False,False,False,False,below 30%
+TUR,Republic of Türkiye,Northern Africa and Western Asia,29.3,2023.0,3,3,3,status unknown,False,False,False,False,below 30%
+PNG,Papua New Guinea,Oceania,28.8,2023.0,3,1,3,grain mandate,False,False,False,False,below 30%
+LAO,Lao People's Democratic Republic,Eastern and South-Eastern Asia,28.6,2023.0,2,3,2,no grain mandate,False,False,False,False,below 30%
+MDA,Republic of Moldova,Europe and Northern America,28.5,2023.0,2,2,1,grain mandate,True,True,True,True,below 30%
+SWZ,Eswatini,Sub-Saharan Africa,28.3,2023.0,3,3,2,no grain mandate,False,True,True,True,below 30%
+ARE,United Arab Emirates,Northern Africa and Western Asia,28.2,2023.0,3,3,2,no grain mandate,False,True,True,True,below 30%
+KWT,Kuwait,Northern Africa and Western Asia,27.7,2023.0,3,3,2,no grain mandate,False,True,True,True,below 30%
+TUN,Tunisia,Northern Africa and Western Asia,27.7,2023.0,3,3,3,status unknown,False,False,False,False,below 30%
+ZWE,Zimbabwe,Sub-Saharan Africa,27.5,2023.0,1,2,1,grain mandate,True,True,True,True,below 30%
+PRK,Democratic People's Republic of Korea,Eastern and South-Eastern Asia,27.5,2023.0,3,3,3,status unknown,False,False,False,False,below 30%
+UGA,Uganda,Sub-Saharan Africa,27.2,2023.0,1,2,1,grain mandate,True,True,True,True,below 30%
+ZMB,Zambia,Sub-Saharan Africa,27.1,2023.0,2,2,2,no grain mandate,False,False,True,True,below 30%
+IRQ,Iraq,Northern Africa and Western Asia,27.1,2023.0,3,3,2,no grain mandate,False,True,True,True,below 30%
+KIR,Kiribati,Oceania,26.9,2023.0,3,3,1,grain mandate,True,True,True,True,below 30%
+IDN,Indonesia,Eastern and South-Eastern Asia,26.7,2023.0,3,3,1,grain mandate,True,True,True,True,below 30%
+BIH,Bosnia and Herzegovina,Europe and Northern America,26.0,2023.0,3,3,3,status unknown,False,False,False,False,below 30%
+PLW,Palau,Oceania,25.9,2023.0,3,3,3,status unknown,False,False,False,False,below 30%
+MNE,Montenegro,Europe and Northern America,25.8,2023.0,3,3,3,status unknown,False,False,False,False,below 30%
+BGR,Bulgaria,Europe and Northern America,25.8,2023.0,3,3,3,status unknown,False,False,False,False,below 30%
+SYC,Seychelles,Sub-Saharan Africa,25.8,2023.0,3,3,3,status unknown,False,False,False,False,below 30%
+SVN,Slovenia,Europe and Northern America,25.7,2023.0,3,3,3,status unknown,False,False,False,False,below 30%
+IRN,Iran (Islamic Republic of),Central and Southern Asia,25.5,2023.0,3,3,1,grain mandate,True,False,False,False,below 30%
+PAN,Panama,Latin America and the Caribbean,25.5,2023.0,3,1,1,grain mandate,True,True,True,True,below 30%
+SVK,Slovakia,Europe and Northern America,25.3,2023.0,3,3,3,status unknown,False,False,False,False,below 30%
+VEN,Venezuela (Bolivarian Republic of),Latin America and the Caribbean,25.2,2023.0,1,2,1,grain mandate,True,False,True,True,below 30%
+SRB,Serbia,Europe and Northern America,24.9,2023.0,3,3,3,status unknown,False,False,False,False,below 30%
+BOL,Bolivia (Plurinational State of),Latin America and the Caribbean,24.9,2023.0,3,3,1,grain mandate,True,True,True,True,below 30%
+NAM,Namibia,Sub-Saharan Africa,24.9,2023.0,2,2,2,no grain mandate,False,False,False,False,below 30%
+PSE,State of Palestine,Northern Africa and Western Asia,24.8,2023.0,3,3,1,grain mandate,True,True,True,True,below 30%
+ALB,Albania,Europe and Northern America,24.7,2023.0,3,3,3,status unknown,False,False,False,False,below 30%
+EST,Estonia,Europe and Northern America,24.7,2023.0,3,3,3,status unknown,False,False,False,False,below 30%
+CZE,Czechia,Europe and Northern America,24.6,2023.0,3,3,3,status unknown,False,False,False,False,below 30%
+URY,Uruguay,Latin America and the Caribbean,24.5,2023.0,3,3,1,grain mandate,True,True,True,True,below 30%
+ROU,Romania,Europe and Northern America,24.3,2023.0,3,3,3,status unknown,False,False,False,False,below 30%
+HUN,Hungary,Europe and Northern America,24.1,2023.0,3,2,3,no grain mandate,False,False,False,False,below 30%
+RUS,Russian Federation,Europe and Northern America,24.1,2023.0,3,3,3,status unknown,False,False,False,False,below 30%
+NIU,Niue,Oceania,24.0,2023.0,,,,status unknown,False,False,False,False,below 30%
+COK,Cook Islands,Oceania,23.9,2023.0,,,,status unknown,False,False,False,False,below 30%
+LTU,Lithuania,Europe and Northern America,23.7,2023.0,3,3,3,status unknown,False,False,False,False,below 30%
+QAT,Qatar,Northern Africa and Western Asia,23.6,2023.0,3,3,2,no grain mandate,False,True,True,True,below 30%
+ARG,Argentina,Latin America and the Caribbean,23.5,2023.0,3,3,1,grain mandate,True,True,True,True,below 30%
+MHL,Marshall Islands,Oceania,23.5,2023.0,3,3,3,status unknown,False,False,False,False,below 30%
+POL,Poland,Europe and Northern America,23.4,2023.0,3,3,3,status unknown,False,False,False,False,below 30%
+HRV,Croatia,Europe and Northern America,23.3,2023.0,3,3,3,status unknown,False,False,False,False,below 30%
+TUV,Tuvalu,Oceania,23.2,2023.0,3,3,3,status unknown,False,False,False,False,below 30%
+PRY,Paraguay,Latin America and the Caribbean,23.2,2023.0,3,3,1,grain mandate,True,True,True,True,below 30%
+ETH,Ethiopia,Sub-Saharan Africa,23.1,2023.0,2,2,1,grain mandate,True,True,False,True,below 30%
+NRU,Nauru,Oceania,22.5,2023.0,3,3,3,status unknown,False,False,False,False,below 30%
+DOM,Dominican Republic,Latin America and the Caribbean,22.4,2023.0,2,3,1,grain mandate,True,True,True,True,below 30%
+COL,Colombia,Latin America and the Caribbean,22.4,2023.0,1,1,1,grain mandate,True,True,True,True,below 30%
+CUB,Cuba,Latin America and the Caribbean,22.2,2023.0,3,3,1,grain mandate,True,True,True,True,below 30%
+SUR,Suriname,Latin America and the Caribbean,22.2,2023.0,3,3,2,no grain mandate,False,False,True,True,below 30%
+TTO,Trinidad and Tobago,Latin America and the Caribbean,22.1,2023.0,3,3,1,grain mandate,True,False,True,True,below 30%
+BLR,Belarus,Europe and Northern America,22.1,2023.0,3,3,3,status unknown,False,False,False,False,below 30%
+FSM,Micronesia (Federated States of),Oceania,22.1,2023.0,3,3,3,status unknown,False,False,False,False,below 30%
+DMA,Dominica,Latin America and the Caribbean,22.0,2023.0,3,3,2,no grain mandate,False,False,True,True,below 30%
+WSM,Samoa,Oceania,21.9,2023.0,3,2,1,grain mandate,True,True,True,True,below 30%
+MKD,North Macedonia,Europe and Northern America,21.5,2023.0,3,3,3,status unknown,False,False,False,False,below 30%
+JAM,Jamaica,Latin America and the Caribbean,21.5,2023.0,3,3,2,no grain mandate,False,False,True,True,below 30%
+LVA,Latvia,Europe and Northern America,21.4,2023.0,3,3,3,status unknown,False,False,False,False,below 30%
+BLZ,Belize,Latin America and the Caribbean,21.3,2023.0,3,2,1,grain mandate,True,True,True,True,below 30%
+BRA,Brazil,Latin America and the Caribbean,21.3,2023.0,1,3,1,grain mandate,True,True,True,True,below 30%
+PER,Peru,Latin America and the Caribbean,21.0,2023.0,3,1,1,grain mandate,True,True,True,True,below 30%
+GRD,Grenada,Latin America and the Caribbean,20.9,2023.0,3,3,1,grain mandate,True,False,True,True,below 30%
+LKA,Sri Lanka,Central and Southern Asia,20.9,2023.0,3,3,1,grain mandate,True,True,True,True,below 30%
+TON,Tonga,Oceania,20.7,2023.0,3,3,3,status unknown,False,False,False,False,below 30%
+THA,Thailand,Eastern and South-Eastern Asia,20.7,2023.0,3,3,3,status unknown,False,False,False,False,below 30%
+VNM,Viet Nam,Eastern and South-Eastern Asia,20.5,2023.0,3,3,1,grain mandate,True,True,True,True,below 30%
+ATG,Antigua and Barbuda,Latin America and the Caribbean,20.3,2023.0,3,3,2,no grain mandate,False,False,True,True,below 30%
+ECU,Ecuador,Latin America and the Caribbean,20.2,2023.0,3,3,1,grain mandate,True,True,True,True,below 30%
+BRB,Barbados,Latin America and the Caribbean,20.1,2023.0,3,3,2,no grain mandate,False,False,True,True,below 30%
+LCA,Saint Lucia,Latin America and the Caribbean,19.9,2023.0,3,3,1,grain mandate,True,False,True,True,below 30%
+UKR,Ukraine,Europe and Northern America,19.4,2023.0,3,3,3,status unknown,False,False,False,False,below 30%
+KNA,Saint Kitts and Nevis,Latin America and the Caribbean,19.4,2023.0,3,3,2,no grain mandate,False,False,True,True,below 30%
+MNG,Mongolia,Eastern and South-Eastern Asia,19.1,2023.0,3,3,1,grain mandate,True,True,True,True,below 30%
+BHS,Bahamas,Latin America and the Caribbean,18.8,2023.0,3,3,2,no grain mandate,False,False,True,True,below 30%
+HND,Honduras,Latin America and the Caribbean,18.8,2023.0,3,3,1,grain mandate,True,True,True,True,below 30%
+VCT,Saint Vincent and the Grenadines,Latin America and the Caribbean,18.8,2023.0,3,3,3,status unknown,False,False,True,True,below 30%
+ARM,Armenia,Northern Africa and Western Asia,18.7,2023.0,3,3,3,status unknown,False,False,False,False,below 30%
+JPN,Japan,Eastern and South-Eastern Asia,18.7,2023.0,3,3,3,status unknown,False,False,False,False,below 30%
+BRN,Brunei Darussalam,Eastern and South-Eastern Asia,18.3,2023.0,3,3,3,status unknown,False,False,False,False,below 30%
+SAU,Saudi Arabia,Northern Africa and Western Asia,17.6,2023.0,3,3,2,no grain mandate,False,True,True,True,below 30%
+DNK,Denmark,Europe and Northern America,17.0,2023.0,3,3,3,status unknown,False,False,False,False,below 30%
+SWE,Sweden,Europe and Northern America,16.8,2023.0,3,3,3,status unknown,False,False,False,False,below 30%
+AUT,Austria,Europe and Northern America,16.7,2023.0,3,3,3,status unknown,False,False,False,False,below 30%
+SGP,Singapore,Eastern and South-Eastern Asia,16.6,2023.0,3,3,3,status unknown,False,False,False,False,below 30%
+CHE,Switzerland,Europe and Northern America,16.6,2023.0,3,3,3,status unknown,False,False,False,False,below 30%
+NLD,Netherlands (Kingdom of the),Europe and Northern America,16.5,2023.0,3,3,3,status unknown,False,False,False,False,below 30%
+ITA,Italy,Europe and Northern America,16.4,2023.0,3,3,3,status unknown,False,False,False,False,below 30%
+AND,Andorra,Europe and Northern America,16.4,2023.0,3,3,3,status unknown,False,False,False,False,below 30%
+CYP,Cyprus,Northern Africa and Western Asia,16.4,2023.0,2,2,2,no grain mandate,False,False,False,False,below 30%
+NOR,Norway,Europe and Northern America,16.3,2023.0,3,3,3,status unknown,False,False,False,False,below 30%
+RWA,Rwanda,Sub-Saharan Africa,16.1,2023.0,1,2,1,grain mandate,True,True,True,True,below 30%
+MLT,Malta,Europe and Northern America,15.7,2023.0,3,3,3,status unknown,False,False,False,False,below 30%
+CHL,Chile,Latin America and the Caribbean,15.7,2023.0,3,3,1,grain mandate,True,True,True,True,below 30%
+KOR,Republic of Korea,Eastern and South-Eastern Asia,15.7,2023.0,3,3,3,status unknown,False,False,False,False,below 30%
+ESP,Spain,Europe and Northern America,15.6,2023.0,3,3,3,status unknown,False,False,False,False,below 30%
+CHN,China,Eastern and South-Eastern Asia,15.6,2023.0,3,3,2,no grain mandate,False,True,True,True,below 30%
+GRC,Greece,Europe and Northern America,15.6,2023.0,3,3,3,status unknown,False,False,False,False,below 30%
+LUX,Luxembourg,Europe and Northern America,15.4,2023.0,3,3,3,status unknown,False,False,False,False,below 30%
+PRT,Portugal,Europe and Northern America,15.0,2023.0,3,3,3,status unknown,False,False,False,False,below 30%
+USA,United States of America,Europe and Northern America,15.0,2023.0,1,1,1,grain mandate,True,True,True,True,below 30%
+BEL,Belgium,Europe and Northern America,15.0,2023.0,3,3,3,status unknown,False,False,False,False,below 30%
+ISL,Iceland,Europe and Northern America,14.7,2023.0,3,3,3,status unknown,False,False,False,False,below 30%
+ISR,Israel,Northern Africa and Western Asia,14.6,2023.0,3,3,3,status unknown,False,False,False,False,below 30%
+SLV,El Salvador,Latin America and the Caribbean,14.4,2023.0,1,3,1,grain mandate,True,True,True,True,below 30%
+CAN,Canada,Europe and Northern America,14.0,2023.0,3,2,1,grain mandate,True,True,True,True,below 30%
+IRL,Ireland,Europe and Northern America,14.0,2023.0,3,3,3,status unknown,False,False,False,False,below 30%
+DEU,Germany,Europe and Northern America,14.0,2023.0,3,3,3,status unknown,False,False,False,False,below 30%
+CRI,Costa Rica,Latin America and the Caribbean,13.7,2023.0,1,1,1,grain mandate,True,True,True,True,below 30%
+GBR,United Kingdom of Great Britain and Northern Ireland,Europe and Northern America,13.6,2023.0,3,3,1,grain mandate,True,True,True,True,below 30%
+FIN,Finland,Europe and Northern America,13.6,2023.0,3,3,3,status unknown,False,False,False,False,below 30%
+MEX,Mexico,Latin America and the Caribbean,13.2,2023.0,1,3,1,grain mandate,True,True,True,True,below 30%
+FRA,France,Europe and Northern America,13.1,2023.0,3,3,3,status unknown,False,False,False,False,below 30%
+NZL,New Zealand,Oceania,12.4,2023.0,3,3,1,grain mandate,True,True,False,True,below 30%
+PHL,Philippines,Eastern and South-Eastern Asia,12.0,2023.0,3,1,1,grain mandate,True,False,True,True,below 30%
+AUS,Australia,Oceania,11.1,2023.0,3,3,1,grain mandate,True,True,False,True,below 30%
+GTM,Guatemala,Latin America and the Caribbean,10.5,2023.0,1,3,1,grain mandate,True,True,True,True,below 30%
+VGB,British Virgin Islands,Latin America and the Caribbean,,,,,,status unknown,False,False,False,False,no data
+NIC,Nicaragua,Latin America and the Caribbean,,,3,1,1,grain mandate,True,True,True,True,no data
+RKS,Kosovo (UNSCR 1244),Europe and Northern America,,,3,3,1,grain mandate,True,True,True,True,no data
+MSR,Montserrat,Latin America and the Caribbean,,,,,,status unknown,False,False,False,False,no data
+AIA,Anguilla,Latin America and the Caribbean,,,,,,status unknown,False,False,False,False,no data
+TCA,Turks and Caicos Islands,Latin America and the Caribbean,,,,,,status unknown,False,False,False,False,no data
+MCO,Monaco,Europe and Northern America,,,3,3,3,status unknown,False,False,False,False,no data
+SMR,San Marino,Europe and Northern America,,,3,3,3,status unknown,False,False,False,False,no data

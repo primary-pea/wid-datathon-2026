@@ -1,0 +1,70 @@
+{
+  "file": "wb_context_ssa.csv",
+  "source": "World Bank WDI via api.worldbank.org/v2 (json, per_page=20000, date=2000:2025), pulled by inputs/pull_wb_context.py",
+  "retrieved_at_utc": "2026-09-13T03:38:53+00:00",
+  "filter": "49 SSA iso3 from config.SSA_ISO3; null values dropped; one column per indicator",
+  "indicators": {
+    "SH.MLR.INCD.P3": {
+      "column": "malaria_incidence_per1000",
+      "label": "Incidence of malaria (per 1,000 population at risk)",
+      "rows": 1150,
+      "source_lastupdated": "2026-07-13"
+    },
+    "SP.DYN.TFRT.IN": {
+      "column": "fertility_rate",
+      "label": "Fertility rate, total (births per woman)",
+      "rows": 1225,
+      "source_lastupdated": "2026-07-13"
+    },
+    "SP.URB.TOTL.IN.ZS": {
+      "column": "urban_pct",
+      "label": "Urban population (% of total population)",
+      "rows": 1274,
+      "source_lastupdated": "2026-07-13"
+    },
+    "SL.EMP.TOTL.SP.ZS": {
+      "column": "employment_pop_pct",
+      "label": "Employment to population ratio, 15+, total (%) (modeled ILO estimate)",
+      "rows": 1243,
+      "source_lastupdated": "2026-07-13"
+    },
+    "SH.DYN.AIDS.ZS": {
+      "column": "hiv_prev_pct",
+      "label": "Prevalence of HIV, total (% of population ages 15-49)",
+      "rows": 1125,
+      "source_lastupdated": "2026-07-13"
+    },
+    "SH.XPD.CHEX.PC.CD": {
+      "column": "health_exp_pc_usd",
+      "label": "Current health expenditure per capita (current US$)",
+      "rows": 1136,
+      "source_lastupdated": "2026-07-13"
+    },
+    "SH.STA.BASS.ZS": {
+      "column": "sanitation_basic_pct",
+      "label": "People using at least basic sanitation services (% of population)",
+      "rows": 1193,
+      "source_lastupdated": "2026-07-13"
+    },
+    "SH.STA.ODFC.ZS": {
+      "column": "open_defecation_pct",
+      "label": "People practicing open defecation (% of population)",
+      "rows": 1193,
+      "source_lastupdated": "2026-07-13"
+    }
+  },
+  "rows": 1274,
+  "columns": [
+    "iso3",
+    "year",
+    "malaria_incidence_per1000",
+    "fertility_rate",
+    "urban_pct",
+    "employment_pop_pct",
+    "hiv_prev_pct",
+    "health_exp_pc_usd",
+    "sanitation_basic_pct",
+    "open_defecation_pct"
+  ],
+  "sha256": "099fdebfe472146810940f42ed73fe4d1143c133555f5959be6bb210c9019b08"
+}

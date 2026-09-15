@@ -1,0 +1,74 @@
+{
+  "run_at": "2026-09-15T18:12:24+00:00",
+  "config_version": "2026-09-13a",
+  "panel_sha256": "afe63e46c26b0403f170c655d164485dd03a1473cb4dd4783fc6cba7043550c2",
+  "data_version": "afe63e46c26b",
+  "sample": {
+    "rows": 994,
+    "countries": 49,
+    "years": [
+      2003,
+      2023
+    ]
+  },
+  "rmse": {
+    "naive_flat": {
+      "rmse": 2.495370996460246,
+      "mae": 1.9644568710967105,
+      "r2_dev": 0.0,
+      "n": 994
+    },
+    "M0_year_effects": {
+      "rmse": 1.9132133072728748,
+      "mae": 1.3531150310242808,
+      "r2_dev": 0.41216351214834746,
+      "n": 994
+    },
+    "M1_income": {
+      "rmse": 1.9215965999430173,
+      "mae": 1.3500507803459756,
+      "r2_dev": 0.40700067741871426,
+      "n": 994
+    },
+    "M2_income_policy": {
+      "rmse": 1.93439642714577,
+      "mae": 1.379799252041095,
+      "r2_dev": 0.3990743848135341,
+      "n": 994
+    },
+    "M2t_income_team_composite": {
+      "rmse": 1.9190254439919983,
+      "mae": 1.3913094935754768,
+      "r2_dev": 0.40858651878984864,
+      "n": 994
+    },
+    "M3_income_all_exposures": {
+      "rmse": 1.9303896560065987,
+      "mae": 1.4264524439382036,
+      "r2_dev": 0.4015612357348466,
+      "n": 994
+    }
+  },
+  "m2_vs_m1_rmse_change_pct": 0.6661037599219544,
+  "m2_calibration_r": 0.6330537654243678,
+  "countries_where_policy_helps": 22,
+  "countries_total": 49,
+  "countries_where_policy_helps_binomial_p": 0.5681724128491652,
+  "m2_vs_m1_rmse_diff_pp": 0.012799827202752745,
+  "m2_vs_m1_rmse_diff_boot95": [
+    -0.030160014015687714,
+    0.060792091648820074
+  ],
+  "context_ladder": {
+    "sample": {
+      "rows": 931,
+      "countries": 46
+    },
+    "rmse": {
+      "C1_income": 1.697784517407883,
+      "C2_income_context": 1.6992086675785287,
+      "C3_income_context_policy": 1.7152892718305994
+    }
+  },
+  "method": "within-country deviations from own mean; year effects transferred from the training set; common estimation sample"
+}

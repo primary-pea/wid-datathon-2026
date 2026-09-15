@@ -1,0 +1,24 @@
+{
+  "file": "gfdx_fortification_gaps.csv",
+  "source": "GFDx (Global Fortification Data Exchange) snapshot via the atlas run (scripts/11_gfdx_tidy.py \u2192 derived/fortification_gaps.parquet)",
+  "source_sha256": "028714a2ee1cc5e8b68d52a2b458a14c3d8c221de1528c37d4baaf2f48d40fca",
+  "rows": 200,
+  "columns": [
+    "iso3",
+    "name",
+    "sdg_region",
+    "anaemia",
+    "anaemia_year",
+    "maize_flour_code",
+    "rice_code",
+    "wheat_flour_code",
+    "mandate_class",
+    "wheat_mandate",
+    "folic_in_wheat_standard",
+    "iron_in_wheat_standard",
+    "wheat_standard_documented",
+    "anaemia_tier"
+  ],
+  "extracted_at_utc": "2026-09-09T17:41:38+00:00",
+  "sha256": "0059354d4c1e0ad11e8a73d1a2e15177590326ffb5d5ae722cebfb3696a8984a"
+}

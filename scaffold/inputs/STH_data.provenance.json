@@ -1,0 +1,36 @@
+{
+  "file": "STH_data.xlsx",
+  "source": "WHO PCT databank, soil-transmitted helminthiases (annual country reports to WHO; data from 2003, methodology revised 2009; page states last update 20 November 2025)",
+  "url_page": "https://www.who.int/teams/control-of-neglected-tropical-diseases/data-platforms/pct-databank/soil-transmitted-helminthiases",
+  "downloaded_by": "Saarah, 2026-09-12 23:56 local (file placed in the shared repo inputs folder, copied to scaffold/inputs/)",
+  "sheet": "STH_DATA",
+  "columns": [
+    "region",
+    "country",
+    "year",
+    "Population requiring PC for STH, Pre-SAC",
+    "Number of Pre-SAC targeted",
+    "Reported number of Pre-SAC treated",
+    "Drug combination, Pre-SAC",
+    "Programme coverage, Pre-SAC (%)",
+    "National coverage, Pre-SAC (%)",
+    "Population requiring PC for STH, SAC",
+    "Number of SAC targeted",
+    "Reported number of SAC treated",
+    "Drug combination, SAC",
+    "Programme coverage, SAC (%)",
+    "National coverage, SAC (%)",
+    "country_code"
+  ],
+  "rows": 3256,
+  "rows_in_ssa": 1484,
+  "bytes": 368761,
+  "sha256": "3236665f428e8ab07be41bcdce9bce5a0dda9a280a146d0bc63c78a40cd17b6c",
+  "used_columns": {
+    "coverage": "National coverage, SAC (%)",
+    "requirement": "Population requiring PC for STH, SAC",
+    "iso3": "country_code (upper-cased)"
+  },
+  "reading_rule": "national coverage of preventive chemotherapy among school-age children, %; NaN in a year with a positive population requiring PC is read as 0 (no treatment reported); years with no requirement stay NaN",
+  "registered_at_utc": "2026-09-13T04:03:04+00:00"
+}

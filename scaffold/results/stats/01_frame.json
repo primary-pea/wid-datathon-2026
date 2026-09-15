@@ -1,0 +1,145 @@
+{
+  "run_at": "2026-09-15T18:11:04+00:00",
+  "config_version": "2026-09-13a",
+  "panel_sha256": "afe63e46c26b0403f170c655d164485dd03a1473cb4dd4783fc6cba7043550c2",
+  "data_version": "afe63e46c26b",
+  "panel_rows": 1274,
+  "frame_rows": 1274,
+  "window": [
+    2000,
+    2023
+  ],
+  "estimation_sample": {
+    "rows": 994,
+    "countries": 49,
+    "years": [
+      2003,
+      2023
+    ],
+    "outcome": "out_anaemia_wra_fs_pct",
+    "policy_main": "feat_gd_stock_anaemia_policies_lag3",
+    "income": "log_gdp_pc_constant"
+  },
+  "identified_from_countries": 44,
+  "constant_within_country": [
+    "CAF",
+    "ERI",
+    "GNQ",
+    "SSD",
+    "SYC"
+  ],
+  "outcome_sd_within": 2.49662716114915,
+  "outcome_sd_overall": 11.23936578512585,
+  "outcome_mean": 38.5407444668008,
+  "policy_main_sd": 2.1162221187991763,
+  "policy_main_mean": 1.8903420523138832,
+  "policy_main_sd_within": 1.6561431278819485,
+  "policy_unit": "active anaemia-cluster policy",
+  "gifna_nan_filled_zero": [
+    "feat_gifna_policy_count_active",
+    "feat_gifna_programme_count_active",
+    "feat_gifna_mechanism_count_active"
+  ],
+  "income_alt_sample_rows": 1004,
+  "corr_lag3_exposures": {
+    "feat_gd_stock_anaemia_policies_lag3": {
+      "feat_gd_stock_anaemia_policies_lag3": 1.0,
+      "feat_gd_logstock_anaemia_policies_lag3": 0.95,
+      "feat_gifna_anemia_programming_intensity_lag3": 0.88,
+      "feat_gd_stock_anaemia_lag3": 0.87,
+      "feat_gd_logstock_anaemia_lag3": 0.88,
+      "feat_gd_any_anaemia_policies_lag3": 0.61,
+      "feat_gd_any_fortification_lag3": 0.32,
+      "feat_gifna_policy_count_active_lag3": 0.85
+    },
+    "feat_gd_logstock_anaemia_policies_lag3": {
+      "feat_gd_stock_anaemia_policies_lag3": 0.95,
+      "feat_gd_logstock_anaemia_policies_lag3": 1.0,
+      "feat_gifna_anemia_programming_intensity_lag3": 0.86,
+      "feat_gd_stock_anaemia_lag3": 0.84,
+      "feat_gd_logstock_anaemia_lag3": 0.92,
+      "feat_gd_any_anaemia_policies_lag3": 0.77,
+      "feat_gd_any_fortification_lag3": 0.39,
+      "feat_gifna_policy_count_active_lag3": 0.81
+    },
+    "feat_gifna_anemia_programming_intensity_lag3": {
+      "feat_gd_stock_anaemia_policies_lag3": 0.88,
+      "feat_gd_logstock_anaemia_policies_lag3": 0.86,
+      "feat_gifna_anemia_programming_intensity_lag3": 1.0,
+      "feat_gd_stock_anaemia_lag3": 0.82,
+      "feat_gd_logstock_anaemia_lag3": 0.84,
+      "feat_gd_any_anaemia_policies_lag3": 0.61,
+      "feat_gd_any_fortification_lag3": 0.4,
+      "feat_gifna_policy_count_active_lag3": 0.87
+    },
+    "feat_gd_stock_anaemia_lag3": {
+      "feat_gd_stock_anaemia_policies_lag3": 0.87,
+      "feat_gd_logstock_anaemia_policies_lag3": 0.84,
+      "feat_gifna_anemia_programming_intensity_lag3": 0.82,
+      "feat_gd_stock_anaemia_lag3": 1.0,
+      "feat_gd_logstock_anaemia_lag3": 0.94,
+      "feat_gd_any_anaemia_policies_lag3": 0.56,
+      "feat_gd_any_fortification_lag3": 0.31,
+      "feat_gifna_policy_count_active_lag3": 0.78
+    },
+    "feat_gd_logstock_anaemia_lag3": {
+      "feat_gd_stock_anaemia_policies_lag3": 0.88,
+      "feat_gd_logstock_anaemia_policies_lag3": 0.92,
+      "feat_gifna_anemia_programming_intensity_lag3": 0.84,
+      "feat_gd_stock_anaemia_lag3": 0.94,
+      "feat_gd_logstock_anaemia_lag3": 1.0,
+      "feat_gd_any_anaemia_policies_lag3": 0.74,
+      "feat_gd_any_fortification_lag3": 0.41,
+      "feat_gifna_policy_count_active_lag3": 0.77
+    },
+    "feat_gd_any_anaemia_policies_lag3": {
+      "feat_gd_stock_anaemia_policies_lag3": 0.61,
+      "feat_gd_logstock_anaemia_policies_lag3": 0.77,
+      "feat_gifna_anemia_programming_intensity_lag3": 0.61,
+      "feat_gd_stock_anaemia_lag3": 0.56,
+      "feat_gd_logstock_anaemia_lag3": 0.74,
+      "feat_gd_any_anaemia_policies_lag3": 1.0,
+      "feat_gd_any_fortification_lag3": 0.46,
+      "feat_gifna_policy_count_active_lag3": 0.52
+    },
+    "feat_gd_any_fortification_lag3": {
+      "feat_gd_stock_anaemia_policies_lag3": 0.32,
+      "feat_gd_logstock_anaemia_policies_lag3": 0.39,
+      "feat_gifna_anemia_programming_intensity_lag3": 0.4,
+      "feat_gd_stock_anaemia_lag3": 0.31,
+      "feat_gd_logstock_anaemia_lag3": 0.41,
+      "feat_gd_any_anaemia_policies_lag3": 0.46,
+      "feat_gd_any_fortification_lag3": 1.0,
+      "feat_gifna_policy_count_active_lag3": 0.39
+    },
+    "feat_gifna_policy_count_active_lag3": {
+      "feat_gd_stock_anaemia_policies_lag3": 0.85,
+      "feat_gd_logstock_anaemia_policies_lag3": 0.81,
+      "feat_gifna_anemia_programming_intensity_lag3": 0.87,
+      "feat_gd_stock_anaemia_lag3": 0.78,
+      "feat_gd_logstock_anaemia_lag3": 0.77,
+      "feat_gd_any_anaemia_policies_lag3": 0.52,
+      "feat_gd_any_fortification_lag3": 0.39,
+      "feat_gifna_policy_count_active_lag3": 1.0
+    }
+  },
+  "max_abs_corr_between_exposures": 0.95,
+  "context_coverage": {
+    "feat_malaria_incidence_per1000": 1104,
+    "feat_fertility_rate": 1176,
+    "feat_urban_pct": 1176,
+    "feat_hiv_prev_pct": 1080,
+    "feat_sanitation_basic_pct": 1149,
+    "feat_unemployment_pct": 1151,
+    "feat_employment_pop_pct": 1151
+  },
+  "women_index_components": [
+    "out_anaemia_wra_fs_pct",
+    "out_anaemia_pregnant_pct",
+    "out_women_underweight_pct",
+    "out_women_overweight_pct"
+  ],
+  "women_index_rows_in_window": 1127,
+  "survey_anchor_country_years_in_window": 83,
+  "survey_anchor_countries": 33
+}

@@ -1,0 +1,23 @@
+{
+  "source": "Nunn & Puga (2012) terrain ruggedness dataset, https://diegopuga.org/data/rugged/",
+  "url": "https://diegopuga.org/data/rugged/rugged_data.zip",
+  "file_in_zip": "rugged_data.csv",
+  "retrieved_at_utc": "2026-09-13T01:48:10+00:00",
+  "rows": 48,
+  "columns": [
+    "isocode",
+    "country",
+    "rugged",
+    "rugged_popw",
+    "land_area",
+    "lat",
+    "lon",
+    "soil",
+    "desert",
+    "tropical",
+    "dist_coast",
+    "near_coast",
+    "cont_africa"
+  ],
+  "sha256": "c038331700c285f0eeaa2f7271beab9e5b601accd5d5d904810ac193b22e9ead"
+}

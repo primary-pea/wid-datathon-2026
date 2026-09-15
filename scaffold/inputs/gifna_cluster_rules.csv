@@ -1,0 +1,48 @@
+cluster,pattern,note
+anaemia,"an(a)?emi",anaemia / anemia / anaemic in any token
+anaemia,"\biron\b",iron supplementation and iron fortificant tokens
+anaemia,"folic|folate",folic acid / folate
+anaemia,"multiple micronutrient",MMS and MNP replace iron-folic acid in WHO guidance
+anaemia,"micronutrient powder",point-of-use fortification (contains iron)
+anaemia,"lipid-based nutrient",LNS contains iron
+fortification,"fortif",any fortification token (mandatory / voluntary / bio- / aligned with WHO guidance)
+fortification,"iodi[sz]",salt iodization / iodisation
+fortification,"food grade salt",salt vehicle token
+fortification,"^(wheat|maize) flours?$",flour vehicle tokens (policies)
+fortification,"edible oils and margarine|margarine/butter",oil and margarine vehicle tokens
+fortification,"food vehicles",fortification attribute token
+micronutrient,"vitamin",vitamin A / D / B12 / B-vitamins / vitamin and mineral nutrition
+micronutrient,"\biodine\b",iodine and iodine deficiency disorders
+micronutrient,"\bzinc\b|\bcalcium\b|b[- ]?vitamins|cobalamin|niacin|riboflavin|thiamin|pyridoxine",other micronutrients (including flour fortificants)
+micronutrient,"micronutrient supplementation",generic micronutrient supplementation
+micronutrient,"\bmineral\b",vitamin and mineral nutrition
+maternal,"pregnan",pregnant women / pregnancy
+maternal,"lactating",lactating women
+maternal,"reproductive age|\bWRA\b",women of reproductive age
+maternal,"(?<!men and )women",women tokens except the general-population token "Adult men and women"
+maternal,"adolescent girls|\bfemales\b|mothers",girls / females / mothers
+maternal,"maternity protection|breastfeeding breaks|maternal",maternity protection and MIYCN
+maternal,"family planning|birth spacing",birth spacing
+iycf,"breastfe|breast-milk|breast milk|\bBMS\b",breastfeeding and the Code of Marketing
+iycf,"baby-friendly|BFHI",Baby-friendly Hospital Initiative
+iycf,"complementary f",complementary feeding / foods
+iycf,"infant|young child|newborn",infants / young children / newborns
+iycf,"low birth weight|\bLBW\b",low-birthweight infants
+iycf,"cord clamping|minimum acceptable diet|designated product|code of marketing|promotion to (the general public|health workers)|prohibition of",other IYCF and Code-implementation attributes
+wasting_stunting,"acute malnutrition|\bSAM\b|\bMAM\b|wasting|stunt|moderate malnutrition",acute malnutrition and stunting
+wasting_stunting,"underweight in children|growth monitoring|children'?s growth",child growth
+infection,"\bHIV|\bTB\b|tuberculosis|malaria|deworm|infectious disease|bednet",infections and nutrition
+infection,"diarrh|\bORS\b|oral rehydration|vaccin",diarrhoea / ORS / vaccination
+infection,"hygien|handwash|sanitation|safe water|water and sanitation",WASH
+food_security,"food security|agricultur|nutrition[- ]sensitive",food security and agriculture
+food_security,"school (meal|feeding|lunch|milk|fruit)|home grown",school feeding
+food_security,"garden",home / school / community gardens
+food_security,"cash transfer|social (protection|security)|subsidies on healthy",social protection
+food_security,"right to food|food sovereignty|local (products|sources)|procure|vulnerable groups|crop|food diversification|food distribution",food access
+ncd_diet,"obes|overweight|\bNCDs?\b|diet-related|healthy diets?|healthy lifestyle|physical activity",obesity / NCDs / healthy diets
+ncd_diet,"salt reduction|salt/sodium|sodium|salt intake|sugar intake|sugars|refined sugar|trans fat|fat intake|saturated|^fats?$|fats and oils",nutrients of concern (not fortification vehicles)
+ncd_diet,"\btax|excise|price polic",fiscal measures
+ncd_diet,"food labelling|labelling of food|menu labelling|front-of-pack|nutrient declaration|health claim|ingredients list|specific nutrition criteria",labelling
+ncd_diet,"marketing of (unhealthy|food)|healthy food environment|reformulation|vending|beverages|snacks|dietary guideline|FBDG|dietary practice|fruit and vegetable|media campaigns|media promotion|blood pressure|blood glucose|cholesterol|diabetes|food safety|sugar reduction|fiscal polic|front of pack|soft drinks|\(standards\)","diet environment, school food standards and risk factors"
+schools_education,"school|curriculum|nutrition education|extracurricular|health promoting|NFSI|women's education|training",schools and nutrition education
+governance,"monitoring mechanism|monitoring of the code|capacity building|sanctions|implementation and monitoring|coordination|monitoring compliance|dissemination of",monitoring / coordination / sanctions (every mechanism record is governance by construction)

@@ -1,0 +1,8 @@
+{
+  "source": "DHS Program API, indicator AN_ANEM_W_ANY (any anaemia, women 15-49), national breakdown, all surveys",
+  "url": "https://api.dhsprogram.com/rest/dhs/data?indicatorIds=AN_ANEM_W_ANY&breakdown=national&perpage=5000&f=json",
+  "retrieved_at_utc": "2026-09-13T01:46:33+00:00",
+  "rows": 139,
+  "note": "DHS country codes are not ISO3; map via country_name to config.COUNTRY_CODES_CSV at assembly",
+  "sha256": "b2ac5908033d685d4360cfb4fa09e8be20656568d0093b7b031892f2a698a921"
+}

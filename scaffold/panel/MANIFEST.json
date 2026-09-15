@@ -1,0 +1,176 @@
+{
+  "built_at": "2026-09-15T18:11:04+00:00",
+  "config_version": "2026-09-13a",
+  "data_version": "afe63e46c26b",
+  "panel": {
+    "path": "ssa_panel.csv",
+    "sha256": "afe63e46c26b0403f170c655d164485dd03a1473cb4dd4783fc6cba7043550c2",
+    "rows": 1274,
+    "columns": 174,
+    "bytes": 1154704
+  },
+  "inputs": {
+    "gifna/gifna_feature_table.csv": {
+      "sha256": "a0c66b369c4148c8f547eb0938db8d1d77089ba234b865290e84a528d7cd95f7",
+      "bytes": 452181,
+      "mtime": "2026-09-15T17:48:33+00:00"
+    },
+    "gifna/gifna_mechanisms.csv": {
+      "sha256": "cae0a83a54c24499e2fbd49f97cec2674b7ec27b27380a4c6cabeec7f93c3024",
+      "bytes": 120982,
+      "mtime": "2026-09-15T17:48:33+00:00"
+    },
+    "gifna/gifna_policies.csv": {
+      "sha256": "c1600d6d9af34514ab2ed778137aac6d33eae7965ee70f9f1bdbac5e9bccfb52",
+      "bytes": 3863633,
+      "mtime": "2026-09-15T17:48:33+00:00"
+    },
+    "gifna/gifna_programmes_and_actions.csv": {
+      "sha256": "bb6a1af9b17f918143d5508846b754e076480f075b82a6cb0e9fa6172f6ee728",
+      "bytes": 5047349,
+      "mtime": "2026-09-15T17:48:33+00:00"
+    },
+    "scaffold/inputs/STH_data.provenance.json": {
+      "sha256": "9d8f1aef3df03841d0e70828ece3aa8c7108279e48222c5706cc18b04e609259",
+      "bytes": 1609,
+      "mtime": "2026-09-13T04:03:04+00:00"
+    },
+    "scaffold/inputs/STH_data.xlsx": {
+      "sha256": "3236665f428e8ab07be41bcdce9bce5a0dda9a280a146d0bc63c78a40cd17b6c",
+      "bytes": 368761,
+      "mtime": "2026-09-13T04:01:22+00:00"
+    },
+    "scaffold/inputs/country_codes_ssa.csv": {
+      "sha256": "d3063e10e30bec5eec5eb215075a1c4cd11126ba7900e9f449fbdedef5df5d76",
+      "bytes": 2295,
+      "mtime": "2026-09-09T14:11:51+00:00"
+    },
+    "scaffold/inputs/dhs_anaemia_women_surveys.csv": {
+      "sha256": "b2ac5908033d685d4360cfb4fa09e8be20656568d0093b7b031892f2a698a921",
+      "bytes": 5017,
+      "mtime": "2026-09-13T01:46:33+00:00"
+    },
+    "scaffold/inputs/dhs_anaemia_women_surveys.provenance.json": {
+      "sha256": "bc9dbe03aed64058a43ca9d6ae37836c89ff443338476914852d9c516b42e4c5",
+      "bytes": 489,
+      "mtime": "2026-09-13T01:46:33+00:00"
+    },
+    "scaffold/inputs/faostat/data_CAHD_full_release_7S2026.parquet": {
+      "sha256": "c156fdcf2344170dbde86da38524f5321814cfed686d7e1a04fabe06ba3bc001",
+      "bytes": 37345,
+      "mtime": "2026-09-09T17:41:38+00:00"
+    },
+    "scaffold/inputs/faostat/data_FS_item21025_stunting_u5_pct.parquet": {
+      "sha256": "2bff8fc32dd87074a599d574559f06be6ebdcedaef018337b369c568bbf9058c",
+      "bytes": 20060,
+      "mtime": "2026-09-09T17:41:38+00:00"
+    },
+    "scaffold/inputs/faostat/data_FS_item21026_wasting_u5_pct.parquet": {
+      "sha256": "0e71fb20b71445c5c5efe460fe6867ada7d18b3d55b7732551d01ae13b3f99c6",
+      "bytes": 15484,
+      "mtime": "2026-09-09T17:41:38+00:00"
+    },
+    "scaffold/inputs/faostat/data_FS_item21041_overweight_u5_pct.parquet": {
+      "sha256": "05708484e78d6ae7e7d5319b5b090eebb1c552ae280816c25991edc4c33f43cd",
+      "bytes": 17015,
+      "mtime": "2026-09-09T17:41:38+00:00"
+    },
+    "scaffold/inputs/faostat/data_FS_item21043_anaemia_women_15_49_pct.parquet": {
+      "sha256": "441439a35358590b26bcff84e31862ab91af1a0c6e854f4faa8ad84235777462",
+      "bytes": 20358,
+      "mtime": "2026-09-09T17:41:38+00:00"
+    },
+    "scaffold/inputs/faostat/data_FS_item21044_exclusive_breastfeeding_pct.parquet": {
+      "sha256": "108dce3f5b663bbaf51882dfeaadc27d8d5ca54f41f77ad222eb42799c403dcc",
+      "bytes": 14702,
+      "mtime": "2026-09-09T17:41:38+00:00"
+    },
+    "scaffold/inputs/faostat/data_FS_item21049_low_birthweight_pct.parquet": {
+      "sha256": "e0856ce71c0e1527f3e99ce7ffd3e3fa6d69e7c91e185e0383adf924aecc99b6",
+      "bytes": 15414,
+      "mtime": "2026-09-09T17:41:38+00:00"
+    },
+    "scaffold/inputs/gfdx_legislation_years_ssa.csv": {
+      "sha256": "31d9b77b1acffc51e3275406a82826d1c10c9152cbb5aea5b5f90261168311ac",
+      "bytes": 8771,
+      "mtime": "2026-09-13T01:48:06+00:00"
+    },
+    "scaffold/inputs/gfdx_legislation_years_ssa.provenance.json": {
+      "sha256": "709965196d0ee3b3cff366f6a1eadeac882cf257cf422512fd63878370f98650",
+      "bytes": 719,
+      "mtime": "2026-09-13T01:48:06+00:00"
+    },
+    "scaffold/inputs/gifna_cluster_rules.csv": {
+      "sha256": "350b2777ef09ba04fa27ff3a92ad6a956e24682a5bed14eaa42a30977b0cfe1f",
+      "bytes": 4572,
+      "mtime": "2026-09-11T12:59:43+00:00"
+    },
+    "scaffold/inputs/igme_2025_ssa_national.csv": {
+      "sha256": "91c86688e15524a2453179fad695dba3cc1d44203e5213b137d4019cbcf41786",
+      "bytes": 307555,
+      "mtime": "2026-09-09T17:41:38+00:00"
+    },
+    "scaffold/inputs/nunn_puga_ruggedness_ssa.csv": {
+      "sha256": "c038331700c285f0eeaa2f7271beab9e5b601accd5d5d904810ac193b22e9ead",
+      "bytes": 3920,
+      "mtime": "2026-09-13T01:48:10+00:00"
+    },
+    "scaffold/inputs/nunn_puga_ruggedness_ssa.provenance.json": {
+      "sha256": "a97e7975391aa1ca204acea16680893c9cc035c343a59fc167cb2eb41d6eede3",
+      "bytes": 560,
+      "mtime": "2026-09-13T01:48:10+00:00"
+    },
+    "scaffold/inputs/ssa_fies_3yr_average.csv": {
+      "sha256": "700fbc2670513fc35d1e672707738bf3d8d66cfeed03c159ebda4a7eda907156",
+      "bytes": 18830,
+      "mtime": "2026-09-09T14:11:50+00:00"
+    },
+    "scaffold/inputs/unicef/UNICEF_Global-database_Womens-Nutrition_August-2025_2.xlsx": {
+      "sha256": "0c57793f2dcc5417c35f635dbde3192817430fef4e9b1373062963f41cee9515",
+      "bytes": 1543002,
+      "mtime": "2026-09-09T17:41:38+00:00"
+    },
+    "scaffold/inputs/wb_context_ssa.csv": {
+      "sha256": "099fdebfe472146810940f42ed73fe4d1143c133555f5959be6bb210c9019b08",
+      "bytes": 115685,
+      "mtime": "2026-09-13T03:38:53+00:00"
+    },
+    "scaffold/inputs/wb_context_ssa.provenance.json": {
+      "sha256": "b664dcba9581ef3247b015dc97ac437f7f4e71afa8f1e7e26e22a3491ab58e1e",
+      "bytes": 2281,
+      "mtime": "2026-09-13T03:38:53+00:00"
+    },
+    "scaffold/inputs/wb_gdp_pc_constant_2015usd_ssa.csv": {
+      "sha256": "83d531181a8e784eebfb75e8a1efa2bcefdcfb8f55f9589512e5c9147c8c20b9",
+      "bytes": 31849,
+      "mtime": "2026-09-09T14:11:51+00:00"
+    },
+    "scaffold/inputs/wb_gdp_pc_constant_2015usd_ssa.provenance.json": {
+      "sha256": "1be1bd837d94d30be6cbc5cb20876183baf1137bb8564518a9ec3e94ff86f6d7",
+      "bytes": 743,
+      "mtime": "2026-09-09T14:11:51+00:00"
+    },
+    "subsaharan_data/GDP_per_capita.csv": {
+      "sha256": "19bc5f67465c187cf253dc9f20886828e33749e97c6efa28df83437ee8689a52",
+      "bytes": 61726,
+      "mtime": "2026-09-15T17:48:33+00:00"
+    }
+  },
+  "events": {
+    "path": "events.csv",
+    "sha256": "a6226f3fc280b93c2781b21f38afc9d1d2969520e0d4cac540c625038a044291",
+    "countries_with_dated_anaemia_policy": 46,
+    "countries_with_wheat_mandate_year": 27
+  },
+  "shared_repo_head": "7d6375e",
+  "checks": {
+    "complete_grid": true,
+    "duplicate_keys": 0,
+    "anaemia_unicef_vs_fs_max_abs_diff": 0.0
+  },
+  "versions": {
+    "python": "3.12.14",
+    "pandas": "3.0.5",
+    "numpy": "2.5.2"
+  }
+}

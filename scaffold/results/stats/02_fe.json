@@ -1,0 +1,1250 @@
+{
+  "run_at": "2026-09-15T18:11:42+00:00",
+  "config_version": "2026-09-13a",
+  "panel_sha256": "afe63e46c26b0403f170c655d164485dd03a1473cb4dd4783fc6cba7043550c2",
+  "data_version": "afe63e46c26b",
+  "spec_A": {
+    "coef": -0.2093543294171165,
+    "se": 0.21079325347435393,
+    "ci": [
+      -0.6230439889517915,
+      0.20433533011755844
+    ],
+    "p": 0.32088557152678865,
+    "n_obs": 994,
+    "n_countries": 49,
+    "r2_within": 0.023316082311128694,
+    "r2_within_note": "two-way within R\u00b2 after both fixed effects (= fixest wr2)",
+    "income_coef": 2.072237136729363,
+    "income_se": 1.7296126992036773,
+    "income_p": 0.23118830501475918,
+    "unit": "pp of anaemia per active anaemia-cluster policy"
+  },
+  "spec_A_std": {
+    "coef_per_overall_sd": -0.4430402625788708,
+    "se_per_overall_sd": 0.44608534549606915,
+    "sd_overall": 2.1162221187991763,
+    "coef_per_within_sd": -0.34672073395649117,
+    "se_per_within_sd": 0.3491037981454289,
+    "sd_within": 1.6561431278819485,
+    "income_coef_per_overall_sd": 1.9477639386398684
+  },
+  "lead_test": {
+    "only": {
+      "term": "feat_gd_stock_anaemia_policies_lead3",
+      "coef": -0.3422764182857301,
+      "ci": [
+        -0.6550883459600036,
+        -0.029464490611456506
+      ],
+      "p": 0.032018640060579084,
+      "n": 1088
+    },
+    "with_lag": {
+      "term": "feat_gd_stock_anaemia_policies_lead3",
+      "coef": -0.27366212925753014,
+      "ci": [
+        -0.5387475302551296,
+        -0.008576728259930722
+      ],
+      "p": 0.04304922253366561,
+      "n": 947
+    }
+  },
+  "trend": {
+    "main": {
+      "term": "feat_gd_stock_anaemia_policies_lag3",
+      "coef": -0.017250546972206182,
+      "ci": [
+        -0.12591718829550247,
+        0.0914160943510901
+      ],
+      "p": 0.7556948092451614,
+      "n": 994
+    },
+    "lead": {
+      "term": "feat_gd_stock_anaemia_policies_lead3",
+      "coef": -0.027872991105528544,
+      "ci": [
+        -0.1678960317691445,
+        0.11215004955808741
+      ],
+      "p": 0.6964252654259354,
+      "n": 1088
+    }
+  },
+  "bracket": {
+    "fd": {
+      "term": "d1_feat_gd_stock_anaemia_policies_lag3",
+      "coef": -0.012858370966062526,
+      "ci": [
+        -0.04375424031932855,
+        0.018037498387203497
+      ],
+      "p": 0.41466834383036644,
+      "n": 945
+    },
+    "longdiff": {
+      "term": "d5_feat_gd_stock_anaemia_policies_lag3",
+      "coef": -0.05778608933461966,
+      "ci": [
+        -0.23502942149938727,
+        0.11945724283014797
+      ],
+      "p": 0.5228223275711588,
+      "n": 749
+    },
+    "ldv": {
+      "term": "feat_gd_stock_anaemia_policies_lag3",
+      "coef": -0.02483658319718056,
+      "ci": [
+        -0.05902256348535436,
+        0.009349397090993243
+      ],
+      "p": 0.15446363993504786,
+      "n": 994,
+      "rho": 0.9872067587995543,
+      "long_run_coef": -1.9413831731958076
+    }
+  },
+  "context": {
+    "ctx_all": {
+      "term": "feat_gd_stock_anaemia_policies_lag3",
+      "coef": -0.051987920230001414,
+      "ci": [
+        -0.36919737665044505,
+        0.2652215361904422
+      ],
+      "p": 0.7477777920982276,
+      "n": 931
+    },
+    "ctx_malaria": {
+      "term": "feat_gd_stock_anaemia_policies_lag3",
+      "coef": -0.03684562820925596,
+      "ci": [
+        -0.35302673238266014,
+        0.2793354759641482
+      ],
+      "p": 0.8191390699475161,
+      "n": 931
+    },
+    "ctx_fertility": {
+      "term": "feat_gd_stock_anaemia_policies_lag3",
+      "coef": -0.1309946191437081,
+      "ci": [
+        -0.5113857370358785,
+        0.24939649874846234
+      ],
+      "p": 0.4993139108445952,
+      "n": 994
+    },
+    "ctx_urban": {
+      "term": "feat_gd_stock_anaemia_policies_lag3",
+      "coef": -0.20645743301654876,
+      "ci": [
+        -0.606578581545575,
+        0.19366371551247744
+      ],
+      "p": 0.31149501015716585,
+      "n": 994
+    },
+    "ctx_hiv": {
+      "term": "feat_gd_stock_anaemia_policies_lag3",
+      "coef": -0.012074106512923479,
+      "ci": [
+        -0.36155590461321985,
+        0.33740769158737294
+      ],
+      "p": 0.9459517996961406,
+      "n": 910
+    },
+    "ctx_sanitation": {
+      "term": "feat_gd_stock_anaemia_policies_lag3",
+      "coef": -0.22231361346614287,
+      "ci": [
+        -0.5966043512592564,
+        0.15197712432697064
+      ],
+      "p": 0.2440452309893435,
+      "n": 982
+    }
+  },
+  "team": {
+    "team_unemployment": {
+      "term": "feat_gd_stock_anaemia_policies_lag3",
+      "coef": -0.17080228621909482,
+      "ci": [
+        -0.6120808467067038,
+        0.27047627426851417
+      ],
+      "p": 0.4476633752339714,
+      "n": 972
+    },
+    "team_employment": {
+      "term": "feat_gd_stock_anaemia_policies_lag3",
+      "coef": -0.17294895574663596,
+      "ci": [
+        -0.6209805662736175,
+        0.27508265478034555
+      ],
+      "p": 0.44888731099406587,
+      "n": 972
+    }
+  },
+  "alt_policy": {
+    "alt_logstock_anaemia_policies": {
+      "term": "feat_gd_logstock_anaemia_policies_lag3",
+      "coef": -0.5657275933732735,
+      "ci": [
+        -1.626694330404287,
+        0.4952391436577399
+      ],
+      "p": 0.295621641215559,
+      "n": 994
+    },
+    "alt_team_anemia_programming_intensity": {
+      "term": "feat_gifna_anemia_programming_intensity_lag3",
+      "coef": -0.17676692339101893,
+      "ci": [
+        -0.4098951531755799,
+        0.056361306393542004
+      ],
+      "p": 0.13707332360564517,
+      "n": 994
+    },
+    "alt_team_anemia_programming_intensity_trend": {
+      "term": "feat_gifna_anemia_programming_intensity_lag3",
+      "coef": 0.04217536642485599,
+      "ci": [
+        -0.017700124986539424,
+        0.1020508578362514
+      ],
+      "p": 0.1674117674740988,
+      "n": 994
+    },
+    "alt_stock_anaemia": {
+      "term": "feat_gd_stock_anaemia_lag3",
+      "coef": -0.08347574104407258,
+      "ci": [
+        -0.3168986825297692,
+        0.14994720044162402
+      ],
+      "p": 0.482959318279617,
+      "n": 994
+    },
+    "alt_logstock_anaemia": {
+      "term": "feat_gd_logstock_anaemia_lag3",
+      "coef": -0.277817617046247,
+      "ci": [
+        -1.088022107635228,
+        0.5323868735427342
+      ],
+      "p": 0.5011472544990496,
+      "n": 994
+    },
+    "alt_any_anaemia_policies": {
+      "term": "feat_gd_any_anaemia_policies_lag3",
+      "coef": 0.8106254221064839,
+      "ci": [
+        -0.5025350669311337,
+        2.1237859111441013
+      ],
+      "p": 0.22601715874312167,
+      "n": 994
+    },
+    "alt_any_anaemia_policies_trend": {
+      "term": "feat_gd_any_anaemia_policies_lag3",
+      "coef": -0.7164459889523491,
+      "ci": [
+        -1.203420402510612,
+        -0.2294715753940862
+      ],
+      "p": 0.003932374847185189,
+      "n": 994
+    },
+    "alt_any_fortification": {
+      "term": "feat_gd_any_fortification_lag3",
+      "coef": -0.49276243576307854,
+      "ci": [
+        -2.130437560635086,
+        1.1449126891089287
+      ],
+      "p": 0.5549928404632065,
+      "n": 994
+    },
+    "alt_any_fortification_trend": {
+      "term": "feat_gd_any_fortification_lag3",
+      "coef": 0.6670648268065058,
+      "ci": [
+        0.02493480085640276,
+        1.3091948527566089
+      ],
+      "p": 0.04174311499123274,
+      "n": 994
+    },
+    "alt_team_policy_count_active": {
+      "term": "feat_gifna_policy_count_active_lag3",
+      "coef": -0.015688254927982644,
+      "ci": [
+        -0.19814237477705057,
+        0.16676586492108528
+      ],
+      "p": 0.8660317451893107,
+      "n": 994
+    }
+  },
+  "outcome_swaps": {
+    "out_anaemia_pregnant_pct": {
+      "term": "feat_gd_stock_anaemia_policies_lag3",
+      "coef": -0.04732012072812114,
+      "ci": [
+        -0.2711966510848249,
+        0.1765564096285826
+      ],
+      "p": 0.6783731858421602,
+      "n": 994,
+      "p_bh": 0.7982572338043039,
+      "label": "Anaemia, pregnant women (%) \u2014 WHO 2025 via UNICEF Aug-2025"
+    },
+    "out_women_underweight_pct": {
+      "term": "feat_gd_stock_anaemia_policies_lag3",
+      "coef": 0.05762416515891969,
+      "ci": [
+        -0.0640037503224407,
+        0.1792520806402801
+      ],
+      "p": 0.35269757890028974,
+      "n": 947,
+      "p_bh": 0.7982572338043039,
+      "label": "Women underweight, BMI<18.5 (%) \u2014 NCD-RisC via UNICEF Aug-2025"
+    },
+    "out_women_overweight_pct": {
+      "term": "feat_gd_stock_anaemia_policies_lag3",
+      "coef": -0.11699089238362002,
+      "ci": [
+        -0.3681984396911131,
+        0.13421665492387302
+      ],
+      "p": 0.3609447972899882,
+      "n": 947,
+      "p_bh": 0.7982572338043039,
+      "label": "Women overweight, BMI\u226525 (%) \u2014 NCD-RisC via UNICEF Aug-2025"
+    },
+    "out_lbw_pct": {
+      "term": "feat_gd_stock_anaemia_policies_lag3",
+      "coef": -0.012383518672089928,
+      "ci": [
+        -0.10749870597596548,
+        0.0827316686317856
+      ],
+      "p": 0.7982572338043039,
+      "n": 621,
+      "p_bh": 0.7982572338043039,
+      "label": "Low birthweight (%) \u2014 UNICEF-WHO via FAOSTAT FS 21049 (to 2020)"
+    },
+    "out_women_index": {
+      "term": "feat_gd_stock_anaemia_policies_lag3",
+      "coef": -0.005210680734946092,
+      "ci": [
+        -0.020184651526850807,
+        0.009763290056958623
+      ],
+      "p": 0.4948024723803608,
+      "n": 947,
+      "p_bh": 0.7982572338043039,
+      "label": "Women's nutrition summary index (mean z-score of four women's indicators; higher = worse)"
+    }
+  },
+  "survey_anchored": {
+    "coef": -0.03574014744967137,
+    "se": 0.27833290727094856,
+    "p": 0.8988535846272692,
+    "n_obs": 80,
+    "n_countries": 33
+  },
+  "bounds": {
+    "sesoi_pp_per_within_sd": 1.0,
+    "sesoi_pp_per_unit": 0.6038125468533061,
+    "mde80_pp_per_unit": 0.59055526301169,
+    "mde80_pp_per_within_sd": 0.9780440404713271,
+    "mde80_pp_per_overall_sd": 1.2497461099586036,
+    "ci90_per_unit": [
+      -0.5560783769313086,
+      0.13736971809707554
+    ],
+    "ci90_per_within_sd": [
+      -0.9209453825185345,
+      0.2275039146055522
+    ],
+    "tost_p_lower": 0.03065149167848802,
+    "tost_p_upper": 5.724089804305071e-05,
+    "tost_p": 0.03065149167848802,
+    "equivalent_at_5pct": true,
+    "largest_beneficial_effect_not_ruled_out_pp_per_within_sd": -0.9209453825185345
+  },
+  "wild_cluster_bootstrap": {
+    "A_main": {
+      "coef": -0.2093543294171167,
+      "t": -1.0301465519233166,
+      "p_wcb": 0.326,
+      "B": 999,
+      "clusters": 49
+    },
+    "lag2": {
+      "coef": -0.24820494094353,
+      "t": -1.2359799635546524,
+      "p_wcb": 0.24,
+      "B": 999,
+      "clusters": 49
+    },
+    "lag5": {
+      "coef": -0.15605092816941518,
+      "t": -0.7712555294662684,
+      "p_wcb": 0.456,
+      "B": 999,
+      "clusters": 49
+    },
+    "drop_thin": {
+      "coef": -0.21408873354177882,
+      "t": -1.049113330016751,
+      "p_wcb": 0.332,
+      "B": 999,
+      "clusters": 47
+    },
+    "income_current_usd": {
+      "coef": -0.15359562773073354,
+      "t": -0.8234708806229676,
+      "p_wcb": 0.42,
+      "B": 999,
+      "clusters": 49
+    },
+    "lead_test_only": {
+      "coef": -0.34227641828572963,
+      "t": -2.221987957405801,
+      "p_wcb": 0.04,
+      "B": 999,
+      "clusters": 49
+    },
+    "lead_test_with_lag": {
+      "coef": -0.2736621292575302,
+      "t": -2.1055761869178014,
+      "p_wcb": 0.069,
+      "B": 999,
+      "clusters": 49
+    },
+    "fd": {
+      "coef": -0.012858370966062935,
+      "t": -0.8249331740134839,
+      "p_wcb": 0.395,
+      "B": 999,
+      "clusters": 49
+    },
+    "longdiff5": {
+      "coef": -0.057786089334602955,
+      "t": -0.6463884683499228,
+      "p_wcb": 0.506,
+      "B": 999,
+      "clusters": 49
+    },
+    "ldv": {
+      "coef": -0.024836583197172246,
+      "t": -1.4407235639276221,
+      "p_wcb": 0.161,
+      "B": 999,
+      "clusters": 49
+    },
+    "ctx_all": {
+      "coef": -0.05198792023000279,
+      "t": -0.33450937961651506,
+      "p_wcb": 0.749,
+      "B": 999,
+      "clusters": 46
+    },
+    "ctx_malaria": {
+      "coef": -0.03684562820922917,
+      "t": -0.23757252201198667,
+      "p_wcb": 0.818,
+      "B": 999,
+      "clusters": 46
+    },
+    "ctx_fertility": {
+      "coef": -0.13099461914370827,
+      "t": -0.7013758848922322,
+      "p_wcb": 0.491,
+      "B": 999,
+      "clusters": 49
+    },
+    "ctx_urban": {
+      "coef": -0.2064574330165502,
+      "t": -1.050912982696468,
+      "p_wcb": 0.311,
+      "B": 999,
+      "clusters": 49
+    },
+    "ctx_hiv": {
+      "coef": -0.012074106512923517,
+      "t": -0.07045781235527425,
+      "p_wcb": 0.944,
+      "B": 999,
+      "clusters": 45
+    },
+    "ctx_sanitation": {
+      "coef": -0.22231361346614387,
+      "t": -1.2103107474427068,
+      "p_wcb": 0.247,
+      "B": 999,
+      "clusters": 49
+    },
+    "team_unemployment": {
+      "coef": -0.1708022862190931,
+      "t": -0.7886057755355077,
+      "p_wcb": 0.461,
+      "B": 999,
+      "clusters": 48
+    },
+    "team_employment": {
+      "coef": -0.1729489557466382,
+      "t": -0.7864812790728196,
+      "p_wcb": 0.459,
+      "B": 999,
+      "clusters": 48
+    },
+    "impl_sth": {
+      "coef": 0.0010105868949777386,
+      "t": 0.2705106479395961,
+      "p_wcb": 0.782,
+      "B": 999,
+      "clusters": 46
+    },
+    "impl_sth_with_policy": {
+      "coef": 0.000998754632617074,
+      "t": 0.2689151630085024,
+      "p_wcb": 0.788,
+      "B": 999,
+      "clusters": 46
+    },
+    "alt_logstock_anaemia_policies": {
+      "coef": -0.5657275933732736,
+      "t": -1.085418766131568,
+      "p_wcb": 0.314,
+      "B": 999,
+      "clusters": 49
+    },
+    "alt_team_anemia_programming_intensity": {
+      "coef": -0.1767669233910189,
+      "t": -1.543468851439439,
+      "p_wcb": 0.153,
+      "B": 999,
+      "clusters": 49
+    },
+    "alt_stock_anaemia": {
+      "coef": -0.08347574104407249,
+      "t": -0.7279616117536021,
+      "p_wcb": 0.514,
+      "B": 999,
+      "clusters": 49
+    },
+    "alt_logstock_anaemia": {
+      "coef": -0.27781761704624697,
+      "t": -0.698002323353539,
+      "p_wcb": 0.539,
+      "B": 999,
+      "clusters": 49
+    },
+    "alt_any_anaemia_policies": {
+      "coef": 0.8106254221064839,
+      "t": 1.2565915786098296,
+      "p_wcb": 0.199,
+      "B": 999,
+      "clusters": 49
+    },
+    "alt_any_fortification": {
+      "coef": -0.492762435763078,
+      "t": -0.6124936254699013,
+      "p_wcb": 0.56,
+      "B": 999,
+      "clusters": 49
+    },
+    "alt_team_policy_count_active": {
+      "coef": -0.01568825492798266,
+      "t": -0.1750300818377117,
+      "p_wcb": 0.861,
+      "B": 999,
+      "clusters": 49
+    },
+    "outcome_out_anaemia_pregnant_pct": {
+      "coef": -0.047320120728121175,
+      "t": -0.43025805404085354,
+      "p_wcb": 0.663,
+      "B": 999,
+      "clusters": 49
+    },
+    "outcome_out_women_underweight_pct": {
+      "coef": 0.05762416515891967,
+      "t": 0.9657506814865003,
+      "p_wcb": 0.344,
+      "B": 999,
+      "clusters": 49
+    },
+    "outcome_out_women_overweight_pct": {
+      "coef": -0.11699089238361994,
+      "t": -0.9493208312949893,
+      "p_wcb": 0.356,
+      "B": 999,
+      "clusters": 49
+    },
+    "outcome_out_lbw_pct": {
+      "coef": -0.012383518672089939,
+      "t": -0.26740814973918586,
+      "p_wcb": 0.79,
+      "B": 999,
+      "clusters": 35
+    },
+    "outcome_out_women_index": {
+      "coef": -0.005210680734946094,
+      "t": -0.7093345649321408,
+      "p_wcb": 0.502,
+      "B": 999,
+      "clusters": 49
+    },
+    "survey_anchored": {
+      "coef": -0.035740147449671765,
+      "t": -0.2282628972268591,
+      "p_wcb": 0.833,
+      "B": 999,
+      "clusters": 33
+    },
+    "income_only": {
+      "coef": 1.2087678274982614,
+      "t": 0.9016084008608201,
+      "p_wcb": 0.402,
+      "B": 999,
+      "clusters": 49
+    }
+  },
+  "sensitivity": {
+    "A_main": {
+      "block": "main",
+      "term": "feat_gd_stock_anaemia_policies_lag3",
+      "coef": -0.2093543294171165,
+      "ci": [
+        -0.6230439889517915,
+        0.20433533011755844
+      ],
+      "p": 0.32088557152678865,
+      "n": 994
+    },
+    "lag2": {
+      "block": "main",
+      "term": "feat_gd_stock_anaemia_policies_lag2",
+      "coef": -0.24820494094353007,
+      "ci": [
+        -0.656472303260055,
+        0.16006242137299492
+      ],
+      "p": 0.23314397159698697,
+      "n": 1041
+    },
+    "lag5": {
+      "block": "main",
+      "term": "feat_gd_stock_anaemia_policies_lag5",
+      "coef": -0.15605092816941507,
+      "ci": [
+        -0.5691255294765785,
+        0.2570236731377484
+      ],
+      "p": 0.4585917591163735,
+      "n": 900
+    },
+    "drop_thin": {
+      "block": "main",
+      "term": "feat_gd_stock_anaemia_policies_lag3",
+      "coef": -0.2140887335417788,
+      "ci": [
+        -0.6293111304862953,
+        0.20113366340273772
+      ],
+      "p": 0.3118522886156796,
+      "n": 977
+    },
+    "income_current_usd": {
+      "block": "main",
+      "term": "feat_gd_stock_anaemia_policies_lag3",
+      "coef": -0.15359562773073346,
+      "ci": [
+        -0.5331308605367335,
+        0.2259396050752666
+      ],
+      "p": 0.4272716864944295,
+      "n": 1004
+    },
+    "lead_test_only": {
+      "block": "lead_test",
+      "term": "feat_gd_stock_anaemia_policies_lead3",
+      "coef": -0.3422764182857301,
+      "ci": [
+        -0.6550883459600036,
+        -0.029464490611456506
+      ],
+      "p": 0.032018640060579084,
+      "n": 1088
+    },
+    "lead_test_with_lag": {
+      "block": "lead_test",
+      "term": "feat_gd_stock_anaemia_policies_lead3",
+      "coef": -0.27366212925753014,
+      "ci": [
+        -0.5387475302551296,
+        -0.008576728259930722
+      ],
+      "p": 0.04304922253366561,
+      "n": 947
+    },
+    "trend_main": {
+      "block": "trend",
+      "term": "feat_gd_stock_anaemia_policies_lag3",
+      "coef": -0.017250546972206182,
+      "ci": [
+        -0.12591718829550247,
+        0.0914160943510901
+      ],
+      "p": 0.7556948092451614,
+      "n": 994
+    },
+    "trend_lead": {
+      "block": "trend",
+      "term": "feat_gd_stock_anaemia_policies_lead3",
+      "coef": -0.027872991105528544,
+      "ci": [
+        -0.1678960317691445,
+        0.11215004955808741
+      ],
+      "p": 0.6964252654259354,
+      "n": 1088
+    },
+    "fd": {
+      "block": "bracket",
+      "term": "d1_feat_gd_stock_anaemia_policies_lag3",
+      "coef": -0.012858370966062526,
+      "ci": [
+        -0.04375424031932855,
+        0.018037498387203497
+      ],
+      "p": 0.41466834383036644,
+      "n": 945
+    },
+    "longdiff5": {
+      "block": "bracket",
+      "term": "d5_feat_gd_stock_anaemia_policies_lag3",
+      "coef": -0.05778608933461966,
+      "ci": [
+        -0.23502942149938727,
+        0.11945724283014797
+      ],
+      "p": 0.5228223275711588,
+      "n": 749
+    },
+    "ldv": {
+      "block": "bracket",
+      "term": "feat_gd_stock_anaemia_policies_lag3",
+      "coef": -0.02483658319718056,
+      "ci": [
+        -0.05902256348535436,
+        0.009349397090993243
+      ],
+      "p": 0.15446363993504786,
+      "n": 994
+    },
+    "ctx_all": {
+      "block": "context",
+      "term": "feat_gd_stock_anaemia_policies_lag3",
+      "coef": -0.051987920230001414,
+      "ci": [
+        -0.36919737665044505,
+        0.2652215361904422
+      ],
+      "p": 0.7477777920982276,
+      "n": 931
+    },
+    "ctx_malaria": {
+      "block": "context",
+      "term": "feat_gd_stock_anaemia_policies_lag3",
+      "coef": -0.03684562820925596,
+      "ci": [
+        -0.35302673238266014,
+        0.2793354759641482
+      ],
+      "p": 0.8191390699475161,
+      "n": 931
+    },
+    "ctx_fertility": {
+      "block": "context",
+      "term": "feat_gd_stock_anaemia_policies_lag3",
+      "coef": -0.1309946191437081,
+      "ci": [
+        -0.5113857370358785,
+        0.24939649874846234
+      ],
+      "p": 0.4993139108445952,
+      "n": 994
+    },
+    "ctx_urban": {
+      "block": "context",
+      "term": "feat_gd_stock_anaemia_policies_lag3",
+      "coef": -0.20645743301654876,
+      "ci": [
+        -0.606578581545575,
+        0.19366371551247744
+      ],
+      "p": 0.31149501015716585,
+      "n": 994
+    },
+    "ctx_hiv": {
+      "block": "context",
+      "term": "feat_gd_stock_anaemia_policies_lag3",
+      "coef": -0.012074106512923479,
+      "ci": [
+        -0.36155590461321985,
+        0.33740769158737294
+      ],
+      "p": 0.9459517996961406,
+      "n": 910
+    },
+    "ctx_sanitation": {
+      "block": "context",
+      "term": "feat_gd_stock_anaemia_policies_lag3",
+      "coef": -0.22231361346614287,
+      "ci": [
+        -0.5966043512592564,
+        0.15197712432697064
+      ],
+      "p": 0.2440452309893435,
+      "n": 982
+    },
+    "team_unemployment": {
+      "block": "team",
+      "term": "feat_gd_stock_anaemia_policies_lag3",
+      "coef": -0.17080228621909482,
+      "ci": [
+        -0.6120808467067038,
+        0.27047627426851417
+      ],
+      "p": 0.4476633752339714,
+      "n": 972
+    },
+    "team_employment": {
+      "block": "team",
+      "term": "feat_gd_stock_anaemia_policies_lag3",
+      "coef": -0.17294895574663596,
+      "ci": [
+        -0.6209805662736175,
+        0.27508265478034555
+      ],
+      "p": 0.44888731099406587,
+      "n": 972
+    },
+    "impl_sth": {
+      "block": "implementation",
+      "term": "feat_sth_pc_coverage_sac_pct_lag3",
+      "coef": 0.0010105868949777442,
+      "ci": [
+        -0.006662528598075517,
+        0.008683702388031006
+      ],
+      "p": 0.7960239407562213,
+      "n": 744
+    },
+    "impl_sth_with_policy": {
+      "block": "implementation",
+      "term": "feat_sth_pc_coverage_sac_pct_lag3",
+      "coef": 0.0009987546326170817,
+      "ci": [
+        -0.006635157158046811,
+        0.008632666423280973
+      ],
+      "p": 0.7973468606688192,
+      "n": 744
+    },
+    "alt_logstock_anaemia_policies": {
+      "block": "alt_policy",
+      "term": "feat_gd_logstock_anaemia_policies_lag3",
+      "coef": -0.5657275933732735,
+      "ci": [
+        -1.626694330404287,
+        0.4952391436577399
+      ],
+      "p": 0.295621641215559,
+      "n": 994
+    },
+    "alt_team_anemia_programming_intensity": {
+      "block": "alt_policy",
+      "term": "feat_gifna_anemia_programming_intensity_lag3",
+      "coef": -0.17676692339101893,
+      "ci": [
+        -0.4098951531755799,
+        0.056361306393542004
+      ],
+      "p": 0.13707332360564517,
+      "n": 994
+    },
+    "alt_team_anemia_programming_intensity_trend": {
+      "block": "alt_policy",
+      "term": "feat_gifna_anemia_programming_intensity_lag3",
+      "coef": 0.04217536642485599,
+      "ci": [
+        -0.017700124986539424,
+        0.1020508578362514
+      ],
+      "p": 0.1674117674740988,
+      "n": 994
+    },
+    "alt_stock_anaemia": {
+      "block": "alt_policy",
+      "term": "feat_gd_stock_anaemia_lag3",
+      "coef": -0.08347574104407258,
+      "ci": [
+        -0.3168986825297692,
+        0.14994720044162402
+      ],
+      "p": 0.482959318279617,
+      "n": 994
+    },
+    "alt_logstock_anaemia": {
+      "block": "alt_policy",
+      "term": "feat_gd_logstock_anaemia_lag3",
+      "coef": -0.277817617046247,
+      "ci": [
+        -1.088022107635228,
+        0.5323868735427342
+      ],
+      "p": 0.5011472544990496,
+      "n": 994
+    },
+    "alt_any_anaemia_policies": {
+      "block": "alt_policy",
+      "term": "feat_gd_any_anaemia_policies_lag3",
+      "coef": 0.8106254221064839,
+      "ci": [
+        -0.5025350669311337,
+        2.1237859111441013
+      ],
+      "p": 0.22601715874312167,
+      "n": 994
+    },
+    "alt_any_anaemia_policies_trend": {
+      "block": "alt_policy",
+      "term": "feat_gd_any_anaemia_policies_lag3",
+      "coef": -0.7164459889523491,
+      "ci": [
+        -1.203420402510612,
+        -0.2294715753940862
+      ],
+      "p": 0.003932374847185189,
+      "n": 994
+    },
+    "alt_any_fortification": {
+      "block": "alt_policy",
+      "term": "feat_gd_any_fortification_lag3",
+      "coef": -0.49276243576307854,
+      "ci": [
+        -2.130437560635086,
+        1.1449126891089287
+      ],
+      "p": 0.5549928404632065,
+      "n": 994
+    },
+    "alt_any_fortification_trend": {
+      "block": "alt_policy",
+      "term": "feat_gd_any_fortification_lag3",
+      "coef": 0.6670648268065058,
+      "ci": [
+        0.02493480085640276,
+        1.3091948527566089
+      ],
+      "p": 0.04174311499123274,
+      "n": 994
+    },
+    "alt_team_policy_count_active": {
+      "block": "alt_policy",
+      "term": "feat_gifna_policy_count_active_lag3",
+      "coef": -0.015688254927982644,
+      "ci": [
+        -0.19814237477705057,
+        0.16676586492108528
+      ],
+      "p": 0.8660317451893107,
+      "n": 994
+    },
+    "outcome_out_anaemia_pregnant_pct": {
+      "block": "outcome_swap",
+      "term": "feat_gd_stock_anaemia_policies_lag3",
+      "coef": -0.04732012072812114,
+      "ci": [
+        -0.2711966510848249,
+        0.1765564096285826
+      ],
+      "p": 0.6783731858421602,
+      "n": 994
+    },
+    "outcome_out_women_underweight_pct": {
+      "block": "outcome_swap",
+      "term": "feat_gd_stock_anaemia_policies_lag3",
+      "coef": 0.05762416515891969,
+      "ci": [
+        -0.0640037503224407,
+        0.1792520806402801
+      ],
+      "p": 0.35269757890028974,
+      "n": 947
+    },
+    "outcome_out_women_overweight_pct": {
+      "block": "outcome_swap",
+      "term": "feat_gd_stock_anaemia_policies_lag3",
+      "coef": -0.11699089238362002,
+      "ci": [
+        -0.3681984396911131,
+        0.13421665492387302
+      ],
+      "p": 0.3609447972899882,
+      "n": 947
+    },
+    "outcome_out_lbw_pct": {
+      "block": "outcome_swap",
+      "term": "feat_gd_stock_anaemia_policies_lag3",
+      "coef": -0.012383518672089928,
+      "ci": [
+        -0.10749870597596548,
+        0.0827316686317856
+      ],
+      "p": 0.7982572338043039,
+      "n": 621
+    },
+    "outcome_out_women_index": {
+      "block": "outcome_swap",
+      "term": "feat_gd_stock_anaemia_policies_lag3",
+      "coef": -0.005210680734946092,
+      "ci": [
+        -0.020184651526850807,
+        0.009763290056958623
+      ],
+      "p": 0.4948024723803608,
+      "n": 947
+    },
+    "survey_anchored": {
+      "block": "anchor",
+      "term": "feat_gd_stock_anaemia_policies_lag3",
+      "coef": -0.03574014744967137,
+      "ci": [
+        -0.6089775004740986,
+        0.5374972055747559
+      ],
+      "p": 0.8988535846272692,
+      "n": 80
+    },
+    "income_only": {
+      "block": "reference",
+      "term": "log_gdp_pc_constant",
+      "coef": 1.2087678274982607,
+      "ci": [
+        -1.509627042129081,
+        3.9271626971256026
+      ],
+      "p": 0.38312385764587065,
+      "n": 1135
+    }
+  },
+  "subsample": [
+    {
+      "control": "feat_fies_severe_total_pct_3yr",
+      "from_year": 2015,
+      "model": "base_same_rows",
+      "outcome": "out_anaemia_wra_fs_pct",
+      "term": "feat_gd_stock_anaemia_policies_lag3",
+      "coef": 0.031000747246479513,
+      "se": 0.1581481500393626,
+      "ci_low": -0.28059644296632935,
+      "ci_high": 0.34259793745928835,
+      "p": 0.8447641368023986,
+      "n_obs": 280,
+      "n_countries": 39,
+      "years": "2015-2023",
+      "r2_within": 0.01390241685770821
+    },
+    {
+      "control": "feat_fies_severe_total_pct_3yr",
+      "from_year": 2015,
+      "model": "with_control",
+      "outcome": "out_anaemia_wra_fs_pct",
+      "term": "feat_gd_stock_anaemia_policies_lag3",
+      "coef": 0.020599744574192308,
+      "se": 0.15196200657378908,
+      "ci_low": -0.27881582530878035,
+      "ci_high": 0.3200153144571649,
+      "p": 0.8922888646206486,
+      "n_obs": 280,
+      "n_countries": 39,
+      "years": "2015-2023",
+      "r2_within": 0.038183442162925574
+    },
+    {
+      "control": "feat_fies_gap_fm_3yr",
+      "from_year": 2015,
+      "model": "base_same_rows",
+      "outcome": "out_anaemia_wra_fs_pct",
+      "term": "feat_gd_stock_anaemia_policies_lag3",
+      "coef": 0.031000747246479513,
+      "se": 0.1581481500393626,
+      "ci_low": -0.28059644296632935,
+      "ci_high": 0.34259793745928835,
+      "p": 0.8447641368023986,
+      "n_obs": 280,
+      "n_countries": 39,
+      "years": "2015-2023",
+      "r2_within": 0.01390241685770821
+    },
+    {
+      "control": "feat_fies_gap_fm_3yr",
+      "from_year": 2015,
+      "model": "with_control",
+      "outcome": "out_anaemia_wra_fs_pct",
+      "term": "feat_gd_stock_anaemia_policies_lag3",
+      "coef": 0.05790847383647217,
+      "se": 0.15139902288485688,
+      "ci_low": -0.24039783139636173,
+      "ci_high": 0.3562147790693061,
+      "p": 0.7024518334928826,
+      "n_obs": 280,
+      "n_countries": 39,
+      "years": "2015-2023",
+      "r2_within": 0.07073892862335196
+    },
+    {
+      "control": "feat_pua_pct",
+      "from_year": 2017,
+      "model": "base_same_rows",
+      "outcome": "out_anaemia_wra_fs_pct",
+      "term": "feat_gd_stock_anaemia_policies_lag3",
+      "coef": 0.0016627954401464055,
+      "se": 0.12936960489241212,
+      "ci_low": -0.25310138958955347,
+      "ci_high": 0.2564269804698463,
+      "p": 0.9897550341348387,
+      "n_obs": 308,
+      "n_countries": 44,
+      "years": "2017-2023",
+      "r2_within": 0.003717625039208916
+    },
+    {
+      "control": "feat_pua_pct",
+      "from_year": 2017,
+      "model": "with_control",
+      "outcome": "out_anaemia_wra_fs_pct",
+      "term": "feat_gd_stock_anaemia_policies_lag3",
+      "coef": -0.00043162289032057713,
+      "se": 0.12691672414139943,
+      "ci_low": -0.2503700692326993,
+      "ci_high": 0.24950682345205813,
+      "p": 0.9972891901320273,
+      "n_obs": 308,
+      "n_countries": 44,
+      "years": "2017-2023",
+      "r2_within": 0.004139861007595891
+    },
+    {
+      "control": "feat_hospital_beds_per1000",
+      "from_year": 2000,
+      "model": "base_same_rows",
+      "outcome": "out_anaemia_wra_fs_pct",
+      "term": "feat_gd_stock_anaemia_policies_lag3",
+      "coef": -0.3998005986050794,
+      "se": 0.2892126489187837,
+      "ci_low": -0.9697124565740096,
+      "ci_high": 0.1701112593638508,
+      "p": 0.16822695217038253,
+      "n_obs": 295,
+      "n_countries": 48,
+      "years": "2003-2023",
+      "r2_within": 0.10002011809563327
+    },
+    {
+      "control": "feat_hospital_beds_per1000",
+      "from_year": 2000,
+      "model": "with_control",
+      "outcome": "out_anaemia_wra_fs_pct",
+      "term": "feat_gd_stock_anaemia_policies_lag3",
+      "coef": -0.41691727889262176,
+      "se": 0.3265430327408401,
+      "ci_low": -1.0604065584833293,
+      "ci_high": 0.2265720006980858,
+      "p": 0.20300876188627415,
+      "n_obs": 295,
+      "n_countries": 48,
+      "years": "2003-2023",
+      "r2_within": 0.10643684675460541
+    },
+    {
+      "control": "feat_health_exp_pc_usd",
+      "from_year": 2000,
+      "model": "base_same_rows",
+      "outcome": "out_anaemia_wra_fs_pct",
+      "term": "feat_gd_stock_anaemia_policies_lag3",
+      "coef": -0.19172679595388298,
+      "se": 0.21796623057233405,
+      "ci_low": -0.6195086865693087,
+      "ci_high": 0.23605509466154279,
+      "p": 0.3793019006942937,
+      "n_obs": 969,
+      "n_countries": 48,
+      "years": "2003-2023",
+      "r2_within": 0.02003190247497111
+    },
+    {
+      "control": "feat_health_exp_pc_usd",
+      "from_year": 2000,
+      "model": "with_control",
+      "outcome": "out_anaemia_wra_fs_pct",
+      "term": "feat_gd_stock_anaemia_policies_lag3",
+      "coef": -0.03902677202449719,
+      "se": 0.18140646887210027,
+      "ci_low": -0.39505677960321056,
+      "ci_high": 0.3170032355542162,
+      "p": 0.8297113819946427,
+      "n_obs": 969,
+      "n_countries": 48,
+      "years": "2003-2023",
+      "r2_within": 0.10542692925929453
+    },
+    {
+      "control": "feat_sth_pc_coverage_sac_pct",
+      "from_year": 2005,
+      "model": "base_same_rows",
+      "outcome": "out_anaemia_wra_fs_pct",
+      "term": "feat_gd_stock_anaemia_policies_lag3",
+      "coef": 0.0372343066024655,
+      "se": 0.176360542394221,
+      "ci_low": -0.30900084526697913,
+      "ci_high": 0.38346945847191016,
+      "p": 0.8328479083980476,
+      "n_obs": 796,
+      "n_countries": 47,
+      "years": "2005-2023",
+      "r2_within": 0.010542778967184696
+    },
+    {
+      "control": "feat_sth_pc_coverage_sac_pct",
+      "from_year": 2005,
+      "model": "with_control",
+      "outcome": "out_anaemia_wra_fs_pct",
+      "term": "feat_gd_stock_anaemia_policies_lag3",
+      "coef": 0.037082395517065825,
+      "se": 0.17198647612145032,
+      "ci_low": -0.30056625818071137,
+      "ci_high": 0.374731049214843,
+      "p": 0.8293503789047079,
+      "n_obs": 796,
+      "n_countries": 47,
+      "years": "2005-2023",
+      "r2_within": 0.02240102903486363
+    }
+  ]
+}

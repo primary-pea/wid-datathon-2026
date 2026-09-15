@@ -1,0 +1,12 @@
+{
+  "indicator": "NY.GDP.PCAP.KD",
+  "label": "GDP per capita (constant 2015 US$)",
+  "source": "World Bank WDI via api.worldbank.org/v2 (json, per_page=20000, date=2000:2025)",
+  "url": "https://api.worldbank.org/v2/country/all/indicator/NY.GDP.PCAP.KD?format=json&per_page=20000&date=2000:2025",
+  "source_lastupdated": "2026-07-13",
+  "retrieved_at_utc": "2026-09-09T13:05:00+00:00",
+  "filter": "49 SSA iso3 codes from config.SSA_ISO3; rows with null value dropped",
+  "rows": 1229,
+  "sha256": "83d531181a8e784eebfb75e8a1efa2bcefdcfb8f55f9589512e5c9147c8c20b9",
+  "status": "INTERIM \u2014 replaces feat_gdp_pc_current_usd as a sensitivity row only; swap to the team's re-pull (same getWDI call, indicator NY.GDP.PCAP.KD) when it lands"
+}
