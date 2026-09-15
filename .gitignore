@@ -236,3 +236,10 @@ data/
 
 # misc
 .DS_Store
+
+# this repo commits its pinned inputs, the team tables and the results — re-include them
+!scaffold/**
+!gifna/**
+!subsaharan_data/**
+!eda/**
+!dashboard/data/**

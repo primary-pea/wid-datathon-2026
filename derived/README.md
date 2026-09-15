@@ -1,13 +1,13 @@
-# derived/ — team data contract & distribution
-Snapshot once, read many. Consumers never need FAOSTAT auth.
+# derived/ — the panel
 
-- Parquet, one table per topic, lowercase_snake names.
-- Schema: iso3 · year · indicator · unit · sex (where split) · value · source_release · claim_tag
+The product of `scaffold/00_assemble_panel.py`, committed so nobody needs to rebuild it to read it:
 
-Versioning: data_version.txt here (e.g. 2026-08-26a). Figures and the dashboard cite the version they read. Tagged + FROZEN at analysis freeze (~Aug 30); post-freeze changes need a team ping.
+- `ssa_panel.csv` — 49 sub-Saharan African countries × 2000–2025, 1,274 rows × 174 columns: `out_*` outcomes, `feat_*` features (income, context, the GIFNA registry stocks by topic cluster, the team feature table), `geo_*` terrain
+- `events.csv` — one row per country: first dated anaemia policy, wheat-flour fortification mandate year
+- `DATA_DICTIONARY.md` — every column, its source and its reading rule
+- `MANIFEST.json` — the SHA-256 of every input and of the panel; `data_version.txt` — the first twelve characters of the panel hash
+- `ssa_panel_readiness.md` / `.csv` — coverage of every column by year; `gifna_direct_token_map.csv` — how registry tokens map to clusters; `ssa_fies_3yr_average.csv`
 
-Read:
-- RStudio: arrow::read_parquet("derived/<table>.parquet")  (repo clone)
-- Colab:   pd.read_parquet on the Drive mirror of this folder (synced by Sarah at each release — no git, no tokens)
+**How every source was obtained, and what the raw data we did not commit looks like: [`DATA_ACQUISITION.md`](DATA_ACQUISITION.md).**
 
-Raw bulk pulls: shared Drive, not git. MICS microdata: licensed per registered user — never committed, never in the shared Drive; its survey-weighted aggregates are published here instead.
+Kept by Saarah; arrives with the freeze copy.

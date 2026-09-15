@@ -1,41 +1,47 @@
-# Primary Pea — WiD 2026 Datathon: "What's Cooking"
+# Ink and Iron — Primary Pea, Women in Data 2026 Datathon (Eat track)
 
-> [!NOTE]
-> repo to be renamed before submission
+**Question.** Across 49 sub-Saharan African countries, do the nutrition policies governments write down move with the anaemia measured in women aged 15–49?
 
-> ⟨ *One-sentence research question — **to be set*** ⟩
+**Answer in four numbers** (scaffold v2.0, data version `afe63e46c26b`, every figure claim-tagged in `scaffold/results/RESULTS.md`):
 
-Team submission and portfolio repository for the Women in Data 2026 Datathon: FAOSTAT-based analysis of food security and nutrition.
+| | |
+|---|---|
+| One more anaemia policy on the books, three years earlier | **−0.21** points of anaemia, 95% interval −0.62 to +0.20, p = 0.32 — a null |
+| Policies three years in the *future* | **−0.34**, p = 0.03 — a future policy cannot cause a past outcome; something else moves both |
+| Effects the data rule out | anything at or beyond **0.60** points per policy (equivalence p = 0.03) |
+| Countries where policy improves an out-of-sample forecast | **22 of 49** — a coin toss |
 
-## Findings
-> ⟨ *2–3 headline findings with claim tags — **to be filled** at analysis freeze (?Aug 30?)* ⟩
+The registry counts what governments write, not what reaches women: three in four programme records carry no date and none records coverage. *Until delivery is recorded, nobody can say which policies work.*
 
-## Repository map
-- `notebooks/` — the analysis, fresh-runtime-safe top to bottom
-- `dashboard/` — interactive companion to the video
-- `figures/` — static visuals as presented
-- `docs/` — methodology, data notes and known FAOSTAT sharp edges
-- `scripts/` — release checks (`preflip_scan.sh`) and small utilities
-- `data/` — not committed; `data/README.md` documents every source and how to re-pull it
-> - [ *more as they come* ]
+## Run it
 
-## Directions for Reproducibility
+```
+uv venv --python 3.12 .venv && uv pip install -p .venv/bin/python -r requirements.txt
+cd scaffold && PY=../.venv/bin/python ./run_all.sh     # rebuilds the panel, every result and the report in about two minutes; then runs the tests (24 pass, 1 skipped)
+```
 
-### For Python Notebooks
-1. Set `FAOSTAT_USER` + `FAOSTAT_PASS` as env vars or Colab Secrets.
-2. Run `notebooks/` in listed order — cell 1 of each is the shared bootstrap (`notebooks/bootstrap_cell.py`), which handles auth and guards a known API bug in `faostat==2.0.1`.
-3. Data sources, domains and release vintages: `docs/data-sources.md`.
+The pipeline reads two team folders at the repo root by name — `gifna/` and `subsaharan_data/` — and every other input from `scaffold/inputs/`, each pinned with a `*.provenance.json`.
 
-### For R [? ?]
-> ⟨ ***To be added*** ⟩
+## Where things are
 
-## Data discipline
-FBS "food supply" means availability, not intake, and is captioned as such. Food-security pulls filter `Element == 'Value'`. Every reported number is tagged [E] exact from API · [C] chart-read · [X] external.
+| Folder | What is in it | Kept by |
+|---|---|---|
+| `scaffold/` | the pipeline: assembly, the dose ladder, event studies, specification curve, validation, tests, the executed cross-check notebook, `results/` | Saarah |
+| `derived/` | the product — `ssa_panel.csv` (49 countries × 2000–2025 × 174 columns), `events.csv`, the data dictionary, manifest and data version. **`derived/DATA_ACQUISITION.md` explains how every source was obtained and describes the raw data that is not committed.** | Saarah |
+| `gifna/` | the WHO GIFNA policy registry: combined exports, the combine and feature-table scripts, the feature table | Tiana |
+| `subsaharan_data/` | World Bank GDP per capita, FIES food insecurity, the 49-country list | Hope |
+| `eda/` | exploratory notebooks, by topic — see `eda/README.md` for who did which | everyone |
+| `dashboard/` | the generator and data snapshot behind the live dashboard | Saarah |
+| `presentation/` | the final script, the deck as PDF, captions, the video link | Ramya |
+| `docs/` | method, data sources, known limits, changelog | Saarah |
+
+## Links
+
+- Project site: https://primary-pea.github.io/ · Deck: https://primary-pea.github.io/ink-and-iron/ · Dashboard: https://primary-pea.github.io/dashboard/
+- Method page: https://primary-pea.github.io/method/ · Reproduce page: https://primary-pea.github.io/reproduce/
 
 ## Team
-> Primary Pea — ⟨ *each member adds their own credit line as they'd like to be publicly credited* ⟩
 
-## Visibility
-Private while we work; **this is the repo that gets published** — planned public at submission (exact date ratified at track lock) as the team's portfolio artifact. Only work deliberately copied here from the scratchpad appears. 
+Primary Pea — Ramyashree Shetty (presentation lead), Alison Nichols (analytics), Hope Winsor (data science), Saarah Hossain (modelling scaffold and dashboard), Tatiana Gabel (policy feature table, background on maternal nutrition).
 
-Write for readers; `scripts/preflip_scan.sh` gates the flip and blocks on hits.
+Data: WHO, UNICEF, FAOSTAT, UN IGME, World Bank, WHO GIFNA, GFDx, DHS, WHO PCT databank, Nunn & Puga. Licence: see `LICENSE`.
