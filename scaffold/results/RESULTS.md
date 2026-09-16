@@ -103,6 +103,7 @@ Reading (first anaemia policy): the two-way FE event study shows a post-adoption
 ## 3. The dose ladder (coefficient on the listed term)
 
 - **Main spec (two-way FE, SE clustered by country): -0.209 pp per active anaemia-cluster policy (t−3), 95% CI [-0.623, +0.204], p = 0.321, wild-cluster-bootstrap p = 0.326**, n = 994, 49 countries, two-way within-R² 0.023 [E:02_fe→spec_A]. Per within-country SD of the dose (1.66): -0.35 pp (SE 0.35) [E:02_fe→spec_A_std].
+
 | variant | block | term | coef | 95% CI | p | p (BH) | p (wild bootstrap) | n | note |
 |---|---|---|---:|---|---:|---:|---:|---:|---|
 | A_main | main | `direct:stock_anaemia_policies_lag3` | -0.209 | [-0.623, +0.204] | 0.321 |  | 0.326 | 994 | main spec: anaemia-cluster policies active (GIFNA policies file, dated) lagged 3 y + log GDP pc (constant 2015 US$); country + year FE; SE clustered by country |
