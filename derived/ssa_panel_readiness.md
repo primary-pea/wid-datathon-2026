@@ -1,6 +1,6 @@
-# SSA panel — readiness (scaffold v2.0, built 2026-09-15, data version afe63e46c26b)
+# SSA panel — readiness (scaffold v2.0, built 2026-09-16, data version afe63e46c26b)
 
-Panel: 1274 rows (49 countries × 26 years, 2000–2025) × 174 columns. File: `ssa_panel.csv`; manifest: `MANIFEST.json`. Script: `scaffold/00_assemble_panel.py`.
+Panel: 1274 rows (49 countries × 26 years, 2000–2025) × 174 columns. File: [`ssa_panel.csv`](ssa_panel.csv); manifest: [`MANIFEST.json`](MANIFEST.json). Script: [`scaffold/00_assemble_panel.py`](../scaffold/00_assemble_panel.py).
 
 | group | column | source | countries (of 49) | years | cells | countries without values |
 |---|---|---|---:|---|---:|---|
@@ -42,7 +42,7 @@ Panel: 1274 rows (49 countries × 26 years, 2000–2025) × 174 columns. File: `
 | feature | feat_gifna_* (76 columns) | GIFNA via gifna/build_feature_table.py (policies, programmes, mechanisms; 1999–2025) | 49 | 2000–2025 | 1274 | — |
 | feature | feat_gd_* (60 columns) | WHO GIFNA registry files read directly by gifna_direct.py (policies, programmes & actions, mechanisms; clusters from inputs/gifna_cluster_rules.csv; 0 = no record) | 49 | 2000–2025 | 1274 | — |
 
-Events (v2.0, `events.csv`, one row per country): first dated anaemia-cluster policy year per registry file and across files (survey-window rows never date an event), GFDx mandatory wheat-/maize-flour fortification years and status, UNICEF sub-region, Nunn–Puga terrain variables.
+Events (v2.0, [`events.csv`](events.csv), one row per country): first dated anaemia-cluster policy year per registry file and across files (survey-window rows never date an event), GFDx mandatory wheat-/maize-flour fortification years and status, UNICEF sub-region, Nunn–Puga terrain variables.
 
 Identical series check: `out_anaemia_wra_unicef_pct` vs `out_anaemia_wra_fs_pct` max |difference| = 0 (the UNICEF workbook republishes the same WHO 2025 edition; not independent).
 
@@ -52,9 +52,9 @@ Countries with fewest complete rows: SSD (4), DJI (10), ERI (12), LBR (16), MOZ 
 
 team country list: 49 names; 48 match the pinned lookup; unmatched (encoding): ["Cô´te d'Ivoire"]
 
-## GIFNA registry files read directly (`gifna_direct.py`; v2.0 adds per-file anaemia and fortification families and the dated events table `events.csv`)
+## GIFNA registry files read directly ([`gifna_direct.py`](../scaffold/gifna_direct.py); v2.0 adds per-file anaemia and fortification families and the dated events table [`events.csv`](events.csv))
 
-Source: WHO GIFNA (https://gifna.who.int/), per-country exports of 3–5 Sep 2026 combined by `gifna/combine_gifna_raw.py`. Features come from the controlled topic / theme / target-group columns only (rules: `inputs/gifna_cluster_rules.csv`; every token and its clusters: `gifna_direct_token_map.csv`). Policies are active from start to end year (open end = still active); undated GNPR questionnaire rows are placed in their survey window (2009–2010, 2016–2017); other undated rows are excluded.
+Source: WHO GIFNA (https://gifna.who.int/), per-country exports of 3–5 Sep 2026 combined by [`gifna/combine_gifna_raw.py`](../gifna/combine_gifna_raw.py). Features come from the controlled topic / theme / target-group columns only (rules: [`inputs/gifna_cluster_rules.csv`](../scaffold/inputs/gifna_cluster_rules.csv); every token and its clusters: [`gifna_direct_token_map.csv`](gifna_direct_token_map.csv)). Policies are active from start to end year (open end = still active); undated GNPR questionnaire rows are placed in their survey window (2009–2010, 2016–2017); other undated rows are excluded.
 
 | source | rows in file | rows in the 49 | records used | dated | open end | survey window | undated, excluded | countries with records | tokens | unmapped tokens (share of mentions) |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|

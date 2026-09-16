@@ -30,7 +30,7 @@ import pandas as pd
 
 import config as cfg
 import gifna_direct
-from util import check_panel_grid, sha256_of
+from util import check_panel_grid, linkify_markdown, sha256_of
 
 WID = Path(os.environ.get("SCAFFOLD_ATLAS_DIR", cfg.ROOT))
 _repo_default = cfg.SCAF.parents[1]  # the repo root: scaffold/ sits beside gifna/ and subsaharan_data/
@@ -633,6 +633,7 @@ def main() -> None:
         *gifna_direct.report_lines(gd_report),
     ]
     (OUT / "ssa_panel_readiness.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
+    linkify_markdown(OUT / "ssa_panel_readiness.md", [cfg.ROOT, cfg.SCAF, OUT])
     print("\n".join(lines[:2]))
     print(f"panel {panel.shape} → {panel_path} | data version {version} | anaemia UNICEF vs FS max diff {ident:g}")
 

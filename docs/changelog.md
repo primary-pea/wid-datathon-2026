@@ -8,8 +8,8 @@
 - Specification curve (`02c`), context ranking with terrain and sub-region (`04`), a bootstrap interval on the leave-one-country-out difference (`03`), the concern-score reproduction (`08`) and the DML sidebar (`09`).
 - Implementation contrast (13 September): delivered deworming coverage among school-age children from the WHO PCT databank as an exposure row and a sub-sample control, next to the paper record.
 - Income: constant 2015 US$ is the main measure; the current-US$ series is a row.
-- The R replica was retired (10 September call); the estimator-agreement table in `RESULTS.md` §8 replaces it. Its test is skipped by design, hence 25 collected, 24 passed, 1 skipped.
-- New pinned inputs with provenance: World Bank context series (pulled by the committed `inputs/pull_wb_context.py`, incl. basic sanitation from the WHO/UNICEF JMP), GFDx legislation years, the DHS survey list, Nunn–Puga terrain. Panel 145 → 174 columns; `events.csv` added; 19 → 24 tests. Wild-cluster-bootstrap p-values on every fixed-effects, first-difference and lagged-outcome row.
+- The R replica was retired (10 September call); the estimator-agreement table in [`scaffold/results/RESULTS.md`](../scaffold/results/RESULTS.md) §8 replaces it. Its test is skipped by design, hence 25 collected, 24 passed, 1 skipped.
+- New pinned inputs with provenance: World Bank context series (pulled by the committed [`scaffold/inputs/pull_wb_context.py`](../scaffold/inputs/pull_wb_context.py), incl. basic sanitation from the WHO/UNICEF JMP), GFDx legislation years, the DHS survey list, Nunn–Puga terrain. Panel 145 → 174 columns; [`derived/events.csv`](../derived/events.csv) added; 19 → 24 tests. Wild-cluster-bootstrap p-values on every fixed-effects, first-difference and lagged-outcome row.
 
 ## 15 September 2026 — repository layout only
 

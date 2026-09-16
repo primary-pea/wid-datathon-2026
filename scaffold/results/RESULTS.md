@@ -1,6 +1,6 @@
 # Scaffold v2.0 results — SSA women's-nutrition panel (2026-09-16)
 
-_Every number carries a pointer `[E:script→key]` into `results/stats/`. Panel data version `afe63e46c26b` (sha256 `afe63e46c26b…`, see `MANIFEST.json`); config `2026-09-13a`. Methodology: `research/scaffold-v2-methodology-audit.md`._
+_Every number carries a pointer `[E:script→key]` into [`results/stats/`](stats/). Panel data version `afe63e46c26b` (sha256 `afe63e46c26b…`, see `MANIFEST.json`); config `2026-09-13a`. Method: [`docs/method.md`](../../docs/method.md); limits: [`docs/known-limits.md`](../../docs/known-limits.md)._
 
 ## 0. The three questions and what this design can answer
 
@@ -103,7 +103,6 @@ Reading (first anaemia policy): the two-way FE event study shows a post-adoption
 ## 3. The dose ladder (coefficient on the listed term)
 
 - **Main spec (two-way FE, SE clustered by country): -0.209 pp per active anaemia-cluster policy (t−3), 95% CI [-0.623, +0.204], p = 0.321, wild-cluster-bootstrap p = 0.326**, n = 994, 49 countries, two-way within-R² 0.023 [E:02_fe→spec_A]. Per within-country SD of the dose (1.66): -0.35 pp (SE 0.35) [E:02_fe→spec_A_std].
-
 | variant | block | term | coef | 95% CI | p | p (BH) | p (wild bootstrap) | n | note |
 |---|---|---|---:|---|---:|---:|---:|---:|---|
 | A_main | main | `direct:stock_anaemia_policies_lag3` | -0.209 | [-0.623, +0.204] | 0.321 |  | 0.326 | 994 | main spec: anaemia-cluster policies active (GIFNA policies file, dated) lagged 3 y + log GDP pc (constant 2015 US$); country + year FE; SE clustered by country |
@@ -266,15 +265,15 @@ Agreement is read on the sign of the interval, not the point estimate: every int
 
 ## 10. Figures
 
-- `results/figures/fig_sensitivity.png` — the dose ladder: main, lags, lead test, trends, bracket, context, team and survey-anchored rows
-- `results/figures/fig_event_study.png` — event studies around the first anaemia policy and the wheat-flour mandate (three estimators)
-- `results/figures/fig_spec_curve.png` — specification curve over exposure × estimator × income × lag × controls
-- `results/figures/fig_loco.png` — leave-one-country-out RMSE by nested model
-- `results/figures/fig_calibration.png` — LOCO calibration scatter for the income + policy model
-- `results/figures/fig_residuals.png` — context ranking (residual from the context model), recent window
-- `results/figures/fig_rankings_compare.png` — income-only vs context residuals, one point per country
-- `results/figures/fig_map.png` — choropleth of the context ranking (plotly/kaleido)
-- `results/figures/fig_trends_anaemia.png` — anaemia small multiples, 49 countries
+- [`results/figures/fig_sensitivity.png`](figures/fig_sensitivity.png) — the dose ladder: main, lags, lead test, trends, bracket, context, team and survey-anchored rows
+- [`results/figures/fig_event_study.png`](figures/fig_event_study.png) — event studies around the first anaemia policy and the wheat-flour mandate (three estimators)
+- [`results/figures/fig_spec_curve.png`](figures/fig_spec_curve.png) — specification curve over exposure × estimator × income × lag × controls
+- [`results/figures/fig_loco.png`](figures/fig_loco.png) — leave-one-country-out RMSE by nested model
+- [`results/figures/fig_calibration.png`](figures/fig_calibration.png) — LOCO calibration scatter for the income + policy model
+- [`results/figures/fig_residuals.png`](figures/fig_residuals.png) — context ranking (residual from the context model), recent window
+- [`results/figures/fig_rankings_compare.png`](figures/fig_rankings_compare.png) — income-only vs context residuals, one point per country
+- [`results/figures/fig_map.png`](figures/fig_map.png) — choropleth of the context ranking (plotly/kaleido)
+- [`results/figures/fig_trends_anaemia.png`](figures/fig_trends_anaemia.png) — anaemia small multiples, 49 countries
 
 ## 11. Caveats that ride with every number
 

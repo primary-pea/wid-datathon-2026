@@ -6,7 +6,7 @@ Everything the pipeline needs to rebuild the panel is committed and pinned by SH
 
 | Input (committed) | Origin | How obtained | Shape |
 |---|---|---|---|
-| `scaffold/inputs/faostat/*.parquet` (7 files) | FAOSTAT, July-2026 release: Suite of Food Security Indicators items 21025, 21026, 21041, 21043, 21044, 21049 and the Cost and Affordability of a Healthy Diet release | pulled from the FAOSTAT bulk download by the atlas script `21_faostat_pull_coverage.py`, cut to the item and copied byte-identical (`raw_copies.provenance.json`) | one row per country-year-item; 148 KB in total |
+| `scaffold/inputs/faostat/*.parquet` (7 files) | FAOSTAT, July-2026 release: Suite of Food Security Indicators items 21025, 21026, 21041, 21043, 21044, 21049 and the Cost and Affordability of a Healthy Diet release | pulled from the FAOSTAT bulk download by the atlas script `21_faostat_pull_coverage.py`, cut to the item and copied byte-identical ([`scaffold/inputs/raw_copies.provenance.json`](../scaffold/inputs/raw_copies.provenance.json)) | one row per country-year-item; 148 KB in total |
 | [`scaffold/inputs/unicef/UNICEF_Global-database_Womens-Nutrition_August-2025_2.xlsx`](../scaffold/inputs/unicef/UNICEF_Global-database_Womens-Nutrition_August-2025_2.xlsx) | UNICEF Global Database, Women's Nutrition, August 2025 | downloaded from data.unicef.org; the workbook republishes the WHO 2025 anaemia series | 1.5 MB workbook; 194 countries; anaemia (women, pregnant, non-pregnant), underweight, overweight |
 | [`gifna/gifna_policies.csv`](../gifna/gifna_policies.csv), `gifna_programmes_and_actions.csv`, `gifna_mechanisms.csv` | WHO Global database on the Implementation of Food and Nutrition Action (GIFNA), https://gifna.who.int/ | per-country exports of 3–5 September 2026, one file per (type, country, export date), combined and de-duplicated by [`gifna/combine_gifna_raw.py`](../gifna/combine_gifna_raw.py) | 5,580 policy rows, 8,442 programme-and-action rows, 131 mechanism rows; 8.8 MB |
 | [`gifna/gifna_feature_table.csv`](../gifna/gifna_feature_table.csv) | derived from the three files above by [`gifna/build_feature_table.py`](../gifna/build_feature_table.py) | — | 1,350 country-year rows, 1999–2025 |
@@ -34,6 +34,6 @@ Everything the pipeline needs to rebuild the panel is committed and pinned by SH
 | MICS survey microdata | licensed per registered user; **not used by scaffold v2.0** | one archive per survey | register at mics.unicef.org; never commit |
 | DHS survey microdata | not used; only the survey list is | — | dhsprogram.com |
 | Team Google Drive: clips, deck assets, Presentation Prep | media, not data | — | the Drive folders |
-| The submission video | up to 10 GB; submitted as a file | — | link in `presentation/video.md` |
+| The submission video | up to 10 GB; submitted as a file on the entry form | — | not committed; the deck repo holds the assembled cut |
 
 The panel is rebuilt in full by [`scaffold/run_all.sh`](../scaffold/run_all.sh) from the committed inputs alone; [`data_version.txt`](data_version.txt) must read `afe63e46c26b` afterwards, and [`scaffold/tests/`](../scaffold/tests/) checks the grid, the provenance hashes and the headline numbers.

@@ -1,5 +1,5 @@
 {
-  "built_at": "2026-09-15T17:49:38+00:00",
+  "built_at": "2026-09-16T13:10:28+00:00",
   "config_version": "2026-09-13a",
   "data_version": "afe63e46c26b",
   "panel": {
@@ -10,6 +10,31 @@
     "bytes": 1154704
   },
   "inputs": {
+    "gifna/gifna_feature_table.csv": {
+      "sha256": "a0c66b369c4148c8f547eb0938db8d1d77089ba234b865290e84a528d7cd95f7",
+      "bytes": 452181,
+      "mtime": "2026-09-15T17:48:33+00:00"
+    },
+    "gifna/gifna_mechanisms.csv": {
+      "sha256": "cae0a83a54c24499e2fbd49f97cec2674b7ec27b27380a4c6cabeec7f93c3024",
+      "bytes": 120982,
+      "mtime": "2026-09-15T17:48:33+00:00"
+    },
+    "gifna/gifna_policies.csv": {
+      "sha256": "c1600d6d9af34514ab2ed778137aac6d33eae7965ee70f9f1bdbac5e9bccfb52",
+      "bytes": 3863633,
+      "mtime": "2026-09-15T17:48:33+00:00"
+    },
+    "gifna/gifna_programmes_and_actions.csv": {
+      "sha256": "bb6a1af9b17f918143d5508846b754e076480f075b82a6cb0e9fa6172f6ee728",
+      "bytes": 5047349,
+      "mtime": "2026-09-15T17:48:33+00:00"
+    },
+    "subsaharan_data/GDP_per_capita.csv": {
+      "sha256": "19bc5f67465c187cf253dc9f20886828e33749e97c6efa28df83437ee8689a52",
+      "bytes": 61726,
+      "mtime": "2026-09-15T17:48:33+00:00"
+    },
     "scaffold/inputs/STH_data.provenance.json": {
       "sha256": "9d8f1aef3df03841d0e70828ece3aa8c7108279e48222c5706cc18b04e609259",
       "bytes": 1609,
@@ -129,31 +154,6 @@
       "sha256": "1be1bd837d94d30be6cbc5cb20876183baf1137bb8564518a9ec3e94ff86f6d7",
       "bytes": 743,
       "mtime": "2026-09-09T14:11:51+00:00"
-    },
-    "team-repo/gifna/gifna_feature_table.csv": {
-      "sha256": "a0c66b369c4148c8f547eb0938db8d1d77089ba234b865290e84a528d7cd95f7",
-      "bytes": 452181,
-      "mtime": "2026-09-15T17:48:33+00:00"
-    },
-    "team-repo/gifna/gifna_mechanisms.csv": {
-      "sha256": "cae0a83a54c24499e2fbd49f97cec2674b7ec27b27380a4c6cabeec7f93c3024",
-      "bytes": 120982,
-      "mtime": "2026-09-15T17:48:33+00:00"
-    },
-    "team-repo/gifna/gifna_policies.csv": {
-      "sha256": "c1600d6d9af34514ab2ed778137aac6d33eae7965ee70f9f1bdbac5e9bccfb52",
-      "bytes": 3863633,
-      "mtime": "2026-09-15T17:48:33+00:00"
-    },
-    "team-repo/gifna/gifna_programmes_and_actions.csv": {
-      "sha256": "bb6a1af9b17f918143d5508846b754e076480f075b82a6cb0e9fa6172f6ee728",
-      "bytes": 5047349,
-      "mtime": "2026-09-15T17:48:33+00:00"
-    },
-    "team-repo/subsaharan_data/GDP_per_capita.csv": {
-      "sha256": "19bc5f67465c187cf253dc9f20886828e33749e97c6efa28df83437ee8689a52",
-      "bytes": 61726,
-      "mtime": "2026-09-15T17:48:33+00:00"
     }
   },
   "events": {
@@ -162,7 +162,7 @@
     "countries_with_dated_anaemia_policy": 46,
     "countries_with_wheat_mandate_year": 27
   },
-  "shared_repo_head": "47a1cd3",
+  "shared_repo_head": "3c7fc79",
   "checks": {
     "complete_grid": true,
     "duplicate_keys": 0,

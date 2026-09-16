@@ -9,7 +9,7 @@ import sys
 import pandas as pd
 
 import config as cfg
-from util import load_stats, panel_sha256, save_stats
+from util import linkify_markdown, load_stats, panel_sha256, save_stats
 
 T = cfg.tag
 STATS_FILES = ("01_frame", "02_fe", "02b_event", "02c_spec", "03_loco", "04_residuals", "05_figures")
@@ -39,7 +39,7 @@ def main() -> None:
 
     w(f"# Scaffold {cfg.SCAFFOLD_VERSION} results — SSA women's-nutrition panel ({cfg.RUN_DATE})\n")
     w(
-        f"_Every number carries a pointer `[E:script→key]` into `results/stats/`. Panel data version `{cfg.data_version()}` (sha256 `{sha[:12]}…`, see `MANIFEST.json`); config `{cfg.CONFIG_VERSION}`. Methodology: `research/scaffold-v2-methodology-audit.md`._\n"
+        f"_Every number carries a pointer `[E:script→key]` into `results/stats/`. Panel data version `{cfg.data_version()}` (sha256 `{sha[:12]}…`, see `MANIFEST.json`); config `{cfg.CONFIG_VERSION}`. Method: `docs/method.md`; limits: `docs/known-limits.md`._\n"
     )
     w("## 0. The three questions and what this design can answer\n")
     w(
@@ -313,6 +313,7 @@ def main() -> None:
         f"- The within-country coefficient is identified from {f1['identified_from_countries']} countries; ERI contributes income data to 2011 only."
     )
     (cfg.RESULTS / "RESULTS.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
+    linkify_markdown(cfg.RESULTS / "RESULTS.md", [cfg.ROOT, cfg.SCAF, cfg.RESULTS])
     print("→", cfg.RESULTS / "RESULTS.md")
     save_stats("06_report", dict(sections=11, estimators_agree_on_sign=True))
     write_dictionary()
@@ -380,6 +381,7 @@ def write_dictionary() -> None:
         "- `deviants_policy_stock.csv`, `deviant_contrast.csv`, `deviants_timeline.csv` — the two context tails, their exposure means with Mann-Whitney p, and their dated anaemia-policy stock at five points in time."
     )
     (cfg.PANEL_DIR / "DATA_DICTIONARY.md").write_text("\n".join(dd) + "\n", encoding="utf-8")
+    linkify_markdown(cfg.PANEL_DIR / "DATA_DICTIONARY.md", [cfg.ROOT, cfg.SCAF, cfg.PANEL_DIR])
     print("→", cfg.PANEL_DIR / "DATA_DICTIONARY.md")
 
 

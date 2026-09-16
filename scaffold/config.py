@@ -3,7 +3,7 @@
 Every parameter the pipeline uses lives here. Scripts import it as ``cfg`` — never as ``C``, because patsy formulas
 use ``C()`` and the alias shadows it. Run from anywhere: ``.venv/bin/python scaffold/<NN>_*.py``.
 
-v2.0 (methodology audit of 12 Sep 2026, research/scaffold-v2-methodology-audit.md): dated-only exposure for the
+v2.0 (methodology audit of 12 Sep 2026, summarised in docs/changelog.md): dated-only exposure for the
 within-country design, an event study with heterogeneity-robust estimators, first-difference / lagged-outcome bracket
 rows, context controls from the anaemia literature, equivalence bounds, a specification curve, a survey-anchored row,
 a women's-nutrition summary index and a context-adjusted positive-deviance ranking.
@@ -35,10 +35,11 @@ FRAME_CSV = RESULTS / "frame.csv"
 
 
 def _default_panel_dir() -> Path:
-    local, shared = SCAF / "panel", ROOT.parent / "derived"
-    if (local / "ssa_panel.csv").exists() or not (shared / "ssa_panel.csv").exists():
-        return local
-    return shared
+    """<repo>/derived/ when the scaffold sits in a repo that has one (the public layout), else scaffold/panel/."""
+    for shared in (ROOT / "derived", ROOT.parent / "derived"):
+        if (shared / "ssa_panel.csv").exists():
+            return shared
+    return SCAF / "panel"
 
 
 PANEL_DIR = Path(os.environ.get("SCAFFOLD_PANEL_DIR", _default_panel_dir()))

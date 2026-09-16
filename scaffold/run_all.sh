@@ -14,10 +14,4 @@ echo "== 06_report"; "$PY" 06_report.py
 echo "== 07_make_notebook"; "$PY" 07_make_notebook.py "$@"
 if [ "${SKIP_TESTS:-0}" != "1" ]; then echo "== tests"; "$PY" -m pytest tests -q; fi
 PANEL_DIR=$("$PY" -c 'import config; print(config.PANEL_DIR)')
-if [ "$(basename "$PANEL_DIR")" = "derived" ]; then  # shared-repo layout: keep the team-facing result folder in step
-  mkdir -p "$PANEL_DIR/scaffold_results"
-  for f in fe_coefficients fe_sensitivity fe_subsample event_study event_att spec_curve loco_rmse loco_per_country residuals_by_country deviants_policy_stock deviant_contrast deviants_timeline concern_score; do
-    [ -f "results/$f.csv" ] && cp "results/$f.csv" "$PANEL_DIR/scaffold_results/"
-  done
-fi
-echo "== done: data version $(cat "$PANEL_DIR/data_version.txt")"
+echo "== done: panel in $PANEL_DIR, data version $(cat "$PANEL_DIR/data_version.txt")"

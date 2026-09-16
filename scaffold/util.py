@@ -137,6 +137,52 @@ def fe_fit_trends(df: pd.DataFrame, y: str, xs: list[str]):
     return m, d, within_r2
 
 
+def linkify_markdown(path: Path, roots: list[Path]) -> int:
+    """Rewrite a generated markdown file so every backticked repo path becomes a relative link.
+
+    A backticked span is a path when it contains a slash or a known extension and resolves under one of ``roots``
+    (tried in order: the repo root, the scaffold folder, the file's own folder). Code fences and spans that are
+    already links are left alone. Returns the number of spans linked."""
+    import os
+    import re
+    import urllib.parse
+
+    tick = re.compile(r"`([^`\n]+)`")
+    ext = re.compile(r"\.(py|md|csv|json|ipynb|Rmd|Rproj|pdf|sh|txt|xlsx|toml|png)$")
+    text = path.read_text(encoding="utf-8")
+    out, fence, n = [], False, 0
+    for line in text.splitlines(keepends=True):
+        if line.lstrip().startswith("```"):
+            fence = not fence
+            out.append(line)
+            continue
+        if fence:
+            out.append(line)
+            continue
+
+        def sub(m, line=line):
+            nonlocal n
+            t = m.group(1).strip()
+            if m.start() > 0 and line[m.start() - 1] == "[" or line[m.end() : m.end() + 2] == "](":
+                return m.group(0)
+            if not re.fullmatch(r"[A-Za-z0-9_./ -]+", t) or ("/" not in t and not ext.search(t)) or t.startswith("."):
+                return m.group(0)
+            for base in roots:
+                cand = (base / t).resolve()
+                if cand.exists():
+                    rel = os.path.relpath(cand, path.parent)
+                    if cand.is_dir() and not rel.endswith("/"):
+                        rel += "/"
+                    n += 1
+                    return f"[`{m.group(1)}`]({urllib.parse.quote(rel)})"
+            return m.group(0)
+
+        out.append(tick.sub(sub, line))
+    if n:
+        path.write_text("".join(out), encoding="utf-8")
+    return n
+
+
 def res_rows(res, spec: str, y: str, d: pd.DataFrame) -> list[dict]:
     """Tidy rows from a linearmodels PanelOLS result. ``r2_within`` is the two-way within R² (= fixest wr2)."""
     ci = res.conf_int()
