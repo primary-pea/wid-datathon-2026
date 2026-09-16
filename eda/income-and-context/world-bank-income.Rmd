@@ -1,0 +1,57 @@
+---
+title: "World Bank Data"
+author: "Hope Winsor"
+date: "2026-09-04"
+output: pdf_document
+---
+
+```{r libraries, message= F}
+library(tidyverse)
+library(FAOSTAT)
+```
+
+```{r read in data}
+countries <- read.csv("../../subsaharan_data/subsahran_africa_countries.csv")
+gdp_per_cap <- getWDI(indicator = "NY.GDP.PCAP.CD", "GDP Per Capita (Constant USD)")
+unemployment <- getWDI(indicator = "SL.UEM.TOTL.ZS", "Unemployment (% of Pop)")
+hospital_beds <- getWDI("SH.MED.BEDS.ZS", "Hospital Beds Per 1000 People")
+gdp_per_cap <- merge(gdp_per_cap, merge(unemployment, hospital_beds))
+```
+
+```{r}
+# drop column of presumably row numbers
+countries |> select(Country) -> countries
+# basic filter shows 43 of subsaharan countries in World Bank data 
+gdp_per_cap |> filter(Country %in% countries$Country) |> select(Country) |>
+  unique() -> wb_countries
+# find missing countries
+# Congo, Cote d'Ivoire, Democratic Republic of the Congo, Gambia, Somalia, United Republic of Tanzania
+countries |> filter(!Country %in% wb_countries$Country)
+```
+
+```{r fix country names}
+countries |> mutate(Country = case_when(
+  Country == "C\xf4\xb4te d'Ivoire" ~ "Cote d'Ivoire",
+  TRUE ~ Country
+)) -> countries
+gdp_per_cap |> mutate(Country = case_when(
+  Country == "Congo, Rep." ~ "Congo",
+  Country == "Congo, Dem. Rep." ~ "Democratic Republic of the Congo",
+  Country == "Gambia, The" ~ "Gambia",
+  Country == "Somalia, Fed. Rep." ~ "Somalia",
+  Country == "Tanzania" ~ "United Republic of Tanzania",
+  TRUE ~ Country
+)) -> gdp_per_cap
+gdp_per_cap <- gdp_per_cap |> filter(Country %in% countries$Country, Year >= 2000)
+```
+
+
+```{r}
+write.csv(gdp_per_cap, "../../subsaharan_data/GDP_per_capita.csv", row.names = FALSE)
+```
+
+
+
+
+
+

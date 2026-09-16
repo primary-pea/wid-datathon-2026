@@ -1,3 +1,3 @@
 # income-and-context/
 
-This goes here (Hope): `world-bank-income.Rmd` and the first-pass notebook, renamed for what it does (e.g. `first-pass.Rmd`), with their knitted output.
+World Bank WDI (Hope). `world-bank-income.Rmd` builds `subsaharan_data/GDP_per_capita.csv`; `first-pass.Rmd` is the initial look across the indicators that became the panel's context block. Both read the country list from `subsaharan_data/` by relative path.

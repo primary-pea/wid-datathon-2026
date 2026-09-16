@@ -1,0 +1,272 @@
+---
+title: "Food Insecurity by Gender"
+author: "Hope Winsor"
+date: "2026-08-28"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = F, fig.height = 3)
+```
+
+```{r packages, include = F}
+#install.packages("FAOSTAT")
+#install.packages("usethis")
+#usethis::edit_r_environ()
+# set FAOSTAT_USER and FAOSTAT_PASSWORD
+library(FAOSTAT)
+library(tidyverse)
+library(cowplot)
+library(knitr)
+library(gridExtra)
+```
+
+```{r data read in, include = F, cache = T}
+# FS = Suite of Food Security Indicators
+food_security <- get_faostat_bulk_api("FS")
+
+# 3 year data range because that's what FAOSTAT displays, 
+# only keep individual countries (area codes < 5000),
+# only keep food insecurity features with measurements in percentages for comparison
+food_security |> filter(str_detect(year, "-"), unit == "%", area_code < 5000) |>
+  pivot_wider(names_from = item) |> group_by(year, area) |>
+  summarise(across(everything(), ~ first(na.omit(.))), .groups = "drop") |> 
+  select(area, year, "Prevalence of severe food insecurity in the total population (percent) (3-year average)",
+         "Prevalence of severe food insecurity in the male adult population (percent) (3-year average)", 
+         "Prevalence of severe food insecurity in the female adult population (percent) (3-year average)") -> insecurity_gender_range
+```
+
+```{r clean data, include = F}
+# fix country names that read in incorrectly
+insecurity_gender_range |> mutate(area = case_when(
+    area == "CÃ´te d'Ivoire" ~ "Cote d'Ivoire",
+    area == "TÃ¼rkiye" ~ "Turkiye",
+    TRUE ~ area  # Keep other values unchanged
+  )) -> insecurity_gender_range
+
+# rename to make merging with world map easier
+names(insecurity_gender_range)[1] <- "region"
+
+# some countries have food insecurity less than 0.5%, not reported numerically -- arbitrarily assign to value 0.4 so these don't get replaced with NA when coerced to numeric
+insecurity_gender_range[insecurity_gender_range == "<0.5"] <- "0.4"
+# convert FI columns to numeric
+insecurity_gender_range |> mutate(across(3:5, as.numeric)) -> insecurity_gender_range
+# drop columns with missing data
+insecurity_gender_range <- insecurity_gender_range |> drop_na()
+```
+
+```{r map set up, include = F}
+world_map <- map_data("world") |> 
+  filter(! long > 180)
+
+# rename regions in world map to match FAOSTAT so map displays properly
+world_map |> mutate(region = case_when(
+  region == "Barbuda" ~ "Antigua and Barbuda", 
+  region == "Bolivia" ~"Bolivia (Plurinational State of)", 
+  region == "Brunei" ~ "Brunei Darussalam", 
+  region == "Cape Verde" ~ "Cabo Verde", 
+  region == "Taiwan" ~ "China, Taiwan Province of", 
+  region == "Republic of Congo" ~ "Congo", 
+  region == "Czech Republic" ~ "Czechia",
+  region == "Ivory Coast" ~ "Cote d'Iviore",
+  region == "North Korea" ~ "Democratic People's Republic of Korea", 
+  region == "Swaziland" ~ "Eswatini", 
+  region == "Iran" ~ "Iran (Islamic Republic of)", 
+  region == "Laos" ~ "Lao People's Democratic Republic", 
+  region == "Northern Mariana Islands" ~ "Micronesia (Federated States of)", 
+  region == "Netherlands" ~ "Netherlands (Kingdom of the)", 
+  region == "South Korea" ~ "Republic of Korea", 
+  region == "Moldova"~"Republic of Moldova", 
+  region == "Russia"~"Russian Federation", 
+  region == "Nevis" ~ "Saint Kitts and Nevis", 
+  region == "Grenadines" ~ "Saint Vincent and the Grenadines", 
+  region == "Syria"~"Syrian Arab Republic", 
+  region == "Trinidad"~"Trinidad and Tobago", 
+  region == "Turkey" ~ "Turkiye", 
+  region == "UK"~"United Kingdom of Great Britain and Northern Ireland", 
+  region == "Tanzania"~"United Republic of Tanzania", 
+  region == "USA"~"United States of America", 
+  region == "Venezuela"~"Venezuela (Bolivarian Republic of)", 
+  region == "Vietnam"~"Viet Nam",
+  TRUE ~ region
+)) -> world_map
+
+show_map <- function(df, date_range, fill_var, title_label){
+  merge(df, world_map) |> filter(year == date_range) |>
+    ggplot(aes(fill = as.numeric(fill_var), map_id = region)) +
+  geom_map(map = world_map) +
+  expand_limits(x = world_map$long, y = world_map$lat) +
+  coord_map("moll") +
+  labs(fill = "", title = title_label)
+}
+```
+
+```{r add diff and rank features, include = F}
+# add difference between male and female FI as feature
+insecurity_gender_range$diff <- insecurity_gender_range$`Prevalence of severe food insecurity in the male adult population (percent) (3-year average)` - insecurity_gender_range$`Prevalence of severe food insecurity in the female adult population (percent) (3-year average)`
+
+# rank difference within each year range, low numbers = higher male FI, high numbers = higher female FI 
+insecurity_gender_range |> group_by(year) |> 
+  mutate(rank = row_number(desc(diff))) -> insecurity_gender_range
+```
+
+```{r show rank tables, include = F}
+
+insecurity_gender_range |> select(region, rank, year) |> filter(rank > 130) |>
+  pivot_wider(
+    names_from = year,
+    values_from = region,
+    names_sort = TRUE
+  ) |>
+  arrange(rank)
+
+insecurity_gender_range |> group_by(region) |> summarise(ave_rank = mean(rank, na.rm = T)) |> arrange(ave_rank)
+```
+
+```{r show graphs, include = F}
+show_plots <- function(location){
+  diff_plot <- insecurity_gender_range |> filter(region == location) |>
+    ggplot(aes(x = year, y = diff)) +
+    geom_point() + geom_text(aes(label = rank), color = "darkblue", vjust = "inward", hjust = "inward", size = 3) +
+    theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust = 1),
+          plot.subtitle = element_text(size = 12)) +
+    labs(title = location, y = "Difference (%)", subtitle = "positive = higher male FI,\nnegative = higher female FI") 
+  
+  values_plot <- insecurity_gender_range |> filter(region == location) |>
+    ggplot(aes(x = year)) + 
+    geom_point(aes(y = `Prevalence of severe food insecurity in the total population (percent) (3-year average)`, color = "Total")) +
+    geom_point(aes(y = `Prevalence of severe food insecurity in the male adult population (percent) (3-year average)`, color = "Male")) +
+    geom_point(aes(y = `Prevalence of severe food insecurity in the female adult population (percent) (3-year average)`, color = "Female")) +
+    theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust = 1)) +
+    labs(title = location, y = "Food Insecurity (%)") +
+    scale_color_manual(name = "Group", 
+                       breaks = c("Total", "Male", "Female"), 
+                       values = c("Total" = "black", "Male" = "blue", "Female" = "red"))
+grid.arrange(diff_plot, values_plot, widths = c(1.25, 2), ncol = 2)
+}
+```
+
+
+## High Relative Male Food Insecurity
+```{r}
+# table won't show complete, probably because of null values in earlier time ranges with less complete data
+insecurity_gender_range |> select(region, rank, year) |> filter(rank < 130) |>
+  pivot_wider(
+    names_from = year,
+    values_from = region,
+    names_sort = TRUE
+  ) |>
+  arrange(rank) |> head(6) |> select(1:6) |> kable() 
+
+insecurity_gender_range |> select(region, rank, year) |> filter(rank < 130) |>
+  pivot_wider(
+    names_from = year,
+    values_from = region,
+    names_sort = TRUE
+  ) |>
+  arrange(rank) |> head(6) |> select(c(1, 7:11)) |> kable() 
+```
+
+
+### Malaysia
+Malaysia has consistently high relative male food insecurity, falling in the top 10 of all countries for all date ranges with available data. 
+
+```{r malaysia}
+show_plots("Malaysia")
+```
+
+### Ireland
+Ireland has a lower average country-wide percentage of food insecurity than Malaysia (between 2-5% to Malaysia's 5-8%), but shows a similar trend with male food insecurity being higher than female food insecurity in all year ranges.
+
+```{r ireland}
+show_plots("Ireland")
+```
+
+
+## High Relative Female Food Insecurity
+Data coverage is not consistent across years. This table shows the total number of countries with data available for each year range. Countries with large numbers have high food insecurity for females relative to males.
+
+```{r}
+insecurity_gender_range |> group_by(year) |> summarise("Countries w/ Data Available" = n()) |> kable()
+```
+
+```{r}
+insecurity_gender_range |> group_by(year) |> 
+  mutate(rank_reversed = row_number(diff)) |> select(region, rank_reversed, year) |>
+  pivot_wider(
+    names_from = year,
+    values_from = region,
+    names_sort = TRUE
+  ) |>
+  arrange(rank_reversed, .by_group = T) |> head(6) |> select(1:6) |> kable() 
+
+insecurity_gender_range |> group_by(year) |> 
+  mutate(rank_reversed = row_number(diff)) |> select(region, rank_reversed, year) |>
+  pivot_wider(
+    names_from = year,
+    values_from = region,
+    names_sort = TRUE
+  ) |>
+  arrange(rank_reversed, .by_group = T) |> head(6) |> select(c(1, 7:11)) |> kable()
+```
+
+
+### Botswana
+Botswana has consistently higher female food insecurity relative to male food insecurity, between 3 and 6% higher.
+
+```{r}
+show_plots("Botswana")
+```
+
+### Afghanistan
+Afghanistan has also had consistently higher female food insecurity than male, with the gap widening over time. Female food insecurity was ~2% higher in 2015-2017, increasing to 10% in 2018-2020 and holding. Of countries with reported data, Afghanistan has had the highest gap of female food insecurity over male for the last four time ranges, and top three for the 3 year ranges before that.
+```{r}
+show_plots("Afghanistan")
+```
+
+
+## Other Interesting Trends
+### Cameroon
+Cameroon was in the top 6, indicating high relative food insecurity for males, from 2014-2016 to 2021-2023 and then in 2022-2024 dropped down to rank 55th. Food insecurity for males and females was approximately equal in 2022-2024 and then slightly higher for females 2023-2025.
+
+```{r}
+show_plots("Cameroon")
+```
+
+### Togo
+
+Togo shows similar pattern to Cameroon, having been the country with the highest relative male food insecurity for three year segments, followed by top 5 for another 5 year segments, and then dropped to 18th in 2022-2024 and 56th in 2023-2025, where male food insecurity and female food insecurity were approximately equal.
+
+```{r}
+show_plots("Togo")
+```
+
+### Libya
+
+Libya had high relative female food insecurity (between 5 and 12 percent higher than male food insecurity), with the gap increasing between over time. In 2019-2021, Libya had the highest relative female food insecurity of all countries with reported data. This trend then reversed and in 2023-2025 Libya had the highest relative male food insecurity of all countries, with male food insecurity about 5% higher than female food insecurity.
+
+```{r}
+show_plots("Libya")
+```
+
+
+## Approximately Equal Food Insecurity
+### Italy
+Italy consistently has almost no food insecurity, reporting less than 0.5% on average for all time ranges for male, female, and total population. (The graph represents less than 0.5% as 0.4 based on an arbitrary assignment to avoid the string "<0.5%" being overwritten as NA when converting to numeric.)
+
+```{r}
+show_plots("Italy")
+```
+
+### Chad
+Chad has high overall food insecurity, between 25 and 40%, but the difference between male and female food insecurity is approximately none.
+
+```{r}
+show_plots("Chad")
+```
+
+
+
+
+
+

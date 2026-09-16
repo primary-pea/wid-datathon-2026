@@ -1,0 +1,46 @@
+---
+title: "Food Insecurity"
+author: "Hope Winsor"
+date: "2026-09-04"
+output: pdf_document
+---
+
+```{r libraries, message= F}
+library(tidyverse)
+library(FAOSTAT)
+```
+
+```{r read in data}
+countries <- read.csv("../../subsaharan_data/subsahran_africa_countries.csv")
+food_security <- get_faostat_bulk_api("FS") |> 
+  filter(nchar(year) == 4, unit == "%") |>
+  pivot_wider(names_from = item) |> group_by(year, area) |>
+  summarise(across(everything(), ~ first(na.omit(.))), .groups = "drop") |> select(area, year, "Prevalence of severe food insecurity in the male adult population (percent) (annual value)",
+         "Prevalence of severe food insecurity in the female adult population (percent) (annual value)", 
+         "Prevalence of severe food insecurity in the total population (percent) (annual value)") 
+```
+
+```{r}
+# fix read in errors for names
+food_security |> mutate(area = case_when(
+    area == "CÃ´te d'Ivoire" ~ "Cote d'Ivoire",
+    area == "TÃ¼rkiye" ~ "Turkiye",
+    TRUE ~ area  # Keep other values unchanged
+  ),
+  year = as.numeric(year)) -> food_security
+countries |> mutate(Country = case_when(
+  Country == "C\xf4\xb4te d'Ivoire" ~ "Cote d'Ivoire",
+  TRUE ~ Country
+)) -> countries
+# all countries match
+food_security |> filter(area %in% countries$Country) |> select(area) |>
+  unique() 
+# save data
+food_security <- food_security |> 
+  filter(area %in% countries$Country, year >= 2000)
+write.csv(food_security, "../../subsaharan_data/food_insecurity.csv", row.names = FALSE)
+```
+
+
+
+

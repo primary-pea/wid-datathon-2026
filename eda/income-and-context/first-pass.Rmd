@@ -1,0 +1,217 @@
+---
+title: "EDA"
+author: "Hope Winsor"
+date: "2026-08-21"
+output: pdf_document
+---
+
+```{r}
+#install.packages("FAOSTAT")
+library(FAOSTAT)
+library(tidyverse)
+# show code label pairs to load appropriate FAOSTAT dataset
+search_dataset()
+```
+
+```{r}
+# FS = Suite of Food Security Indicators
+food_security <- get_faostat_bulk_api("FS")
+```
+
+```{r}
+# for simplicity, only look at 2024
+# give each data category its own column
+food_security |> filter(year == "2024") |> pivot_wider(names_from = item) |> group_by(area) %>%
+  summarise(across(everything(), ~ first(na.omit(.))), .groups = "drop") -> food_short
+```
+
+```{r}
+food_security |> filter(year == "2024") |> group_by(item) |> summarise(data_completion = n()/nrow(food_short)*100)
+```
+
+info on 
+
+```{r}
+world_map = map_data("world") %>% 
+  filter(! long > 180)
+
+countries = world_map %>% 
+  distinct(region) %>% 
+  rowid_to_column() 
+
+countries_plus_food <- countries |> merge(food_short, by.x = "region", by.y = "area")
+countries_plus_food %>% 
+  ggplot(aes(fill = as.numeric(`Average dietary energy requirement (kcal/cap/day)`), map_id = region)) +
+  geom_map(map = world_map) +
+  expand_limits(x = world_map$long, y = world_map$lat) +
+  coord_map("moll") +
+  labs(fill = "", title = "Average dietary energy requirement")
+```
+
+```{r}
+countries_plus_food %>% 
+  ggplot(aes(fill = as.numeric(`Incidence of caloric losses at retail distribution level (percent)`), map_id = region)) +
+  geom_map(map = world_map) +
+  expand_limits(x = world_map$long, y = world_map$lat) +
+  coord_map("moll") +
+  labs(fill = "", title = "")
+```
+
+```{r}
+# compare food insecurity between male and female population
+# split data into three-year range data and one-year range data
+food_security |> filter(str_detect(year, "-"), unit == "%") |>
+  pivot_wider(names_from = item) |> group_by(year, area) |>
+  summarise(across(everything(), ~ first(na.omit(.))), .groups = "drop") |> 
+  select(area, year, contains(c("male", "female"))) -> insecurity_gender_range
+
+food_security |> filter(nchar(year) == 4, unit == "%") |>
+  pivot_wider(names_from = item) |> group_by(year, area) |>
+  summarise(across(everything(), ~ first(na.omit(.))), .groups = "drop") |> 
+  select(area, year, contains(c("male", "female"))) -> insecurity_gender
+
+# find gaps in data coverage
+insecurity_gender_range |> group_by(year) |> summarise(
+    across(
+      everything(),
+      ~ mean(is.na(.)) * 100
+    )
+  )
+
+insecurity_gender |> group_by(year) |> summarise(
+    across(
+      everything(),
+      ~ mean(is.na(.)) * 100
+    )
+  )
+
+
+insecurity_gender_range <- insecurity_gender_range |> drop_na()
+```
+
+100% coverage for data in 3 year range from 2014-2016 onwards
+no data prior to 2014
+limited data 2014 onwards in 1 year increments
+
+```{r}
+world_map <- map_data("world") |>
+  filter(! long > 180)
+
+world_map |> ggplot(aes(map_id = region)) + geom_map(map = world_map, color = "grey") +
+  expand_limits(x = world_map$long, y = world_map$lat) +
+  coord_map("moll")
+
+unique(world_map$region)[!unique(world_map$region) %in% unique(insecurity_gender_range$area)]
+unique(insecurity_gender_range$area)[!unique(insecurity_gender_range$area) %in% unique(world_map$region)]
+
+#in FAOSTAT: "Antigua and Barbuda", "Bolivia (Plurinational State of)", "Brunei Darussalam", "Cabo Verde", "China, Hong Kong SAR", "China, Macao SAR", "China, Taiwan Province of", "China, mainland", "Congo", "Czechia", "CÃ´te d'Ivoire", "Democratic People's Republic of Korea", "Eswatini", "Iran (Islamic Republic of)", "Lao People's Democratic Republic", "Melanesia", "Micronesia (Federated States of)", "Netherlands (Kingdom of the)", "Republic of Korea", "Republic of Moldova", "Russian Federation", "Saint Kitts and Nevis", "Saint Vincent and the Grenadines", "Syrian Arab Republic", "Tokelau", "Trinidad and Tobago", "Tuvalu", "TÃ¼rkiye", "United Kingdom of Great Britain and Northern Ireland", "United Republic of Tanzania", "United States of America", "Venezuela (Bolivarian Republic of)", "Viet Nam"  
+
+insecurity_gender_range |> mutate(area = case_when(
+    area == "CÃ´te d'Ivoire" ~ "Cote d'Ivoire",
+    area == "TÃ¼rkiye" ~ "Turkiye",
+    TRUE ~ area  # Keep other values unchanged
+  )) -> insecurity_gender_range
+
+# rename regions in world map to match FAOSTAT so map displays properly
+world_map |> mutate(region = case_when(
+  region == "Barbuda" ~ "Antigua and Barbuda", 
+  region == "Bolivia" ~"Bolivia (Plurinational State of)", 
+  region == "Brunei" ~ "Brunei Darussalam", 
+  region == "Cape Verde" ~ "Cabo Verde", 
+  region == "Taiwan" ~ "China, Taiwan Province of", 
+  region == "Republic of Congo" ~ "Congo", 
+  region == "Czech Republic" ~ "Czechia",
+  region == "Ivory Coast" ~ "Cote d'Iviore",
+  region == "North Korea" ~ "Democratic People's Republic of Korea", 
+  region == "Swaziland" ~ "Eswatini", 
+  region == "Iran" ~ "Iran (Islamic Republic of)", 
+  region == "Laos" ~ "Lao People's Democratic Republic", 
+  region == "Northern Mariana Islands" ~ "Micronesia (Federated States of)", 
+  region == "Netherlands" ~ "Netherlands (Kingdom of the)", 
+  region == "South Korea" ~ "Republic of Korea", 
+  region == "Moldova"~"Republic of Moldova", 
+  region == "Russia"~"Russian Federation", 
+  region == "Nevis" ~ "Saint Kitts and Nevis", 
+  region == "Grenadines" ~ "Saint Vincent and the Grenadines", 
+  region == "Syria"~"Syrian Arab Republic", 
+  region == "Trinidad"~"Trinidad and Tobago", 
+  region == "Turkey" ~ "Turkiye", 
+  region == "UK"~"United Kingdom of Great Britain and Northern Ireland", 
+  region == "Tanzania"~"United Republic of Tanzania", 
+  region == "USA"~"United States of America", 
+  region == "Venezuela"~"Venezuela (Bolivarian Republic of)", 
+  region == "Vietnam"~"Viet Nam",
+  TRUE ~ region
+)) -> world_map
+
+names(insecurity_gender_range)[1] <- "region"
+
+# map 2023-2025 to confirm map renders correctly
+merge(insecurity_gender_range, world_map) |> filter(year == "2023-2025") -> test_df
+  
+test_df |> ggplot(aes(fill = as.numeric(`Prevalence of severe food insecurity in the male adult population (percent) (3-year average)`), map_id = region)) + geom_map(map = world_map, color = "grey") +
+  expand_limits(x = world_map$long, y = world_map$lat) +
+  coord_map("moll") + labs(fill = "Severe FI male")
+```
+in which I discover that there are in fact data gaps
+they're just blanks instead of NA
+
+```{r}
+# fill blanks with NA
+insecurity_gender_range |> select(-diff) |> mutate_all(na_if, "") |> group_by(year) |> summarise(
+    across(
+      everything(),
+      ~ mean(is.na(.)) * 100
+    )
+  ) 
+insecurity_gender_range |> mutate_all(na_if, "")-> insecurity_gender_range
+insecurity_gender_range <- insecurity_gender_range |> drop_na()
+```
+
+```{r}
+# add column for difference between male and female insecurity
+insecurity_gender_range$diff <- as.numeric(insecurity_gender_range$`Prevalence of severe food insecurity in the male adult population (percent) (3-year average)`) - as.numeric(insecurity_gender_range$`Prevalence of severe food insecurity in the female adult population (percent) (3-year average)`)
+
+insecurity_gender_range |> filter(year == "2023-2025") |> ggplot(aes(fill = diff, map_id = region)) + geom_map(map = world_map, color = "grey") +
+  expand_limits(x = world_map$long, y = world_map$lat) +
+  coord_map("moll") + labs(fill = "Insecurity Gender Gap") + scale_fill_gradient2()
+```
+
+
+```{r}
+insecurity_gender_range |> group_by(year) |> 
+  mutate(rank = row_number(desc(diff))) -> insecurity_gender_range
+
+insecurity_gender_range |> select(region, year, diff, rank) |> arrange(rank)
+```
+
+```{r}
+insecurity_gender_range |> select(region, rank, year) |> filter(rank < 130) |>
+  pivot_wider(
+    names_from = year,
+    values_from = region,
+    names_sort = TRUE
+  ) %>%
+  arrange(rank)
+
+insecurity_gender_range |> select(region, rank, year) |> filter(rank > 130) |>
+  pivot_wider(
+    names_from = year,
+    values_from = region,
+    names_sort = TRUE
+  ) %>%
+  arrange(rank)
+
+insecurity_gender_range |> group_by(region) |> summarise(ave_rank = mean(rank, na.rm = T)) |> arrange(ave_rank)
+
+insecurity_gender_range |> filter(region %in% c("Libya")) |> select(region, rank, year, diff)
+```
+
+Togo went from highest diff w/ high MFI for 10 years to 61st in 2023-2025
+Malasia has consistently high MFI
+Ireland has ~1.5% diff consistently
+
+Botswana has consistently high FFI ~-4-5%
+Afghanistan had -2 2015-2017, increasing to -10 2018-2020 and holding
+
+Libya inconsistent: -4.3 in 2014-2016, -10 2018-2021, 4.9 in 2023-2025
