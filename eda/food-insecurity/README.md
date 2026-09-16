@@ -1,3 +1,3 @@
 # food-insecurity/
 
-FAOSTAT FIES, by country and by sex (Hope). `food-insecurity.Rmd` builds `subsaharan_data/food_insecurity.csv`; `food-insecurity-by-gender.Rmd` looks at the women-minus-men gap and is knitted to `food-insecurity-by-gender.pdf`. Both read the country list from `subsaharan_data/` by relative path.
+Hope's work on FAOSTAT FIES in R. [`food-insecurity.Rmd`](food-insecurity.Rmd) pulls the three-year prevalence of severe food insecurity for the 49 countries and writes [`subsaharan_data/food_insecurity.csv`](../../subsaharan_data/food_insecurity.csv); [`food-insecurity-by-gender.Rmd`](food-insecurity-by-gender.Rmd) looks at the women-minus-men gap and names the notable countries, knitted to [`food-insecurity-by-gender.pdf`](food-insecurity-by-gender.pdf). Both read the country list from [`subsaharan_data/`](../../subsaharan_data/) by relative path. Fed the FIES gender-gap sensitivity row.

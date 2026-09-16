@@ -13,8 +13,8 @@
 
 ## 15 September 2026 — repository layout only
 
-- The registry folder the pipeline reads was renamed from a member's name to `gifna/`; the notebook's fallback paths follow the public layout. No number changed: the panel hash is unchanged.
+- The registry folder the pipeline reads was renamed from a member's name to [`gifna/`](../gifna/); the notebook's fallback paths follow the public layout. No number changed: the panel hash is unchanged.
 
 ## v1.2 (11 September 2026) and earlier
 
-- The methodology audit that produced v2.0 is summarised in `scaffold/README.md`; earlier versions are not published.
+- The methodology audit that produced v2.0 is summarised in [`scaffold/README.md`](../scaffold/README.md); earlier versions are not published.

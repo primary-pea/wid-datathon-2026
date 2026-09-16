@@ -1,6 +1,6 @@
 # Data sources
 
-Every file the pipeline reads is committed and pinned by SHA-256 (`derived/MANIFEST.json`, 29 inputs; `scaffold/inputs/*.provenance.json`). How each was pulled, and what raw material is *not* committed, is in `derived/DATA_ACQUISITION.md`. Each source is used under its own terms of use, linked below.
+Every file the pipeline reads is committed and pinned by SHA-256 ([`derived/MANIFEST.json`](../derived/MANIFEST.json), 29 inputs; `scaffold/inputs/*.provenance.json`). How each was pulled, and what raw material is *not* committed, is in [`derived/DATA_ACQUISITION.md`](../derived/DATA_ACQUISITION.md). Each source is used under its own terms of use, linked below.
 
 | Source | What we use | Release / access | Enters the panel as |
 |---|---|---|---|
@@ -16,6 +16,6 @@ Every file the pipeline reads is committed and pinned by SHA-256 (`derived/MANIF
 | DHS Program API — https://api.dhsprogram.com | the list of surveys with women's haemoglobin testing | 13 September 2026 | `feat_dhs_anaemia_survey` — the survey-anchored flag |
 | WHO PCT databank, soil-transmitted helminthiases — https://www.who.int/teams/control-of-neglected-tropical-diseases/data-platforms/pct-databank | national deworming coverage among school-age children | downloaded 12 September 2026 | `feat_sth_pc_coverage_sac_pct` — the one delivery measure |
 | Nunn & Puga (2012) — https://diegopuga.org/data/rugged/ | terrain ruggedness, tropical share, distance to coast | 13 September 2026 | `geo_rugged`, `geo_tropical`, `geo_dist_coast` |
-| Team files | the 49-country list; the cluster rules | — | `config.py`; `scaffold/inputs/gifna_cluster_rules.csv` |
+| Team files | the 49-country list; the cluster rules | — | `config.py`; [`scaffold/inputs/gifna_cluster_rules.csv`](../scaffold/inputs/gifna_cluster_rules.csv) |
 
 Not used by scaffold v2.0 and never committed: MICS and DHS survey microdata (licensed per registered user).

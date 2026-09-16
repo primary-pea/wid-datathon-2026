@@ -6,7 +6,7 @@
 
 **Question.** Across 49 sub-Saharan African countries, do the nutrition policies governments write down move with the anaemia measured in women aged 15–49?
 
-**Answer in four numbers** (scaffold v2.0, data version `afe63e46c26b`, every figure claim-tagged in `scaffold/results/RESULTS.md`):
+**Answer in four numbers** (scaffold v2.0, data version `afe63e46c26b`, every figure claim-tagged in [`scaffold/results/RESULTS.md`](scaffold/results/RESULTS.md)):
 
 | | |
 | --- | --- |
@@ -26,20 +26,20 @@ cd scaffold && PY=../.venv/bin/python ./run_all.sh
 
 Rebuilds the panel, every result and the report in about two minutes; then runs the tests (24 pass, 1 skipped).
 
-The pipeline reads two team folders at the repo root by name — `gifna/` and `subsaharan_data/` — and every other input from `scaffold/inputs/`, each pinned with a `*.provenance.json`.
+The pipeline reads two team folders at the repo root by name — [`gifna/`](gifna/) and [`subsaharan_data/`](subsaharan_data/) — and every other input from [`scaffold/inputs/`](scaffold/inputs/), each pinned with a `*.provenance.json`.
 
 ## Where things are
 
 | Folder | What is in it | Kept by |
 | --- | --- | --- |
-| `scaffold/` | the pipeline: assembly, the dose ladder, event studies, specification curve, validation, tests, the executed cross-check notebook, `results/` | Saarah |
-| `derived/` | the product — `ssa_panel.csv` (49 countries × 2000–2025 × 174 columns), `events.csv`, the data dictionary, manifest and data version. **`derived/DATA_ACQUISITION.md` explains how every source was obtained and describes the raw data that is not committed.** | Saarah |
-| `gifna/` | the WHO GIFNA policy registry: combined exports, the combine and feature-table scripts, the feature table | Tiana |
-| `subsaharan_data/` | World Bank GDP per capita, FIES food insecurity, the 49-country list | Hope |
-| `eda/` | exploratory notebooks, by topic — see `eda/README.md` for who did which | everyone |
-| `dashboard/` | the generator and data snapshot behind the live dashboard | Saarah |
-| `presentation/` | the final script, the deck as PDF, captions, the video link | Ramya |
-| `docs/` | method, data sources, known limits, changelog | Saarah |
+| [`scaffold/`](scaffold/) | the pipeline: assembly, the dose ladder, event studies, specification curve, validation, tests, the executed cross-check notebook, `results/` | Saarah |
+| [`derived/`](derived/) | the product — `ssa_panel.csv` (49 countries × 2000–2025 × 174 columns), `events.csv`, the data dictionary, manifest and data version. **[`derived/DATA_ACQUISITION.md`](derived/DATA_ACQUISITION.md) explains how every source was obtained and describes the raw data that is not committed.** | Saarah |
+| [`gifna/`](gifna/) | the WHO GIFNA policy registry: combined exports, the combine and feature-table scripts, the feature table | Tiana |
+| [`subsaharan_data/`](subsaharan_data/) | World Bank GDP per capita, FIES food insecurity, the 49-country list | Hope |
+| [`eda/`](eda/) | exploratory notebooks by topic, with outputs and a figure or two each — [`eda/README.md`](eda/README.md) says who did which and what it fed | everyone |
+| [`dashboard/`](dashboard/) | the generator and data snapshot behind the live dashboard | Saarah |
+| [`presentation/`](presentation/) | the final script and the deck as exported on submission day; the video was a file upload | Ramya |
+| [`docs/`](docs/) | method, data sources, known limits, changelog | Saarah |
 
 ## Links
 
@@ -63,4 +63,4 @@ Primary Pea:
 
 Data: WHO, UNICEF, FAOSTAT, UN IGME, World Bank, WHO GIFNA, GFDx, DHS, WHO PCT databank, Nunn & Puga.
 
-Licence: see `LICENSE`.
+Licence: see [`LICENSE`](LICENSE).
