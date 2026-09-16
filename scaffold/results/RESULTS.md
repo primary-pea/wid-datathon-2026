@@ -1,4 +1,4 @@
-# Scaffold v2.0 results — SSA women's-nutrition panel (2026-09-15)
+# Scaffold v2.0 results — SSA women's-nutrition panel (2026-09-16)
 
 _Every number carries a pointer `[E:script→key]` into `results/stats/`. Panel data version `afe63e46c26b` (sha256 `afe63e46c26b…`, see `MANIFEST.json`); config `2026-09-13a`. Methodology: `research/scaffold-v2-methodology-audit.md`._
 

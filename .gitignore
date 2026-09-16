@@ -242,5 +242,15 @@ data/
 !gifna/**
 !subsaharan_data/**
 !eda/**
-!dashboard/data/**
 !dashboard/data/
+!dashboard/data/**
+
+# ...but never the build junk those negations would otherwise let back in
+__pycache__/
+**/__pycache__/**
+*.pyc
+.pytest_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+.DS_Store
+scaffold/panel/

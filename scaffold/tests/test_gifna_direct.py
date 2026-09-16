@@ -11,11 +11,7 @@ import pytest
 import config as cfg
 import gifna_direct as gd
 
-_default_repo = next(
-    (p for p in (Path(__file__).resolve().parents[2], Path.home() / "miscP" / "parent-primary-pea" / "wid-datathon-2026") if (p / "gifna").exists()),
-    Path(__file__).resolve().parents[2],
-)
-REPO = Path(os.environ.get("SCAFFOLD_REPO_DIR", _default_repo))
+REPO = Path(os.environ.get("SCAFFOLD_REPO_DIR", Path(__file__).resolve().parents[2]))
 
 
 @pytest.fixture(scope="module")

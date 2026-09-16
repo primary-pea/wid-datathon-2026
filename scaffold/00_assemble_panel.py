@@ -33,10 +33,7 @@ import gifna_direct
 from util import check_panel_grid, sha256_of
 
 WID = Path(os.environ.get("SCAFFOLD_ATLAS_DIR", cfg.ROOT))
-_repo_default = next(
-    (p for p in (cfg.SCAF.parents[1], Path.home() / "miscP" / "parent-primary-pea" / "wid-datathon-2026") if (p / "gifna").exists()),
-    cfg.SCAF.parents[1],
-)
+_repo_default = cfg.SCAF.parents[1]  # the repo root: scaffold/ sits beside gifna/ and subsaharan_data/
 SCR = Path(os.environ.get("SCAFFOLD_REPO_DIR", _repo_default))
 OUT = cfg.PANEL_DIR
 SSA = set(cfg.SSA_ISO3)

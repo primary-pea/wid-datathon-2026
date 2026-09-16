@@ -300,7 +300,7 @@ if __name__ == "__main__":  # standalone mapping pass: python gifna_direct.py [s
 
     import config as cfg
 
-    scr = Path(sys.argv[1]) if len(sys.argv) > 1 else Path.home() / "miscP" / "parent-primary-pea" / "misc-scratchpads-etc"
+    scr = Path(sys.argv[1]) if len(sys.argv) > 1 else cfg.SCAF.parents[1]
     feats, tm, rep, fy = build(scr, cfg.INPUTS / "gifna_cluster_rules.csv", cfg.SSA_ISO3, list(cfg.YEARS))
     print("\n".join(report_lines(rep)))
     print(f"\nfeatures {feats.shape}; columns: {len(rep['columns'])}")
